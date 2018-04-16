@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>主页</title>
+    <!-- mobile apps -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="" />
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <!-- //mobile apps -->
+    <!-- Custom Theme files -->
+    <link href="css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
+    <link rel="stylesheet" href="css/pagesStyle.css" media="screen" type="text/css" />
+    <link href="css/style.css" type="text/css" rel="stylesheet" media="all">
+    <link href="css/loading.css" type="text/css" rel="stylesheet" media="all">
+    <link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" />
+    <!-- //Custom Theme files -->
+    <!-- js -->
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <!-- //js -->
+    <!-- web-fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Buda:300' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,300italic,400italic,700,700italic' rel='stylesheet' type='text/css'>
+    <!-- //web-fonts -->
+    <!-- start-smooth-scrolling -->
+    <script type="text/javascript" src="js/move-top.js"></script>
+    <script type="text/javascript" src="js/easing.js"></script>
+    <script type="text/javascript">
+        jQuery(document).ready(function($) {
+            $(".scroll").click(function(event){
+                event.preventDefault();
+
+                $('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+            });
+        });
+    </script>
+
+    <!-- //end-smooth-scrolling -->
+</head>
+<body id="theBody">
+<!-- banner -->
+<div class="banner">
+    <div class="banner-info">
+        <div class="banner-top">
+            <div class="container">
+                <div class="banner-top-grids banner-top-left">
+                    <ul class="social-icons">
+
+                    </ul>
+                </div>
+                <div class="banner-top-grids banner-logo" >
+                    <a href="index.html">
+                        <img src="images/1-2.png" alt=""/>
+                        <h1>StockHub </h1>
+                        <p>Do the best investment.</p>
+                    </a>
+                </div>
+                <div class="banner-top-grids banner-top-right ">
+                    <div id="loginInOrOutDiv" class="pull-right">
+                        <span class="glyphicon glyphicon-globe col-md-3" style="font-size:28px;color:orange;margin-top: 10px;margin-right: 5px"></span>
+                        <div id="buttonDiv" class="btn-group col-md-7" style="background: #00000000" >
+                            <!--<button type="button" class="btn  dropdown-toggle" data-toggle="dropdown">-->
+                            <!--登录 <span class="caret"></span>-->
+                            <!--</button>-->
+                            <button id="userButton" class="btn btn-primary btn-lg" data-toggle="modal">
+                                登录
+                            </button>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+        </div>
+        <!-- banner-text -->
+        <div class="banner-text about-banner-text">
+            <h2>StockHub</h2><br>
+        </div>
+        <!-- //banner-text -->
+        <!-- top-navigation -->
+        <div class="main ">
+            <div class="container">
+                <nav id="menu" class="nav top-nav" style="margin-left:15%!important;margin-right:0%!important;">
+                    <button  class="navtoogle">
+                        <span class="icon-menu glyphicon glyphicon-menu-hamburger"> </span> Menu
+                    </button>
+                    <ul>
+                        <li>
+                            <a href="index.html">
+									<span class="icon">
+										<i aria-hidden="true" class="icon-home glyphicon glyphicon-home"></i>
+									</span>
+                                <span>主页</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="industry.html" onclick="$('#section-2').animatescroll();">
+									<span class="icon">
+										<i aria-hidden="true" class="icon-portfolio glyphicon glyphicon-cog"></i>
+									</span>
+                                <span>行业</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="stock.html" onclick="$('#section-3').animatescroll();">
+									<span class="icon">
+										<i aria-hidden="true" class="icon-blog glyphicon glyphicon-picture"></i>
+									</span>
+                                <span>股票</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="strategy.html" onclick="$('#section-4').animatescroll();">
+									<span class="icon">
+										<i aria-hidden="true" class="icon-team glyphicon glyphicon-check"></i>
+									</span>
+                                <span>策略</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="user.html" onclick="$('#section-5').animatescroll();">
+									<span class="icon">
+										<i aria-hidden="true" class="icon-contact glyphicon glyphicon-envelope"></i>
+									</span>
+                                <span>用户</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- script-for-menu -->
+                <script>
+                    $(".navtoogle").click(function(){
+                        $(".top-nav ul").slideToggle("slow" , function(){
+                        });
+                    });
+                </script>
+                <!-- //script-for-menu -->
+                <script src="js/modernizr.custom.js"></script>
+            </div>
+        </div>
+        <!-- //top-navigation -->
+        <div class="clearfix"> </div>
+    </div>
+</div>
+<!-- //banner -->
+
+
+
+<!--登录、注册、找回页面-->
+<div id="loginDiv" class="modal fade"  tabindex="-2" role="dialog" aria-labelledby="loginTitle" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button id="loginCloseButton" data-dismiss="modal" type="button" class="close" >x</button>
+                <h1 id="loginTitle" class="text-center text-primarymodal-title">登录</h1>
+            </div>
+            <div class="modal-body">
+                <!--<form action="" class="form col-md-12 center-block">-->
+
+                <input id="loginAccount" type="text" class="form-control  input-lg" placeholder="账户名">
+
+                <input id="loginPassword" type="password" class="form-control  input-lg"  placeholder="登录密码">
+
+                <button id="loginNowButton" class="btn btn-primary btn-lg btn-block">立刻登录</button>
+
+                <!--</form>-->
+            </div>
+            <div class="modal-footer">
+                <span><a id="loginA1" data-toggle="modal" href="#resetDiv" class="pull-left">重设密码</a></span>
+                <span><a id="loginA2" data-toggle="modal" href="#registerDiv" class="pull-right">注册</a></span>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="registerDiv" class="modal fade"  tabindex="-1" role="dialog" aria-labelledby="registerTitle" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button id="registerCloseButton" data-dismiss="modal" type="button" class="close" >x</button>
+                <h1 id="registerTitle" class="text-center text-primarymodal-title">注册</h1>
+            </div>
+            <div class="modal-body">
+                <!--<form action="" class="form col-md-12 center-block">-->
+
+                <input id="registerAccount" type="text" class="form-control  input-lg" placeholder="设置账号名（以字母开头的数字和字母的组合）">
+                <input id="registerUserName" type="text" class="form-control  input-lg" placeholder="设置用户名">
+                <input id="registerPassword" type="password" class="form-control  input-lg"  placeholder="密码">
+                <input id="registerPassword2" type="password" class="form-control  input-lg"  placeholder="确认密码">
+
+                <button id="registerNowButton" class="btn btn-primary btn-lg btn-block">立刻注册</button>
+                <!--</form>-->
+            </div>
+            <div class="modal-footer">
+                <span><a id="registerA1" data-toggle="modal" href="#loginDiv" class="pull-left">登录</a></span>
+                <span><a id="registerA2" data-toggle="modal" href="#resetDiv" class="pull-right">重设密码</a></span>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="resetDiv" class="modal fade"  tabindex="-3" role="dialog" aria-labelledby="resetTitle" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button id="resetCloseButton" data-dismiss="modal" type="button" class="close" >x</button>
+                <h1 id="resetTitle" class="text-center text-primarymodal-title">重设密码</h1>
+            </div>
+            <div class="modal-body">
+                <!--<form action="" class="form col-md-12 center-block">-->
+                <input id="resetAccount" type="text" class="form-control  input-lg" placeholder="账户名">
+                <input id="resetPassword" type="password" class="form-control  input-lg"  placeholder="原密码">
+                <input id="resetPassword2" type="password" class="form-control  input-lg"  placeholder="新密码">
+                <input id="resetPassword3" type="password" class="form-control  input-lg"  placeholder="确认密码">
+                <button id="resetNowButton" class="btn btn-primary btn-lg btn-block">立刻修改</button>
+                <!--</form>-->
+            </div>
+            <div class="modal-footer">
+                <span><a id="resetA1" data-toggle="modal" href="#loginDiv" class="pull-left">登录</a></span>
+                <span><a id="resetA2" data-toggle="modal" href="#registerDiv" class="pull-right">注册</a></span>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!--登录、注册、找回页面-->
+
+
+<!--主页主体部分-->
+<div class="codes">
+    <div class="container">
+        <!--左边的网页，占网页大小的2/3-->
+        <div class="col-md-7">
+            <!--三个板指数据的图表，要做到和雪球一样的版式-->
+            <div class="container_12">
+                <div  class="home__stock-index">
+
+                    <div>
+
+                        <div id="CSI300" class="home__stock-index__item col-md-4"  style="height: 300px; width:300px;  padding: 3px;margin-left: 22%;margin-right: 20%;">
+                            <a href="plate.html?plate=CSI300" target="_blank">
+                                <div id="divForCSI300List" class="type" >
+                                    <h5>沪深300</h5>
+                                    <div id="valueOfCSI300" class="current"></div>
+                                    <div class="growth"> <i id="growthPercentageOfCSI300"></i>(+<i id="growthAmountOfCSI300"></i>)</div>
+                                </div>
+                            </a>
+                            <div id="divForCSI300Chart"  style="height: 225px;width: 300px; ">
+                            </div>
+                        </div>
+
+                        <div class="clearfix"></div>
+                    </div>
+
+                    <div >
+
+                        <div id="SCI" class="home__stock-index__item col-md-6"  style="height: 300px; width:300px; padding: 3px;">
+                            <!--板指数据-->
+                            <a href="plate.html?plate=SCI" target="_blank">
+                                <div  id="divForSCIList" class="type" style=" width:300px;">
+                                    <h5>上证指数</h5>
+                                    <div id="valueOfSCI" class="current"></div>
+                                    <div class="growth"> <i id="growthPercentageOfSCI"></i>(+<i id="growthAmountOfSCI"></i>)</div>
+                                </div>
+                            </a>
+                            <!--板指简易图表-->
+                            <div id="divForSCIChart"  style="height: 225px;width: 300px; ">
+                            </div>
+                        </div>
+
+
+                        <div id="SIASA" class="home__stock-index__item col-md-6"  style="height: 300px; width:300px; padding: 3px;">
+                            <a href="plate.html?plate=SIASA" target="_blank">
+                                <div id="divForSIASAList" class="type">
+                                    <h5>深证成指</h5>
+                                    <div id="valueOfSIASA" class="current"></div>
+                                    <div class="growth"> <i id="growthPercentageOfSIASA"></i>(+<i id="growthAmountOfSIASA"></i>)</div>
+                                </div>
+                            </a>
+                            <div id="divForSIASAChart"  style="height: 225px;width: 300px;  ">
+                            </div>
+                        </div>
+
+                        <div class="clearfix"></div>
+
+                    </div>
+
+
+
+                    <div>
+
+
+                        <div id="SPF" class="home__stock-index__item col-md-4"  style="height: 300px; width:300px; padding: 3px;">
+                            <a href="plate.html?plate=SPF" target="_blank">
+                                <div id="divForSPFList" class="type">
+                                    <h5>中小板指</h5>
+                                    <div id="valueOfSPF" class="current"></div>
+                                    <div class="growth"> <i id="growthPercentageOfSPF"></i>(+<i id="growthAmountOfSPF"></i>)</div>
+                                </div>
+                            </a>
+                            <div id="divForSPFChart"  style="height: 225px;width: 300px; ">
+                            </div>
+                        </div>
+
+                        <div id="GEM" class="home__stock-index__item col-md-4"  style="height: 300px; width:300px;  padding: 3px;">
+                            <a href="plate.html?plate=GEM" target="_blank">
+                                <div id="divForGEMList" class="type">
+                                    <h5>创业板指</h5>
+                                    <div id="valueOfGEM" class="current"></div>
+                                    <div class="growth"> <i id="growthPercentageOfGEM"></i>(+<i id="growthAmountOfGEM"></i>)</div>
+                                </div>
+                            </a>
+                            <div id="divForGEMChart"  style="height: 225px;width: 300px;">
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+
+                </div>
+            </div>
+            <!--//三个板指数据的图表，要做到和雪球一样的版式-->
+
+            <!--新闻区-->
+            <div class="grid_3 grid_5 ">
+                <h3 class="hdg">新闻</h3>
+                <div class="bs-example bs-example-tabs" role="tabpanel" data-example-id="togglable-tabs">
+                    <ul id="myTab" class="nav nav-tabs" role="tablist">
+                        <li role="presentation" class="active"><a href="#HeadLine" id="home-tab" role="tab" data-toggle="tab" aria-controls="home" aria-expanded="true">头条</a></li>
+                        <!--<li role="presentation"><a href="#Emergency" role="tab" id="profile-tab" data-toggle="tab" aria-controls="profile">证券</a></li>-->
+                        <!--<li role="presentation" class="dropdown">-->
+                            <!--<a href="#" id="myTabDrop1" class="dropdown-toggle" data-toggle="dropdown" aria-controls="myTabDrop1-contents">其他 <span class="caret"></span></a>-->
+                            <!--<ul class="dropdown-menu" role="menu" aria-labelledby="myTabDrop1" id="myTabDrop1-contents">-->
+                                <!--<li><a href="#dropdown1" tabindex="-1" role="tab" id="dropdown1-tab" data-toggle="tab" aria-controls="dropdown1">消息速递</a></li>-->
+                                <!--<li><a href="#dropdown2" tabindex="-1" role="tab" id="dropdown2-tab" data-toggle="tab" aria-controls="dropdown2">业内新秀</a></li>-->
+                            <!--</ul>-->
+                        <!--</li>-->
+                    </ul>
+                    <div id="NewsTabPane" class="tab-content">
+                        <!--头条内容-->
+                        <div role="tabpanel" class="tab-pane fade in active" id="HeadLine" aria-labelledby="home-tab">
+                            <div id="HeadLines">
+
+                            </div>
+                        </div>
+
+                        <!--突发内容-->
+                        <!--<div role="tabpanel" class="tab-pane fade" id="Emergency" aria-labelledby="profile-tab">-->
+                            <!--<div id="Bond">-->
+                                <!--&lt;!&ndash;<div  id="E1" class="well">&ndash;&gt;-->
+                                    <!--&lt;!&ndash;<a id="E1A" >新浪财经金牌董秘评选中：四大快递追逐激烈（名单）</a>&ndash;&gt;-->
+                                <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                                <!--&lt;!&ndash;<div id="E2" class="well"   >&ndash;&gt;-->
+                                    <!--&lt;!&ndash;<a id="E2A"  >金徽酒分销数据遭疑连发三公告澄清 媒体：报道真实</a>&ndash;&gt;-->
+                                <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                                <!--&lt;!&ndash;<div id="E3" class="well"   >&ndash;&gt;-->
+                                    <!--&lt;!&ndash;<a id="E3A"  >美银美林调查：做多科技股成全球最热门交易</a>&ndash;&gt;-->
+                                <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                            <!--</div>-->
+                        <!--</div>-->
+
+                        <!--&lt;!&ndash;剩下的两个选择框&ndash;&gt;-->
+                        <!--<div role="tabpanel" class="tab-pane fade" id="dropdown1" aria-labelledby="dropdown1-tab">-->
+
+                        <!--</div>-->
+                        <!--<div role="tabpanel" class="tab-pane fade" id="dropdown2" aria-labelledby="dropdown2-tab">-->
+                            <!--&lt;!&ndash;<div class="well">&ndash;&gt;-->
+                                <!--&lt;!&ndash;北京总规划将上报中央审定 机构:中央政务区呼之欲出&ndash;&gt;-->
+                            <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                            <!--&lt;!&ndash;<div class="well">&ndash;&gt;-->
+                                <!--&lt;!&ndash;年内最后一波降费向电价等开刀 总理称军中无戏言&ndash;&gt;-->
+                            <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                            <!--&lt;!&ndash;<div class="well">&ndash;&gt;-->
+                                <!--&lt;!&ndash;多部门或出新政限煤炭进口 力争迎峰度夏前回落570元&ndash;&gt;-->
+                            <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                        <!--</div>-->
+
+
+
+                    </div>
+
+                </div>
+            </div>
+            <!--//新闻区-->
+        </div>
+        <!--//左边的网页，占网页大小的2/3-->
+
+        <!--右边的网页，占网页大小的1/3，放各种榜单-->
+        <div class="col-md-5">
+            <!--行情排行榜-->
+            <div class="grid_3 grid_5 ">
+                <h3 class="hdg">行情排行榜</h3>
+                <div class="bs-example bs-example-tabs" role="tabpanel" data-example-id="togglable-tabs">
+                    <ul id="myTab1" class="nav nav-tabs" role="tablist">
+                        <li role="presentation" class="active"><a href="#ITable" id="TabForITable" role="tab" data-toggle="tab" aria-controls="home" aria-expanded="true">涨幅榜</a></li>
+                        <li role="presentation"><a href="#DTable" role="tab" id="TabForDTable" data-toggle="tab" aria-controls="profile">跌幅榜</a></li>
+                        <li role="presentation"><a href="#D2Table" role="tab" id="TabForD2Table" data-toggle="tab" aria-controls="profile">成交量榜</a></li>
+                        <li role="presentation"><a href="#PTable" role="tab" id="TabForPTable" data-toggle="tab" aria-controls="profile">潜力榜</a></li>
+                    </ul>
+                    <div id="TableData" class="tab-content">
+                        <div id="ITable" role="tabpanel" class="tab-pane fade in active"  aria-labelledby="home-tab">
+
+                            <!--<a href="#" onclick="replaceContent()">点击替换内容</a>-->
+                            <div id="IncreaseTable" class="bs-docs-example col-md-12">
+
+                            </div>
+                            <div class="clearfix"></div>
+                            <div id="IncreaseTablePages" class="col-md-12" >
+
+                            </div>
+                        </div>
+                        <div id="DTable" role="tabpanel" class="tab-pane fade"  aria-labelledby="profile-tab">
+                            <div id="DecreaseTable" class="bs-docs-example col-md-12">
+
+                            </div>
+                            <div class="clearfix"></div>
+                            <div id="DecreaseTablePages" class="col-md-12">
+
+                            </div>
+                        </div>
+                        <div id="D2Table" role="tabpanel" class="tab-pane fade"  aria-labelledby="dropdown1-tab">
+                            <div id="DealTable" class="bs-docs-example col-md-12">
+
+                            </div>
+                            <div class="clearfix"></div>
+                            <div id="DealTablePages" class="col-md-12">
+
+                            </div>
+                        </div>
+                        <div id="PTable" role="tabpanel" class="tab-pane fade" aria-labelledby="dropdown2-tab">
+                            <div  id="PotentialTable" class="bs-docs-example col-md-12">
+
+                            </div>
+                            <div class="clearfix"></div>
+                            <div  id="PotentialTablePages" class="col-md-12">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--投资参考-->
+            <div class="grid_3 grid_5 ">
+                <h3 class="hdg">投资参考</h3>
+                <div id="Investments">
+                    <div  id="I1" class="well">
+                        <a id="I1A" >新浪财经金牌董秘评选中：四大快递追逐激烈（名单）</a>
+                    </div>
+                    <div id="I2" class="well"   >
+                        <a id="I2A"  >金徽酒分销数据遭疑连发三公告澄清 媒体：报道真实</a>
+                    </div>
+                    <div id="I3" class="well"   >
+                        <a id="I3A"  >美银美林调查：做多科技股成全球最热门交易</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--//右边的网页，占网页大小的1/3，放各种榜单-->
+    </div>
+
+</div>
+<!--主页主体部分-->
+
+<!-- slid -->
+<div class="slid about-w3ls-slid">
+    <div class="container">
+        <h3>对于理性投资者来说，要获得稳定持续的高收益，找到永不过时的行业很重要，但同样重要的是，在这个行业处于市场预期低估或被大众忽略时买入才能最终获得成功。  </h3>
+    </div>
+</div>
+<!-- //slid -->
+
+
+<!-- footer -->
+<div class="footer">
+    <div class="container">
+        <div class="footer-wthree-nav">
+            <ul>
+                <li><a href="index.html">主页</a></li>
+                <li><a href="industry.html">行业</a></li>
+                <li><a href="stock.html">股票</a></li>
+                <li><a href="strategy.html">策略</a></li>
+                <li><a href="user.html">用户</a></li>
+            </ul>
+        </div>
+        <div class="footer-w3lsrow" style="margin-bottom: 20px;">
+            <div class="col-md-4 footer-grids footer-address">
+                <h3>Contact Us :</h3>
+                <ul>
+                    <li style="margin-bottom: 20px;"><i class="glyphicon glyphicon-envelope"></i> 151250006@smail.nju.edu.cn </li>
+                    <li style="margin-bottom: 20px;"><i class="glyphicon glyphicon-envelope"></i> 151250011@smail.nju.edu.cn </li>
+                    <li style="margin-bottom: 20px;"><i class="glyphicon glyphicon-envelope"></i> 151250013@smail.nju.edu.cn </li>
+                    <li style="margin-bottom: 15px;"><i class="glyphicon glyphicon-envelope"></i> 151099149@smail.nju.edu.cn </li>
+                    <li></li>
+                </ul>
+            </div>
+            <div class="col-md-4 footer-grids subscribe">
+                <h3>Join Us :</h3><br><br>
+                <form action="#" method="post">
+                    <input type="text" name="Email" placeholder="Your Email" required="">
+                    <input type="submit" value="Subscribe">
+                </form>
+                <div class="clearfix"> </div>
+            </div>
+            <div class="col-md-4 footer-grids footer-address footer-icons" style="alignment: right;" >
+                <!--footer-icons-->
+                <h3>Follow Us :</h3>
+                <ul ><br><br>
+                    <!--class="social-icons"-->
+                    <li>曹鸿荣</li>
+                    <li>常德隆</li>
+                    <li>陈进</li>
+                    <li>武秀峰</li>
+                </ul>
+                <div class="clearfix"> </div>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+    </div>
+</div>
+<!-- //footer -->
+<!-- smooth-scrolling-of-move-up -->
+<script type="text/javascript">
+    $(document).ready(function() {
+        /*
+         var defaults = {
+         containerID: 'toTop', // fading element id
+         containerHoverID: 'toTopHover', // fading element hover id
+         scrollSpeed: 1200,
+         easingType: 'linear'
+         };
+         */
+
+        $().UItoTop({ easingType: 'easeOutQuart' });
+
+    });
+</script>
+<script>
+//    window.localStorage.setItem("presentPlate","SCI300");
+</script>
+<!-- //smooth-scrolling-of-move-up -->
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="js/bootstrap.js"></script>
+<script src="js/echarts.min.js"></script>
+<script src="js/StockBlSer/index.js"></script>
+<script src="js/StockBlSer/logInOutOrRegister.js"></script>
+
+
+<script>
+        window.onload=ready();
+</script>
+
+<!--
+<script>
+
+    var data1=[
+          {
+        "date": "5/24/17",
+        "open": "10",
+        "high": "11",
+        "low": "9.8",
+        "close": "10.2",
+        "code": "60001",
+        "AdjClose": "13",
+        "name": "kl",
+        "market": "sa",
+        "increaseOrDecrease": "20%",
+        "preAdjClose": "1.2",
+        "plate": "1"
+    },
+    {
+        "date": "5/25/17",
+        "pen": "10",
+        "high": "11",
+        "low": "9.8",
+        "close": "10.2",
+        "AdjClose": "10",
+        "code": "60001",
+        "name": "kl",
+        "market": "sa",
+        "increaseOrDecrease": "30%",
+        "preAdjClose": "1.2",
+        "plate": "1"
+    },
+    {
+        "date": "5/26/17",
+        "open": "10",
+        "high": "11",
+        "low": "9.8",
+        "close": "10.2",
+        "AdjClose": "12",
+        "code": "60001",
+        "name": "kl",
+        "market": "sa",
+        "increaseOrDecrease": "18%",
+        "preAdjClose": "1.2",
+        "plate": "1"
+    },
+    {
+        "date": "5/27/17",
+        "open": "10",
+        "high": "11",
+        "low": "9.8",
+        "close": "10.2",
+        "AdjClose": "14",
+        "code": "60001",
+        "name": "kl",
+        "market": "sa",
+        "increaseOrDecrease": "16%",
+        "preAdjClose": "1.2",
+        "plate": "1"
+    }
+    ];
+    // 路径配置
+
+    require.config({
+        paths: {
+            echarts: 'js/dist'
+        }
+    });
+
+    // 使用
+    require(
+        [
+            'echarts',
+            'echarts/theme/macarons',
+            'echarts/chart/k' // 使用柱状图就加载bar模块，按需加载
+        ],
+        function (ec,theme) {
+            // 基于准备好的dom，初始化echarts图表
+
+
+            var getdate = [];
+            var getatr = [];
+            var KInfo1 = [];
+            for (var i = 0; i < data1.length; i++) {
+                getdate[i] = data1[i].date;
+                KInfo1[0] = data1[i].open;
+                KInfo1[1] = data1[i].close;
+                KInfo1[2] = data1[i].low;
+                KInfo1[3] = data1[i].high;
+                getatr[i] = KInfo1;
+            }
+
+//            var myChart1 = echarts.init(document.querySelector("#divForSCI"));
+            var myChart1 = ec.init(document.getElementById('divForSCIChart'),theme);
+
+
+            // 指定图表的配置项和数据
+
+            var option = {
+                title: {
+                    text: ''
+                },
+                tooltip: {
+                    trigger: 'axis',
+                    formatter: function (params) {
+                        var res = params[0].seriesName + ' ' + params[0].name;
+                        res += '<br/>  开盘 : ' + params[0].value[0] + '  最高 : ' + params[0].value[3];
+                        res += '<br/>  收盘 : ' + params[0].value[1] + '  最低 : ' + params[0].value[2];
+                        return res;
+                    }
+                },
+                legend: {
+                    data: ['上证指数']
+                },
+                toolbox: {
+                    show: false,
+                    feature: {
+                        mark: {show: true},
+                        dataZoom: {show: true},
+                        dataView: {show: true, readOnly: false},
+                        magicType: {show: true, type: ['line', 'bar']},
+                        restore: {show: true},
+                        saveAsImage: {show: true}
+                    }
+                },
+                dataZoom: {
+                    show: true,
+                    realtime: true,
+                    start: 50,
+                    end: 100
+                },
+                xAxis: [
+                    {
+                        type: 'category',
+                        boundaryGap: true,
+                        axisTick: {onGap: false},
+                        splitLine: {show: false},
+                        data: getdate
+                    }
+                ],
+                yAxis: [
+                    {
+                        type: 'value',
+                        scale: true,
+                        boundaryGap: [0.01, 0.01]
+                    }
+                ],
+                series: [//开盘，收盘，最低，最高
+                    {
+                        name: '上证指数',
+                        type: 'k',
+                        data: getatr
+                    }
+                ]
+            };
+
+
+            // 使用刚指定的配置项和数据显示图表。
+            myChart1.setOption(option);
+            alert("end");
+        }
+    );
+
+
+</script>
+-->
+
+</body>
+</html>

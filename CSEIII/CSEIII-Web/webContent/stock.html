@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>股票</title>
+    <!-- mobile apps -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="" />
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <!-- //mobile apps -->
+    <!-- Custom Theme files -->
+    <link href="css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
+    <link href="css/style.css" type="text/css" rel="stylesheet" media="all">
+    <link rel="stylesheet" href="css/lightbox.css">
+    <!-- //Custom Theme files -->
+    <!-- js -->
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <!-- //js -->
+    <!-- web-fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Buda:300' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,300italic,400italic,700,700italic' rel='stylesheet' type='text/css'>
+    <!-- //web-fonts -->
+    <!-- start-smooth-scrolling -->
+    <script type="text/javascript" src="js/move-top.js"></script>
+    <script type="text/javascript" src="js/easing.js"></script>
+    <script type="text/javascript">
+        jQuery(document).ready(function($) {
+            $(".scroll").click(function(event){
+                event.preventDefault();
+
+                $('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+            });
+        });
+    </script>
+
+    <script type="text/javascript" src="js/stockJS/stock.js"></script>
+    <script src="js/Chart.js/Chart.js-master"></script>
+    <script src="js/dist/echarts-all.js"></script>
+    <!-- //end-smooth-scrolling -->
+</head>
+<body>
+<!-- banner -->
+<div class="banner about-banner">
+    <div class="banner-info">
+        <div class="banner-top">
+            <div class="container">
+                <div class="banner-top-grids banner-top-left">
+                    <ul class="social-icons">
+
+                    </ul>
+                </div>
+                <div class="banner-top-grids banner-logo">
+                    <a href="index.html">
+                        <img src="images/1.png" alt=""/>
+                        <h1>StockHub </h1>
+                        <p>Do the best investment.</p>
+                    </a>
+                </div>
+                <div class="banner-top-grids banner-top-right">
+                    <p><span class="glyphicon glyphicon-globe"></span> StockHubers </p>
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+        </div>
+        <!-- banner-text -->
+        <div class="banner-text about-banner-text">
+            <h2>
+                <ol class="breadcrumb">
+                    <li><a href="index.html">主页</a></li>
+                    <li class="active">股票</li>
+                </ol>
+            </h2>
+        </div>
+        <!-- //banner-text -->
+        <!-- top-navigation -->
+        <div class="main">
+            <div class="container">
+                <nav id="menu" class="nav top-nav">
+                    <button  class="navtoogle">
+                        <span class="icon-menu glyphicon glyphicon-menu-hamburger"> </span> Menu
+                    </button>
+                    <ul>
+                        <li>
+                            <a href="index.html">
+									<span class="icon">
+										<i aria-hidden="true" class="icon-home glyphicon glyphicon-home"></i>
+									</span>
+                                <span>主页</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="plate.html" onclick="$('#section-2').animatescroll();">
+									<span class="icon">
+										<i aria-hidden="true" class="icon-services glyphicon glyphicon-info-sign"></i>
+									</span>
+                                <span>板块</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="industry.html" onclick="$('#section-3').animatescroll();">
+									<span class="icon">
+										<i aria-hidden="true" class="icon-portfolio glyphicon glyphicon-cog"></i>
+									</span>
+                                <span>行业</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="stock.html" onclick="$('#section-4').animatescroll();">
+									<span class="icon">
+										<i aria-hidden="true" class="icon-blog glyphicon glyphicon-picture"></i>
+									</span>
+                                <span>股票</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="strategy.html" onclick="$('#section-5').animatescroll();">
+									<span class="icon">
+										<i aria-hidden="true" class="icon-team glyphicon glyphicon-check"></i>
+									</span>
+                                <span>策略</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="user.html" onclick="$('#section-6').animatescroll();">
+									<span class="icon">
+										<i aria-hidden="true" class="icon-contact glyphicon glyphicon-envelope"></i>
+									</span>
+                                <span>用户</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- script-for-menu -->
+                <script>
+                    $(".navtoogle").click(function(){
+                        $(".top-nav ul").slideToggle("slow" , function(){
+                        });
+                    });
+                </script>
+                <!-- //script-for-menu -->
+                <script src="js/modernizr.custom.js"></script>
+            </div>
+        </div>
+        <!-- //top-navigation -->
+        <div class="clearfix"> </div>
+    </div>
+</div>
+<!-- //banner -->
+
+<!-- 个股，此处学习新浪财经 -->
+<div class="codes">
+    <div class="container">
+    <!-- 公司资料、重大事项、行情走势等 -->
+    <div class="col-md-2">
+        <h3 class="hdg ">公司资料</h3>
+        <div class="bs-docs-example ">
+            <table class="table">
+                <tbody>
+                <tr>
+                    <td>所属行业</td>
+                    <td id="companyIndustry">软件开发</td>
+                </tr>
+                <tr>
+                    <td>公司所在地</td>
+                    <td id="companyLocation">上海</td>
+                </tr>
+                <tr>
+                    <td>上市日期</td>
+                    <td id="timeToMarket">2001-5-1</td>
+                </tr>
+                <tr>
+                    <td>股东人数</td>
+                    <td id="shareHoldersNum">16</td>
+                </tr>
+                <tr>
+                    <td>总资产</td>
+                    <td id="totalMoney">500万</td>
+                </tr>
+                <tr>
+                    <td>流动资产</td>
+                    <td id="flowMoney">400万</td>
+                </tr>
+                <tr>
+                    <td>固定资产</td>
+                    <td id="fixMoney">100万</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h3 class="hdg ">重大事项</h3>
+        <ul class="list-group ">
+            <li class="list-group-item">Cras justo odio</li>
+            <li class="list-group-item">Dapibus ac facilisis in</li>
+            <li class="list-group-item">Morbi leo risus</li>
+            <li class="list-group-item">Porta ac consectetur ac</li>
+            <li class="list-group-item">Vestibulum at eros</li>
+        </ul>
+
+        <h3 class="hdg ">行情走势</h3>
+        <ul class="list-group ">
+            <li class="list-group-item">Cras justo odio</li>
+            <li class="list-group-item">Dapibus ac facilisis in</li>
+            <li class="list-group-item">Morbi leo risus</li>
+            <li class="list-group-item">Porta ac consectetur ac</li>
+            <li class="list-group-item">Vestibulum at eros</li>
+        </ul>
+    </div>
+    <!-- //公司资料、重大事项、行情走势等 -->
+
+    <!-- 个股的K线图、均线图、数据、预测分数、雷达图、行业内排名、公司新闻等 -->
+    <div class="col-md-7">
+        <!--搜索框-->
+        <form method="post" >
+            <fieldset class="search">
+                <input id="searchStockCodeOrNameInput" type="text" class="inputText" placeholder="请输入股票代码或名称" required>
+                <!---input type="submit" value="搜索" onclick="getStockGoalOne()"--->
+                <button type="button" onclick="getStockWholeData()">搜索</button>
+            </fieldset>
+        </form>
+        <!--//搜索框-->
+
+        <!--股票数据-->
+        <div class="home__stock-index__item">
+            <!--股票数据-->
+            <a class="type" target="_blank">
+                <h5 id="singleStockName">股票名称</h5>
+                <div class="current" id="singleStockCurrent">3083.51</div>
+                <div class="growth" id="singleStockInOrDe"> <i>+</i>0.72%(<i>+</i>22.01)</div>
+            </a>
+
+            <!--股票简易k线图表-->
+            <div id="singleStockSimpleKChart"  style="height: 225px;width: 290px;  border: 1px solid #ccc; ">
+
+            </div>
+            <!--//股票简易k线图表-->
+
+            <!--行业整体简易饼状图等图表-->
+            <div id="singleStockSimplePieChart"  style="height: 225px;width: 290px;  border: 1px solid #ccc; ">
+
+            </div>
+            <!--//行业整体简易饼状图等图表-->
+
+            <!--股票雷达图-->
+            <div id="singleStockRadarChart"  style="height: 225px;width: 290px;  border: 1px solid #ccc; ">
+
+            </div>
+            <!--//股票雷达图-->
+
+        </div>
+        <!--//股票数据-->
+
+        <!--股票K线均线图-->
+        <div id="singleStockKAndEMAChart" >
+
+        </div>
+        <!--//股票K线均线图-->
+
+        <!--股票行业内排名-->
+        <h3 class="hdg">行业内排行榜</h3>
+        <div class="bs-example bs-example-tabs" role="tabpanel" data-example-id="togglable-tabs">
+            <ul id="myTab1" class="nav nav-tabs" role="tablist">
+                <li role="presentation" class="active"><a href="#industryInc" id="industryIncTab" role="tab" data-toggle="tab" aria-controls="industryInc" aria-expanded="true">涨幅榜</a></li>
+                <li role="presentation"><a href="#industryDec" role="tab" id="industryDecTab" data-toggle="tab" aria-controls="industryDec">跌幅榜</a></li>
+                <li role="presentation"><a href="#indusrtyVolume" role="tab" id="indusrtyVolumeTab" data-toggle="tab" aria-controls="indusrtyVolume">成交量榜</a></li>
+                <li role="presentation"><a href="#industryPotential" role="tab" id="industryPotentialTab" data-toggle="tab" aria-controls="industryPotential">潜力榜</a></li>
+            </ul>
+            <div id="myTabContent1" class="tab-content">
+                <div role="tabpanel" class="tab-pane fade in active" id="industryInc" aria-labelledby="industryIncTab">
+                    <div class="bs-docs-example ">
+                        <table id="increaseTable" class="table table-hover">
+                            <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>代码</th>
+                                <th>名称</th>
+                                <th>涨幅</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Jacob</td>
+                                <td>Thornton</td>
+                                <td>@fat</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td colspan="2">Larry the Bird</td>
+                                <td>@twitter</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="industryDec" aria-labelledby="industryDecTab">
+                    <table id="decreaseTable" class="table table-hover">
+                        <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>代码</th>
+                            <th>名称</th>
+                            <th>跌幅</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Jacob</td>
+                            <td>Thornton</td>
+                            <td>@fat</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td colspan="2">Larry the Bird</td>
+                            <td>@twitter</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="indusrtyVolume" aria-labelledby="indusrtyVolumeTab">
+                    <table id="volumeTable" class="table table-hover">
+                        <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>代码</th>
+                            <th>名称</th>
+                            <th>成交量</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Jacob</td>
+                            <td>Thornton</td>
+                            <td>@fat</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td colspan="2">Larry the Bird</td>
+                            <td>@twitter</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="industryPotential" aria-labelledby="industryPotentialTab">
+                    <table id="potentialTable" class="table table-hover">
+                        <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>代码</th>
+                            <th>名称</th>
+                            <th>潜力</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Jacob</td>
+                            <td>Thornton</td>
+                            <td>@fat</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td colspan="2">Larry the Bird</td>
+                            <td>@twitter</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <!--//股票行业内排名-->
+
+        <!--股票公司资讯-->
+        <div class="grid_3 grid_5 ">
+            <h3 class="hdg">公司资讯</h3>
+            <div class="well">
+                There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration
+            </div>
+            <div class="well">
+                It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here
+            </div>
+            <div class="well">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic
+            </div>
+        </div>
+        <!--//股票公司资讯-->
+    </div>
+    <!-- //个股的K线图、均线图、数据、预测分数、雷达图、行业内排名、公司新闻等 -->
+
+    <!-- 讨论区 -->
+    <div class="col-md-3">
+        <div class="grid_3 grid_5 ">
+            <h3 class="hdg">讨论区</h3>
+            <div class="well">
+                There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration
+            </div>
+            <div class="well">
+                It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here
+            </div>
+            <div class="well">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic
+            </div>
+        </div>
+    </div>
+    <!-- //讨论区 -->
+    </div>
+</div>
+<!-- //个股 -->
+
+<!-- slid -->
+<div class="slid about-w3ls-slid">
+    <div class="container">
+        <h3>对于理性投资者来说，要获得稳定持续的高收益，找到永不过时的行业很重要，但同样重要的是，在这个行业处于市场预期低估或被大众忽略时买入才能最终获得成功。  </h3>
+    </div>
+</div>
+<!-- //slid -->
+
+<!-- footer -->
+<div class="footer">
+    <div class="container">
+        <div class="footer-wthree-nav">
+            <ul>
+                <li><a href="index.html">主页</a></li>
+                <li><a href="plate.html">板块</a></li>
+                <li><a href="industry.html">行业</a></li>
+                <li><a href="stock.html">股票</a></li>
+                <li><a href="strategy.html">策略</a></li>
+                <li><a href="user.html">用户</a></li>
+            </ul>
+        </div>
+        <div class="footer-w3lsrow" style="margin-bottom: 20px;">
+            <div class="col-md-4 footer-grids footer-address">
+                <h3>Contact Us :</h3>
+                <ul>
+                    <li style="margin-bottom: 20px;"><i class="glyphicon glyphicon-envelope"></i> 151250006@smail.nju.edu.cn </li>
+                    <li style="margin-bottom: 20px;"><i class="glyphicon glyphicon-envelope"></i> 151250011@smail.nju.edu.cn </li>
+                    <li style="margin-bottom: 20px;"><i class="glyphicon glyphicon-envelope"></i> 151250013@smail.nju.edu.cn </li>
+                    <li style="margin-bottom: 15px;"><i class="glyphicon glyphicon-envelope"></i> 151099149@smail.nju.edu.cn </li>
+                    <li></li>
+                </ul>
+            </div>
+            <div class="col-md-4 footer-grids subscribe">
+                <h3>Join Us :</h3><br><br>
+                <form action="#" method="post">
+                    <input type="text" name="Email" placeholder="Your Email" required="">
+                    <input type="submit" value="Subscribe">
+                </form>
+                <div class="clearfix"> </div>
+            </div>
+            <div class="col-md-4 footer-grids footer-address footer-icons" style="alignment: right;" >
+                <!--footer-icons-->
+                <h3>Follow Us :</h3>
+                <ul ><br><br>
+                    <!--class="social-icons"-->
+                    <li>曹鸿荣</li>
+                    <li>常德隆</li>
+                    <li>陈进</li>
+                    <li>武秀峰</li>
+                </ul>
+                <div class="clearfix"> </div>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+    </div>
+</div>
+<!-- //footer -->
+<!-- smooth-scrolling-of-move-up -->
+<script type="text/javascript">
+    $(document).ready(function() {
+        /*
+         var defaults = {
+         containerID: 'toTop', // fading element id
+         containerHoverID: 'toTopHover', // fading element hover id
+         scrollSpeed: 1200,
+         easingType: 'linear'
+         };
+         */
+
+        $().UItoTop({ easingType: 'easeOutQuart' });
+
+    });
+</script>
+<!-- //smooth-scrolling-of-move-up -->
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="js/bootstrap.js"></script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+/*-----------------------          Basic Settings   Begin           -----------------------*/
+.split-pane .split-pane-divider {
+    -fx-background-color: #1A1A1A;
+
+}
+#MainUI{
+    -fx-background-color: #444444;
+}
+#CloseButton{
+    -fx-background-color: rgba(0,0,0,0);
+    -fx-background-image: url("closeForLogin.png");
+}
+#CloseButton:hover{
+    -fx-background-color: rgba(0,0,0,0);
+    -fx-background-image: url("closeForLogin.png");
+    -fx-effect: dropshadow( three-pass-box , #F4F460 , 5 , 0.0 , 0 , 0 );
+}
+#minButton{
+    -fx-background-color: rgba(0,0,0,0);
+    -fx-background-image: url("minForLogin.png");
+}
+#minButton:hover{
+    -fx-background-color: rgba(0,0,0,0);
+    -fx-background-image: url("minForLogin.png");
+    -fx-effect: dropshadow( three-pass-box , #F4F460 , 5 , 0.0 , 0 , 0 );
+}
+#StartButton{
+    -fx-background-radius: 50%;
+    -fx-background-color: rgba(0,0,0,0);
+    -fx-background-image: url("start-off.png");
+    -fx-background-position: center;
+    -fx-background-repeat: no-repeat;
+}
+#StartButton:hover{
+    -fx-effect: dropshadow( three-pass-box , #F4F460 , 2 , 0.0 , 0 , 0 );
+}
+#TextArea{
+    -fx-color: #444444;
+}
+/*-----------------------          Basic Settings    End          -----------------------*/
+
+
+
+
+#UILabel{
+    -fx-alignment: center;
+    -fx-text-fill: #F4F460;
+    -fx-font-size: 34px;
+    -fx-effect: dropshadow( three-pass-box , #F4F460 , 5 , 0.0 , 0 , 0 );
+
+}
+
+
+
+
+
+
+
+
+/*-----------------------          ErrorMessage   Begin            -----------------------*/
+
+#ErrorText{
+    -fx-alignment: center;
+    -fx-background-color: rgba(0,0,0,0);
+    -fx-background-image: url("errorImage.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: left ;
+}
+
+/*-----------------------          ErrorMessage    End           -----------------------*/

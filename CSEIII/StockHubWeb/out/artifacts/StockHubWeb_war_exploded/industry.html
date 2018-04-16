@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>行业</title>
+    <!-- mobile apps -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="keywords" content="" />
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <!-- //mobile apps -->
+    <!-- Custom Theme files -->
+    <link href="css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
+    <link href="css/style.css" type="text/css" rel="stylesheet" media="all">
+    <!-- //Custom Theme files -->
+    <!-- js -->
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <!-- //js -->
+    <!-- web-fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Buda:300' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,300italic,400italic,700,700italic' rel='stylesheet' type='text/css'>
+    <!-- //web-fonts -->
+    <!-- start-smooth-scrolling -->
+    <script type="text/javascript" src="js/move-top.js"></script>
+    <script type="text/javascript" src="js/easing.js"></script>
+    <script type="text/javascript">
+        jQuery(document).ready(function($) {
+            $(".scroll").click(function(event){
+                event.preventDefault();
+
+                $('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+            });
+        });
+    </script>
+
+    <script src="js/dist/echarts-all.js"></script>
+    <script src="js/industryJS/industry.js"></script>
+
+    <!-- //end-smooth-scrolling -->
+</head>
+<body onload="initWholeIndustry()">
+<!-- banner -->
+<div class="banner">
+    <div class="banner-info">
+        <div class="banner-top">
+            <div class="container">
+                <div class="banner-top-grids banner-top-left">
+                    <ul class="social-icons">
+
+                    </ul>
+                </div>
+                <div class="banner-top-grids banner-logo" >
+                    <a href="index.html">
+                        <img src="images/1-2.png" alt=""/>
+                        <h1>StockHub </h1>
+                        <p>Do the best investment.</p>
+                    </a>
+                </div>
+                <div class="banner-top-grids banner-top-right ">
+                    <div id="loginInOrOutDiv" class="pull-right">
+                        <span class="glyphicon glyphicon-globe col-md-3" style="font-size:28px;color:orange;margin-top: 10px;margin-right: 5px"></span>
+                        <div id="buttonDiv" class="btn-group col-md-7" style="background: #00000000" >
+                            <!--<button type="button" class="btn  dropdown-toggle" data-toggle="dropdown">-->
+                            <!--登录 <span class="caret"></span>-->
+                            <!--</button>-->
+                            <button id="userButton" class="btn btn-primary btn-lg" data-toggle="modal">
+                                登录
+                            </button>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+        </div>
+        <!-- banner-text -->
+        <div class="banner-text about-banner-text">
+            <h2>
+                <ol class="breadcrumb">
+                    <li><a href="index.html">主页</a></li>
+                    <li class="active">行业</li>
+                </ol>
+            </h2>
+        </div>
+        <!-- //banner-text -->
+        <!-- top-navigation -->
+        <div class="main ">
+            <div class="container">
+                <nav id="menu" class="nav top-nav" style="margin-left:15%!important;margin-right:0%!important;">
+                    <button  class="navtoogle">
+                        <span class="icon-menu glyphicon glyphicon-menu-hamburger"> </span> Menu
+                    </button>
+                    <ul>
+                        <li>
+                            <a href="index.html">
+									<span class="icon">
+										<i aria-hidden="true" class="icon-home glyphicon glyphicon-home"></i>
+									</span>
+                                <span>主页</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="industry.html" onclick="$('#section-2').animatescroll();">
+									<span class="icon">
+										<i aria-hidden="true" class="icon-portfolio glyphicon glyphicon-cog"></i>
+									</span>
+                                <span>行业</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="stock.html" onclick="$('#section-3').animatescroll();">
+									<span class="icon">
+										<i aria-hidden="true" class="icon-blog glyphicon glyphicon-picture"></i>
+									</span>
+                                <span>股票</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="strategy.html" onclick="$('#section-4').animatescroll();">
+									<span class="icon">
+										<i aria-hidden="true" class="icon-team glyphicon glyphicon-check"></i>
+									</span>
+                                <span>策略</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="user.html" onclick="$('#section-5').animatescroll();">
+									<span class="icon">
+										<i aria-hidden="true" class="icon-contact glyphicon glyphicon-envelope"></i>
+									</span>
+                                <span>用户</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- script-for-menu -->
+                <script>
+                    $(".navtoogle").click(function(){
+                        $(".top-nav ul").slideToggle("slow" , function(){
+                        });
+                    });
+                </script>
+                <!-- //script-for-menu -->
+                <script src="js/modernizr.custom.js"></script>
+            </div>
+        </div>
+        <!-- //top-navigation -->
+        <div class="clearfix"> </div>
+    </div>
+</div>
+<!-- //banner -->
+
+
+<!--登录、注册、找回页面-->
+<div id="loginDiv" class="modal fade"  tabindex="-2" role="dialog" aria-labelledby="loginTitle" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button id="loginCloseButton" data-dismiss="modal" type="button" class="close" >x</button>
+                <h1 id="loginTitle" class="text-center text-primarymodal-title">登录</h1>
+            </div>
+            <div class="modal-body">
+                <!--<form action="" class="form col-md-12 center-block">-->
+
+                <input id="loginAccount" type="text" class="form-control  input-lg" placeholder="账户名">
+
+                <input id="loginPassword" type="password" class="form-control  input-lg"  placeholder="登录密码">
+
+                <button id="loginNowButton" class="btn btn-primary btn-lg btn-block">立刻登录</button>
+
+                <!--</form>-->
+            </div>
+            <div class="modal-footer">
+                <span><a id="loginA1" data-toggle="modal" href="#resetDiv" class="pull-left">重设密码</a></span>
+                <span><a id="loginA2" data-toggle="modal" href="#registerDiv" class="pull-right">注册</a></span>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="registerDiv" class="modal fade"  tabindex="-1" role="dialog" aria-labelledby="registerTitle" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button id="registerCloseButton" data-dismiss="modal" type="button" class="close" >x</button>
+                <h1 id="registerTitle" class="text-center text-primarymodal-title">注册</h1>
+            </div>
+            <div class="modal-body">
+                <!--<form action="" class="form col-md-12 center-block">-->
+
+                <input id="registerAccount" type="text" class="form-control  input-lg" placeholder="设置账号名（以字母开头的数字和字母的组合）">
+                <input id="registerUserName" type="text" class="form-control  input-lg" placeholder="设置用户名">
+                <input id="registerPassword" type="password" class="form-control  input-lg"  placeholder="密码">
+                <input id="registerPassword2" type="password" class="form-control  input-lg"  placeholder="确认密码">
+
+                <button id="registerNowButton" class="btn btn-primary btn-lg btn-block">立刻注册</button>
+                <!--</form>-->
+            </div>
+            <div class="modal-footer">
+                <span><a id="registerA1" data-toggle="modal" href="#loginDiv" class="pull-left">登录</a></span>
+                <span><a id="registerA2" data-toggle="modal" href="#resetDiv" class="pull-right">重设密码</a></span>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="resetDiv" class="modal fade"  tabindex="-3" role="dialog" aria-labelledby="resetTitle" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button id="resetCloseButton" data-dismiss="modal" type="button" class="close" >x</button>
+                <h1 id="resetTitle" class="text-center text-primarymodal-title">重设密码</h1>
+            </div>
+            <div class="modal-body">
+                <!--<form action="" class="form col-md-12 center-block">-->
+                <input id="resetAccount" type="text" class="form-control  input-lg" placeholder="账户名">
+                <input id="resetPassword" type="password" class="form-control  input-lg"  placeholder="原密码">
+                <input id="resetPassword2" type="password" class="form-control  input-lg"  placeholder="新密码">
+                <input id="resetPassword3" type="password" class="form-control  input-lg"  placeholder="确认密码">
+                <button id="resetNowButton" class="btn btn-primary btn-lg btn-block">立刻修改</button>
+                <!--</form>-->
+            </div>
+            <div class="modal-footer">
+                <span><a id="resetA1" data-toggle="modal" href="#loginDiv" class="pull-left">登录</a></span>
+                <span><a id="resetA2" data-toggle="modal" href="#registerDiv" class="pull-right">注册</a></span>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!--登录、注册、找回页面-->
+
+<div class="codes">
+    <div class="container">
+    <!--左边的网页，占网页大小的2/3-->
+    <div class="col-md-7">
+        <div style="height: 35px;"></div>
+        <div>
+            <h3 class="hdg">行业一览</h3>
+            <div class="bs-docs-example ">
+                <table id="allIndustryTable" class="table table-bordered">
+                </table>
+            </div>
+        </div>
+
+        <div class="home__stock-index__item">
+            <!--行业整体饼状图图表-->
+            <div id="industryWholePieChart"  style="height: 350px;width: 600px; ">
+            </div>
+            <!--//行业整体饼状图图表-->
+        </div>
+
+        <!--行业下面的表格-->
+        <div class="bs-docs-example ">
+            <table id="industryTotalInfo" class="table table-hover">
+            </table>
+        </div>
+        <!--//行业下面的表格-->
+    </div>
+    <!--//左边的网页，占网页大小的2/3-->
+
+    <!--右边的网页，占网页大小的1/3，放各种榜单-->
+    <div class="col-md-5">
+        <!--行情排行榜-->
+        <div class="grid_3 grid_5 ">
+            <h3 class="hdg">行情排行榜</h3>
+            <div class="bs-example bs-example-tabs" role="tabpanel" data-example-id="togglable-tabs">
+                <ul id="myTab1" class="nav nav-tabs" role="tablist">
+                    <li role="presentation" class="active"><a href="#home1" id="home-tab1" role="tab" data-toggle="tab" aria-controls="home" aria-expanded="true">涨幅榜</a></li>
+                    <li role="presentation"><a href="#profile1" role="tab" id="profile-tab1" data-toggle="tab" aria-controls="profile">跌幅榜</a></li>
+                    <li role="presentation"><a href="#dropdown3" role="tab" id="profile-tab2" data-toggle="tab" aria-controls="profile">成交量榜</a></li>
+                    <li role="presentation"><a href="#dropdown4" role="tab" id="profile-tab3" data-toggle="tab" aria-controls="profile">潜力榜</a></li>
+                </ul>
+                <div id="myTabContent1" class="tab-content">
+                    <div role="tabpanel" class="tab-pane fade in active" id="home1" aria-labelledby="home-tab">
+                        <div class="bs-docs-example ">
+                            <table id="increaseTotalTable" class="table table-hover">
+                            </table>
+                        </div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane fade" id="profile1" aria-labelledby="profile-tab">
+                        <table id="decreaseTotalTable" class="table table-hover">
+                        </table>
+                    </div>
+                    <div role="tabpanel" class="tab-pane fade" id="dropdown3" aria-labelledby="dropdown1-tab">
+                        <table id="volumeTotalTable" class="table table-hover">
+                        </table>
+                    </div>
+                    <div role="tabpanel" class="tab-pane fade" id="dropdown4" aria-labelledby="dropdown2-tab">
+                        <table id="potentialTotalTable" class="table table-hover">
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!--//右边的网页，占网页大小的1/3，放各种榜单-->
+    </div>
+</div>
+
+<!-- slid -->
+<div class="slid about-w3ls-slid">
+    <div class="container">
+        <h3>对于理性投资者来说，要获得稳定持续的高收益，找到永不过时的行业很重要，但同样重要的是，在这个行业处于市场预期低估或被大众忽略时买入才能最终获得成功。  </h3>
+    </div>
+</div>
+<!-- //slid -->
+
+
+<!-- footer -->
+<div class="footer">
+    <div class="container">
+        <div class="footer-wthree-nav">
+            <ul>
+                <li><a href="index.html">主页</a></li>
+                <li><a href="industry.html">行业</a></li>
+                <li><a href="stock.html">股票</a></li>
+                <li><a href="strategy.html">策略</a></li>
+                <li><a href="user.html">用户</a></li>
+            </ul>
+        </div>
+        <div class="footer-w3lsrow" style="margin-bottom: 20px;">
+            <div class="col-md-4 footer-grids footer-address">
+                <h3>Contact Us :</h3>
+                <ul>
+                    <li style="margin-bottom: 20px;"><i class="glyphicon glyphicon-envelope"></i> 151250006@smail.nju.edu.cn </li>
+                    <li style="margin-bottom: 20px;"><i class="glyphicon glyphicon-envelope"></i> 151250011@smail.nju.edu.cn </li>
+                    <li style="margin-bottom: 20px;"><i class="glyphicon glyphicon-envelope"></i> 151250013@smail.nju.edu.cn </li>
+                    <li style="margin-bottom: 15px;"><i class="glyphicon glyphicon-envelope"></i> 151099149@smail.nju.edu.cn </li>
+                    <li></li>
+                </ul>
+            </div>
+            <div class="col-md-4 footer-grids subscribe">
+                <h3>Join Us :</h3><br><br>
+                <form action="#" method="post">
+                    <input type="text" name="Email" placeholder="Your Email" required="">
+                    <input type="submit" value="Subscribe">
+                </form>
+                <div class="clearfix"> </div>
+            </div>
+            <div class="col-md-4 footer-grids footer-address footer-icons" style="alignment: right;" >
+                <!--footer-icons-->
+                <h3>Follow Us :</h3>
+                <ul ><br><br>
+                    <!--class="social-icons"-->
+                    <li>曹鸿荣</li>
+                    <li>常德隆</li>
+                    <li>陈进</li>
+                    <li>武秀峰</li>
+                </ul>
+                <div class="clearfix"> </div>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+    </div>
+</div>
+<!-- //footer -->
+<!-- smooth-scrolling-of-move-up -->
+<script type="text/javascript">
+    $(document).ready(function() {
+        /*
+         var defaults = {
+         containerID: 'toTop', // fading element id
+         containerHoverID: 'toTopHover', // fading element hover id
+         scrollSpeed: 1200,
+         easingType: 'linear'
+         };
+         */
+
+        $().UItoTop({ easingType: 'easeOutQuart' });
+
+    });
+</script>
+<!-- //smooth-scrolling-of-move-up -->
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="js/bootstrap.js"></script>
+<script src="js/StockBlSer/logInOutOrRegister.js"></script>
+</body>
+</html>

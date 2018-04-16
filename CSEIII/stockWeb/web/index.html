@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>主页</title>
+    <!-- mobile apps -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="" />
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <!-- //mobile apps -->
+    <!-- Custom Theme files -->
+    <link href="css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
+    <link href="css/style.css" type="text/css" rel="stylesheet" media="all">
+    <link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" />
+    <!-- //Custom Theme files -->
+    <!-- js -->
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <!-- //js -->
+    <!-- web-fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Buda:300' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,300italic,400italic,700,700italic' rel='stylesheet' type='text/css'>
+    <!-- //web-fonts -->
+    <!-- start-smooth-scrolling -->
+    <script type="text/javascript" src="js/move-top.js"></script>
+    <script type="text/javascript" src="js/easing.js"></script>
+    <script type="text/javascript">
+        jQuery(document).ready(function($) {
+            $(".scroll").click(function(event){
+                event.preventDefault();
+
+                $('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+            });
+        });
+    </script>
+    <!-- //end-smooth-scrolling -->
+</head>
+<body>
+<!-- banner -->
+<div class="banner">
+    <div class="banner-info">
+        <div class="banner-top">
+            <div class="container">
+                <div class="banner-top-grids banner-top-left">
+                    <ul class="social-icons">
+                        empty
+                    </ul>
+                </div>
+                <div class="banner-top-grids banner-logo" >
+                    <a href="index.html">
+                        <img src="images/1-2.png" alt=""/>
+                        <h1>StockHub </h1>
+                        <p>Do the best investment.</p>
+                    </a>
+                </div>
+                <div class="banner-top-grids banner-top-right">
+                    <p><span class="glyphicon glyphicon-globe"></span> StockHubers </p>
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+        </div>
+        <!-- banner-text -->
+        <div class="banner-text about-banner-text">
+            <h2>StockHub</h2><br>
+        </div>
+        <!-- //banner-text -->
+        <!-- top-navigation -->
+        <div class="main">
+            <div class="container">
+                <nav id="menu" class="nav top-nav">
+                    <button  class="navtoogle">
+                        <span class="icon-menu glyphicon glyphicon-menu-hamburger"> </span> Menu
+                    </button>
+                    <ul>
+                        <li>
+                            <a href="index.html">
+									<span class="icon">
+										<i aria-hidden="true" class="icon-home glyphicon glyphicon-home"></i>
+									</span>
+                                <span>主页</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="plate.html" onclick="$('#section-2').animatescroll();">
+									<span class="icon">
+										<i aria-hidden="true" class="icon-services glyphicon glyphicon-info-sign"></i>
+									</span>
+                                <span>板块</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="industry.html" onclick="$('#section-3').animatescroll();">
+									<span class="icon">
+										<i aria-hidden="true" class="icon-portfolio glyphicon glyphicon-cog"></i>
+									</span>
+                                <span>行业</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="stock.html" onclick="$('#section-4').animatescroll();">
+									<span class="icon">
+										<i aria-hidden="true" class="icon-blog glyphicon glyphicon-picture"></i>
+									</span>
+                                <span>股票</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="strategy.html" onclick="$('#section-5').animatescroll();">
+									<span class="icon">
+										<i aria-hidden="true" class="icon-team glyphicon glyphicon-check"></i>
+									</span>
+                                <span>策略</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="user.html" onclick="$('#section-6').animatescroll();">
+									<span class="icon">
+										<i aria-hidden="true" class="icon-contact glyphicon glyphicon-envelope"></i>
+									</span>
+                                <span>用户</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- script-for-menu -->
+                <script>
+                    $(".navtoogle").click(function(){
+                        $(".top-nav ul").slideToggle("slow" , function(){
+                        });
+                    });
+                </script>
+                <!-- //script-for-menu -->
+                <script src="js/modernizr.custom.js"></script>
+            </div>
+        </div>
+        <!-- //top-navigation -->
+        <div class="clearfix"> </div>
+    </div>
+</div>
+<!-- //banner -->
+
+<!--主页主体部分-->
+<div class="codes">
+    <div class="container">
+        <!--左边的网页，占网页大小的2/3-->
+        <div class="col-md-8">
+            <!--三个板指数据的图表，要做到和雪球一样的版式-->
+            <div class="container_12">
+                <div class="home__stock-index">
+                    <div class="home__stock-index__item col-md-4">
+                        <!--板指数据-->
+                        <a class="type" href="/S/SH000001" target="_blank">
+                            <h5>上证指数</h5>
+                            <div class="current">3083.51</div>
+                            <div class="growth"> <i>+</i>0.72%(<i>+</i>22.01)</div>
+                        </a>
+                        <!--板指简易图表-->
+                        <a class="chart" href="/S/SH000001" target="_blank">
+                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" id="SH000001">
+                                <path class="last-close" d="M0 16L70 16" stroke="#666c72" stroke-linecap="round" stroke-width="1" stroke-dasharray="3,3" fill="none" data-value="3061.5"></path>
+                            </svg>
+                        </a>
+                    </div>
+
+                    <div class="home__stock-index__item col-md-4">
+                        <a class="type" href="/S/SZ399006" target="_blank">
+                            <h5>创业板指</h5>
+                            <div class="current">1774.63</div>
+                            <div class="growth"> <i>+</i>0.13%(<i>+</i>2.22)</div>
+                        </a>
+                        <a class="chart" href="/S/SZ399006" target="_blank">
+                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" id="SZ399006">
+                                <path class="last-close" d="M0 16L70 16" stroke="#666c72" stroke-linecap="round" stroke-width="1" stroke-dasharray="3,3" fill="none" data-value="1772.41"></path>
+                            </svg>
+                        </a>
+                    </div>
+
+                    <div class="home__stock-index__item col-md-4">
+                        <a class="type" href="/S/HKHSI" target="_blank">
+                            <h5>恒生指数</h5>
+                            <div class="current">25156.34</div>
+                            <div class="growth"> <i>+</i>0.12%(<i>+</i>30.79)</div>
+                        </a>
+                        <a class="chart" href="/S/HKHSI" target="_blank">
+                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" id="HKHSI">
+                                <path class="last-close" d="M0 16L70 16" stroke="#666c72" stroke-linecap="round" stroke-width="1" stroke-dasharray="3,3" fill="none" data-value="25125.55"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!--//三个板指数据的图表，要做到和雪球一样的版式-->
+
+            <!--新闻区-->
+            <div class="grid_3 grid_5 ">
+                <h3 class="hdg">新闻</h3>
+                <div class="bs-example bs-example-tabs" role="tabpanel" data-example-id="togglable-tabs">
+                    <ul id="myTab" class="nav nav-tabs" role="tablist">
+                        <li role="presentation" class="active"><a href="#home" id="home-tab" role="tab" data-toggle="tab" aria-controls="home" aria-expanded="true">头条</a></li>
+                        <li role="presentation"><a href="#profile" role="tab" id="profile-tab" data-toggle="tab" aria-controls="profile">突发</a></li>
+                        <li role="presentation" class="dropdown">
+                            <a href="#" id="myTabDrop1" class="dropdown-toggle" data-toggle="dropdown" aria-controls="myTabDrop1-contents">其他 <span class="caret"></span></a>
+                            <ul class="dropdown-menu" role="menu" aria-labelledby="myTabDrop1" id="myTabDrop1-contents">
+                                <li><a href="#dropdown1" tabindex="-1" role="tab" id="dropdown1-tab" data-toggle="tab" aria-controls="dropdown1">消息速递</a></li>
+                                <li><a href="#dropdown2" tabindex="-1" role="tab" id="dropdown2-tab" data-toggle="tab" aria-controls="dropdown2">业内新秀</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <div id="myTabContent" class="tab-content">
+                        <!--头条内容-->
+                        <div role="tabpanel" class="tab-pane fade in active" id="home" aria-labelledby="home-tab">
+                            <div class="well">
+                                新浪财经金牌董秘评选中：四大快递追逐激烈（名单）
+                            </div>
+                            <div class="well">
+                                金徽酒分销数据遭疑连发三公告澄清 媒体：报道真实
+                            </div>
+                            <div class="well">
+                                美银美林调查：做多科技股成全球最热门交易
+                            </div>
+                        </div>
+
+                        <!--突发内容-->
+                        <div role="tabpanel" class="tab-pane fade" id="profile" aria-labelledby="profile-tab">
+                            <div class="well">
+                                北京总规划将上报中央审定 机构:中央政务区呼之欲出
+                            </div>
+                            <div class="well">
+                                年内最后一波降费向电价等开刀 总理称军中无戏言
+                            </div>
+                            <div class="well">
+                                多部门或出新政限煤炭进口 力争迎峰度夏前回落570元
+                            </div>
+                        </div>
+
+                        <!--剩下的两个选择框-->
+                        <div role="tabpanel" class="tab-pane fade" id="dropdown1" aria-labelledby="dropdown1-tab">
+                            <div class="well">
+                                北京总规划将上报中央审定 机构:中央政务区呼之欲出
+                            </div>
+                            <div class="well">
+                                年内最后一波降费向电价等开刀 总理称军中无戏言
+                            </div>
+                            <div class="well">
+                                多部门或出新政限煤炭进口 力争迎峰度夏前回落570元
+                            </div>
+                        </div>
+                        <div role="tabpanel" class="tab-pane fade" id="dropdown2" aria-labelledby="dropdown2-tab">
+                            <div class="well">
+                                北京总规划将上报中央审定 机构:中央政务区呼之欲出
+                            </div>
+                            <div class="well">
+                                年内最后一波降费向电价等开刀 总理称军中无戏言
+                            </div>
+                            <div class="well">
+                                多部门或出新政限煤炭进口 力争迎峰度夏前回落570元
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--//新闻区-->
+        </div>
+        <!--//左边的网页，占网页大小的2/3-->
+
+        <!--右边的网页，占网页大小的1/3，放各种榜单-->
+        <div class="col-md-4">
+            <!--行情排行榜-->
+            <div class="grid_3 grid_5 ">
+                <h3 class="hdg">行情排行榜</h3>
+                <div class="bs-example bs-example-tabs" role="tabpanel" data-example-id="togglable-tabs">
+                    <ul id="myTab1" class="nav nav-tabs" role="tablist">
+                        <li role="presentation" class="active"><a href="#home" id="home-tab1" role="tab" data-toggle="tab" aria-controls="home" aria-expanded="true">涨幅榜</a></li>
+                        <li role="presentation"><a href="#profile" role="tab" id="profile-tab1" data-toggle="tab" aria-controls="profile">跌幅榜</a></li>
+                        <li role="presentation"><a href="#profile" role="tab" id="profile-tab2" data-toggle="tab" aria-controls="profile">成交量榜</a></li>
+                        <li role="presentation"><a href="#profile" role="tab" id="profile-tab3" data-toggle="tab" aria-controls="profile">潜力榜</a></li>
+                    </ul>
+                    <div id="myTabContent1" class="tab-content">
+                        <div role="tabpanel" class="tab-pane fade in active" id="home1" aria-labelledby="home-tab">
+                            <div class="bs-docs-example ">
+                                <table class="table table-hover">
+                                    <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>代码</th>
+                                        <th>名称</th>
+                                        <th>涨幅</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>000001</td>
+                                        <td>Otto</td>
+                                        <td>1.32%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>000002</td>
+                                        <td>Thornton</td>
+                                        <td>2.11%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>000003</td>
+                                        <td>Larry the Bird</td>
+                                        <td>0.12%</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div role="tabpanel" class="tab-pane fade" id="profile1" aria-labelledby="profile-tab">
+                            <table class="table table-hover">
+                                <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>代码</th>
+                                    <th>名称</th>
+                                    <th>涨幅</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>K100001</td>
+                                    <td>Otto</td>
+                                    <td>-7.22%</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>000002</td>
+                                    <td>Ronton</td>
+                                    <td>-6.11%</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>000009</td>
+                                    <td>Strup</td>
+                                    <!--colspan="2"-->
+                                    <td>-5.12%</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div role="tabpanel" class="tab-pane fade" id="dropdown3" aria-labelledby="dropdown1-tab">
+                            <table class="table table-hover">
+                                <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>代码</th>
+                                    <th>名称</th>
+                                    <th>涨幅</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>000001</td>
+                                    <td>Oley</td>
+                                    <td>12.5</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>000002</td>
+                                    <td>Monton</td>
+                                    <td>10.2</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>000003</td>
+                                    <td>Laris</td>
+                                    <td>7.3</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div role="tabpanel" class="tab-pane fade" id="dropdown4" aria-labelledby="dropdown2-tab">
+                            <table class="table table-hover">
+                                <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>代码</th>
+                                    <th>名称</th>
+                                    <th>涨幅</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>K000169</td>
+                                    <td>Strup</td>
+                                    <td>9.32%</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>M100723</td>
+                                    <td>Conon</td>
+                                    <td>6.11%</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>L010230</td>
+                                    <td>Boots</td>
+                                    <td>4.12%</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--投资参考-->
+            <div class="grid_3 grid_5 ">
+                <h3 class="hdg">投资参考</h3>
+                <div class="well">
+                    北京总规划将上报中央审定 机构:中央政务区呼之欲出
+                </div>
+                <div class="well">
+                    年内最后一波降费向电价等开刀 总理称军中无戏言
+                </div>
+                <div class="well">
+                    多部门或出新政限煤炭进口 力争迎峰度夏前回落570元
+                </div>
+            </div>
+        </div>
+        <!--//右边的网页，占网页大小的1/3，放各种榜单-->
+    </div>
+</div>
+<!--主页主体部分-->
+
+<!-- slid -->
+<div class="slid about-w3ls-slid">
+    <div class="container">
+        <h3>对于理性投资者来说，要获得稳定持续的高收益，找到永不过时的行业很重要，但同样重要的是，在这个行业处于市场预期低估或被大众忽略时买入才能最终获得成功。  </h3>
+    </div>
+</div>
+<!-- //slid -->
+
+
+<!-- footer -->
+<div class="footer">
+    <div class="container">
+        <div class="footer-wthree-nav">
+            <ul>
+                <li><a href="index.html">主页</a></li>
+                <li><a href="plate.html">板块</a></li>
+                <li><a href="industry.html">行业</a></li>
+                <li><a href="stock.html">股票</a></li>
+                <li><a href="strategy.html">策略</a></li>
+                <li><a href="user.html">用户</a></li>
+            </ul>
+        </div>
+        <div class="footer-w3lsrow" style="margin-bottom: 20px;">
+            <div class="col-md-4 footer-grids footer-address">
+                <h3>Contact Us :</h3>
+                <ul>
+                    <li style="margin-bottom: 20px;"><i class="glyphicon glyphicon-envelope"></i> 151250006@smail.nju.edu.cn </li>
+                    <li style="margin-bottom: 20px;"><i class="glyphicon glyphicon-envelope"></i> 151250011@smail.nju.edu.cn </li>
+                    <li style="margin-bottom: 20px;"><i class="glyphicon glyphicon-envelope"></i> 151250013@smail.nju.edu.cn </li>
+                    <li style="margin-bottom: 15px;"><i class="glyphicon glyphicon-envelope"></i> 151099149@smail.nju.edu.cn </li>
+                    <li></li>
+                </ul>
+            </div>
+            <div class="col-md-4 footer-grids subscribe">
+                <h3>Join Us :</h3><br><br>
+                <form action="#" method="post">
+                    <input type="text" name="Email" placeholder="Your Email" required="">
+                    <input type="submit" value="Subscribe">
+                </form>
+                <div class="clearfix"> </div>
+            </div>
+            <div class="col-md-4 footer-grids footer-address footer-icons" style="alignment: right;" >
+                <!--footer-icons-->
+                <h3>Follow Us :</h3>
+                <ul ><br><br>
+                    <!--class="social-icons"-->
+                    <li>曹鸿荣</li>
+                    <li>常德隆</li>
+                    <li>陈进</li>
+                    <li>武秀峰</li>
+                </ul>
+                <div class="clearfix"> </div>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+    </div>
+</div>
+<!-- //footer -->
+<!-- smooth-scrolling-of-move-up -->
+<script type="text/javascript">
+    $(document).ready(function() {
+        /*
+         var defaults = {
+         containerID: 'toTop', // fading element id
+         containerHoverID: 'toTopHover', // fading element hover id
+         scrollSpeed: 1200,
+         easingType: 'linear'
+         };
+         */
+
+        $().UItoTop({ easingType: 'easeOutQuart' });
+
+    });
+</script>
+<!-- //smooth-scrolling-of-move-up -->
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="js/bootstrap.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>策略</title>
+    <!-- mobile apps -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="" />
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <!-- //mobile apps -->
+    <!-- Custom Theme files -->
+    <link href="css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
+    <link href="css/style.css" type="text/css" rel="stylesheet" media="all">
+    <!-- //Custom Theme files -->
+    <!-- js -->
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <!-- //js -->
+    <!-- web-fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Buda:300' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,300italic,400italic,700,700italic' rel='stylesheet' type='text/css'>
+    <!-- //web-fonts -->
+    <!-- start-smooth-scrolling -->
+    <script type="text/javascript" src="js/move-top.js"></script>
+    <script type="text/javascript" src="js/easing.js"></script>
+    <script type="text/javascript">
+        jQuery(document).ready(function($) {
+            $(".scroll").click(function(event){
+                event.preventDefault();
+
+                $('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+            });
+        });
+    </script>
+    <script type="text/javascript" src="js/strategyJS/strategy.js"></script>
+    <!-- //end-smooth-scrolling -->
+</head>
+<body>
+<!-- banner -->
+<div class="banner about-banner">
+    <div class="banner-info">
+        <div class="banner-top">
+            <div class="container">
+                <div class="banner-top-grids banner-top-left">
+                    <ul class="social-icons">
+
+                    </ul>
+                </div>
+                <div class="banner-top-grids banner-logo">
+                    <a href="index.html">
+                        <img src="images/1.png" alt=""/>
+                        <h1>StockHub </h1>
+                        <p>Do the best investment.</p>
+                    </a>
+                </div>
+                <div class="banner-top-grids banner-top-right">
+                    <p><span class="glyphicon glyphicon-globe"></span> StockHubers </p>
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+        </div>
+        <!-- banner-text -->
+        <div class="banner-text about-banner-text">
+            <h2>
+                <ol class="breadcrumb">
+                    <li><a href="index.html">主页</a></li>
+                    <li class="active">策略</li>
+                </ol>
+            </h2>
+        </div>
+        <!-- //banner-text -->
+        <!-- top-navigation -->
+        <div class="main">
+            <div class="container">
+                <nav id="menu" class="nav top-nav">
+                    <button  class="navtoogle">
+                        <span class="icon-menu glyphicon glyphicon-menu-hamburger"> </span> Menu
+                    </button>
+                    <ul>
+                        <li>
+                            <a href="index.html">
+									<span class="icon">
+										<i aria-hidden="true" class="icon-home glyphicon glyphicon-home"></i>
+									</span>
+                                <span>主页</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="plate.html" onclick="$('#section-2').animatescroll();">
+									<span class="icon">
+										<i aria-hidden="true" class="icon-services glyphicon glyphicon-info-sign"></i>
+									</span>
+                                <span>板块</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="industry.html" onclick="$('#section-3').animatescroll();">
+									<span class="icon">
+										<i aria-hidden="true" class="icon-portfolio glyphicon glyphicon-cog"></i>
+									</span>
+                                <span>行业</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="stock.html" onclick="$('#section-4').animatescroll();">
+									<span class="icon">
+										<i aria-hidden="true" class="icon-blog glyphicon glyphicon-picture"></i>
+									</span>
+                                <span>股票</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="strategy.html" onclick="$('#section-5').animatescroll();">
+									<span class="icon">
+										<i aria-hidden="true" class="icon-team glyphicon glyphicon-check"></i>
+									</span>
+                                <span>策略</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="user.html" onclick="$('#section-6').animatescroll();">
+									<span class="icon">
+										<i aria-hidden="true" class="icon-contact glyphicon glyphicon-envelope"></i>
+									</span>
+                                <span>用户</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- script-for-menu -->
+                <script>
+                    $(".navtoogle").click(function(){
+                        $(".top-nav ul").slideToggle("slow" , function(){
+                        });
+                    });
+                </script>
+                <!-- //script-for-menu -->
+                <script src="js/modernizr.custom.js"></script>
+            </div>
+        </div>
+        <!-- //top-navigation -->
+        <div class="clearfix"> </div>
+    </div>
+</div>
+<!-- //banner -->
+<!--Short codes-->
+<div class="codes">
+    <div class="container">
+        <div>
+            <!--搜索区左边3/4区域-->
+            <div class="col-md-9">
+                <!-- 策略用户填充即搜索区域 -->
+                <div class="row ">
+                    <!--填充内容区域-->
+                    <div class="col-lg-10 in-gp-tl">
+                        <div class="col-lg-4 in-gp-tl">
+                            <tr>
+                                <nobr>策略</nobr>
+                                <select id="strategySelect" class="form-control" style="width: 80%">
+                                    <option value="0" selected="">动量策略</option>
+                                    <option value="1">均值回归策略</option>
+                                    <option value="2">MA择时策略</option>
+                                </select>
+                            </tr>
+                        </div>
+
+                        <div class="col-lg-3 in-gp-tl">
+                            <div class="input-group">
+                                <nobr>形成期</nobr>
+                                <input id="formationInput" type="text" class="form-control" style="width: 80%">
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 in-gp-tl">
+                            <div class="input-group">
+                                <nobr>开始日期</nobr>
+                                <input type="date" class="form-control" value="2016-11-01" min="2014-05-19" max="2017-06-15"/>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 in-gp-tl">
+                            <tr>
+                                <nobr>板块</nobr>
+                                <select id="plateSelect" class="form-control" style="width: 80%">
+                                    <option value="0" selected="">所有</option>
+                                    <option value="1">自选股</option>
+                                    <option value="2">主板</option>
+                                    <option value="3">中小板</option>
+                                    <option value="4">创业板</option>
+                                    <option value="5">上证</option>
+                                    <option value="6">深圳</option>
+                                    <option value="7">沪深</option>
+                                </select>
+                            </tr>
+                        </div>
+
+                        <div class="col-lg-3 in-gp-tl">
+                            <div class="input-group">
+                                <nobr>持有期</nobr>
+                                <input id="holdInput" type="text" class="form-control" style="width: 80%">
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 in-gp-tl">
+                            <div class="input-group">
+                                <nobr>结束日期</nobr>
+                                <input type="date" value="2017-06-15" class="form-control" min="2014-05-19" max="2017-06-15"/>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/填充内容区域-->
+                    <!--搜索按钮-->
+                    <div class="col-lg-2 in-gp-tl">
+                        <input type="image" src="images/搜索.png" width="30%" height="30%" onclick="searchStrategy()"/>
+                    </div>
+                    <!--/搜索按钮-->
+                </div>
+                <!-- /策略用户填充即搜索区域 -->
+            </div>
+            <!--//搜索区左边3/4区域-->
+
+            <!--搜索区右边1/4区域-->
+            <div class="col-md-9">
+                <div id="strategyRadar"></div>
+            </div>
+            <!--搜索区右边1/4区域-->
+
+
+            <!--左边3/4区域-->
+            <div class="col-md-9">
+                <!-- 策略具体 -->
+
+                <!--累计收益率比较图-->
+                <div>
+                    <div class="col-lg-2 in-gp-tl">
+                        <td>年化收益率</td><br>
+                        <td id="yearYieldRate">10%</td>
+                    </div>
+                    <div class="col-lg-2 in-gp-tl">
+                        <td>基准年化收益率</td><br>
+                        <td id="benchmarkYearYieldRate">20%</td>
+                    </div>
+                    <div class="col-lg-2 in-gp-tl">
+                        <td>阿尔法</td><br>
+                        <td id="alpha">30%</td>
+                    </div>
+                    <div class="col-lg-2 in-gp-tl">
+                        <td>贝塔</td><br>
+                        <td id="beta">40%</td>
+                    </div>
+                    <div class="col-lg-2 in-gp-tl">
+                        <td>夏普比率</td><br>
+                        <td id="sharpeRatio">50%</td>
+                    </div>
+                    <div class="col-lg-2 in-gp-tl">
+                        <td>最大回撤</td><br>
+                        <td id="maxWithdraw">60%</td>
+                    </div>
+                    <div id="yieldChart">
+
+                    </div>
+                </div>
+                <!--/累计收益率比较图-->
+
+                <!--最优形成期/持有期-->
+                <div></div>
+                <!--/最优形成期/持有期-->
+
+                <!--相对指数收益-->
+                <div></div>
+                <!--/相对指数收益-->
+
+                <!--策略结果显示区-->
+                <div>
+
+                </div>
+                <!--/策略结果显示区-->
+
+                <!-- /策略具体 -->
+            </div>
+            <!--//左边3/4区域-->
+
+            <!--右边1/4区域-->
+            <div class="col-md-3">
+                <!-- 讨论区 -->
+                <div class="grid_3 grid_5 ">
+                    <h3 class="hdg">讨论区</h3>
+                    <div class="well">
+                        There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration
+                    </div>
+                    <div class="well">
+                        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here
+                    </div>
+                    <div class="well">
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic
+                    </div>
+                </div>
+                <!-- //讨论区 -->
+            </div>
+            <!--//右边1/4区域-->
+
+        </div>
+    </div>
+</div>
+<!--//short-codes-->
+
+<!-- slid -->
+<div class="slid about-w3ls-slid">
+    <div class="container">
+        <h3>对于理性投资者来说，要获得稳定持续的高收益，找到永不过时的行业很重要，但同样重要的是，在这个行业处于市场预期低估或被大众忽略时买入才能最终获得成功。  </h3>
+    </div>
+</div>
+<!-- //slid -->
+
+<!-- footer -->
+<div class="footer">
+    <div class="container">
+        <div class="footer-wthree-nav">
+            <ul>
+                <li><a href="index.html">主页</a></li>
+                <li><a href="plate.html">板块</a></li>
+                <li><a href="industry.html">行业</a></li>
+                <li><a href="stock.html">股票</a></li>
+                <li><a href="strategy.html">策略</a></li>
+                <li><a href="user.html">用户</a></li>
+            </ul>
+        </div>
+        <div class="footer-w3lsrow" style="margin-bottom: 20px;">
+            <div class="col-md-4 footer-grids footer-address">
+                <h3>Contact Us :</h3>
+                <ul>
+                    <li style="margin-bottom: 20px;"><i class="glyphicon glyphicon-envelope"></i> 151250006@smail.nju.edu.cn </li>
+                    <li style="margin-bottom: 20px;"><i class="glyphicon glyphicon-envelope"></i> 151250011@smail.nju.edu.cn </li>
+                    <li style="margin-bottom: 20px;"><i class="glyphicon glyphicon-envelope"></i> 151250013@smail.nju.edu.cn </li>
+                    <li style="margin-bottom: 15px;"><i class="glyphicon glyphicon-envelope"></i> 151099149@smail.nju.edu.cn </li>
+                    <li></li>
+                </ul>
+            </div>
+            <div class="col-md-4 footer-grids subscribe">
+                <h3>Join Us :</h3><br><br>
+                <form action="#" method="post">
+                    <input type="text" name="Email" placeholder="Your Email" required="">
+                    <input type="submit" value="Subscribe">
+                </form>
+                <div class="clearfix"> </div>
+            </div>
+            <div class="col-md-4 footer-grids footer-address footer-icons" style="alignment: right;" >
+                <!--footer-icons-->
+                <h3>Follow Us :</h3>
+                <ul ><br><br>
+                    <!--class="social-icons"-->
+                    <li>曹鸿荣</li>
+                    <li>常德隆</li>
+                    <li>陈进</li>
+                    <li>武秀峰</li>
+                </ul>
+                <div class="clearfix"> </div>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+    </div>
+</div>
+<!-- //footer -->
+<!-- smooth-scrolling-of-move-up -->
+<script type="text/javascript">
+    $(document).ready(function() {
+        /*
+         var defaults = {
+         containerID: 'toTop', // fading element id
+         containerHoverID: 'toTopHover', // fading element hover id
+         scrollSpeed: 1200,
+         easingType: 'linear'
+         };
+         */
+
+        $().UItoTop({ easingType: 'easeOutQuart' });
+
+    });
+</script>
+<!-- //smooth-scrolling-of-move-up -->
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="js/bootstrap.js"></script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="lib1">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/out/artifacts/StockHubWeb_war_exploded/WEB-INF/lib/servlet-api.jar!/" />
+      <root url="jar://$PROJECT_DIR$/out/artifacts/StockHubWeb_war_exploded/WEB-INF/lib/org.json.jar!/" />
+      <root url="jar://$PROJECT_DIR$/out/artifacts/StockHubWeb_war_exploded/WEB-INF/lib/mysql-connector-java-5.1.22-bin.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

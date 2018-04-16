@@ -1,0 +1,1117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>板块</title>
+    <!-- mobile apps -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="" />
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <!-- //mobile apps -->
+    <!-- Custom Theme files -->
+    <link href="css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
+    <link href="css/style.css" type="text/css" rel="stylesheet" media="all">
+    <!-- //Custom Theme files -->
+    <!-- js -->
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <!-- //js -->
+    <!-- web-fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Buda:300' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,300italic,400italic,700,700italic' rel='stylesheet' type='text/css'>
+    <!-- //web-fonts -->
+    <!-- start-smooth-scrolling -->
+    <script type="text/javascript" src="js/move-top.js"></script>
+    <script type="text/javascript" src="js/easing.js"></script>
+    <script type="text/javascript">
+        jQuery(document).ready(function($) {
+            $(".scroll").click(function(event){
+                event.preventDefault();
+
+                $('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+            });
+        });
+    </script>
+    <!-- //end-smooth-scrolling -->
+</head>
+<body>
+<!-- banner -->
+<div class="banner about-banner">
+    <div class="banner-info">
+        <div class="banner-top">
+            <div class="container">
+                <div class="banner-top-grids banner-top-left">
+                    <ul class="social-icons">
+
+                    </ul>
+                </div>
+                <div class="banner-top-grids banner-logo">
+                    <a href="index.html">
+                        <img src="images/1.png" alt=""/>
+                        <h1>StockHub </h1>
+                        <p>Do the best investment.</p>
+                    </a>
+                </div>
+                <div class="banner-top-grids banner-top-right ">
+                    <div id="loginInOrOutDiv" class="pull-right">
+                        <span class="glyphicon glyphicon-globe col-md-4" style="font-size:30px;color:orange"></span>
+                        <div id="buttonDiv" class="btn-group col-md-7" style="background: #00000000">
+                            <!--<button type="button" class="btn  dropdown-toggle" data-toggle="dropdown">-->
+                            <!--登录 <span class="caret"></span>-->
+                            <!--</button>-->
+                            <button id="userButton" class="btn btn-primary btn-lg" data-toggle="modal">
+                                用户
+                            </button>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+        </div>
+        <!-- banner-text -->
+        <div class="banner-text about-banner-text">
+            <h2>
+                <ol class="breadcrumb">
+                    <li><a href="index.html">主页</a></li>
+                    <li class="active">板块</li>
+                </ol>
+            </h2>
+        </div>
+        <!-- //banner-text -->
+        <!-- top-navigation -->
+        <div class="main">
+            <div class="container">
+                <nav id="menu" class="nav top-nav">
+                    <button  class="navtoogle">
+                        <span class="icon-menu glyphicon glyphicon-menu-hamburger"> </span> Menu
+                    </button>
+                    <ul>
+                        <li>
+                            <a href="index.html">
+									<span class="icon">
+										<i aria-hidden="true" class="icon-home glyphicon glyphicon-home"></i>
+									</span>
+                                <span>主页</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="plate.html" onclick="$('#section-2').animatescroll();">
+									<span class="icon">
+										<i aria-hidden="true" class="icon-services glyphicon glyphicon-info-sign"></i>
+									</span>
+                                <span>板块</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="industry.html" onclick="$('#section-3').animatescroll();">
+									<span class="icon">
+										<i aria-hidden="true" class="icon-portfolio glyphicon glyphicon-cog"></i>
+									</span>
+                                <span>行业</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="stock.html" onclick="$('#section-4').animatescroll();">
+									<span class="icon">
+										<i aria-hidden="true" class="icon-blog glyphicon glyphicon-picture"></i>
+									</span>
+                                <span>股票</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="strategy.html" onclick="$('#section-5').animatescroll();">
+									<span class="icon">
+										<i aria-hidden="true" class="icon-team glyphicon glyphicon-check"></i>
+									</span>
+                                <span>策略</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="user.html" onclick="$('#section-6').animatescroll();">
+									<span class="icon">
+										<i aria-hidden="true" class="icon-contact glyphicon glyphicon-envelope"></i>
+									</span>
+                                <span>用户</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- script-for-menu -->
+                <script>
+                    $(".navtoogle").click(function(){
+                        $(".top-nav ul").slideToggle("slow" , function(){
+                        });
+                    });
+                </script>
+                <!-- //script-for-menu -->
+                <script src="js/modernizr.custom.js"></script>
+            </div>
+        </div>
+        <!-- //top-navigation -->
+        <div class="clearfix"> </div>
+    </div>
+</div>
+<!-- //banner -->
+
+<!--登录、注册、找回页面-->
+<div id="loginDiv" class="modal fade"  tabindex="-2" role="dialog" aria-labelledby="loginTitle" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button id="loginCloseButton" data-dismiss="modal" type="button" class="close" >x</button>
+                <h1 id="loginTitle" class="text-center text-primarymodal-title">登录</h1>
+            </div>
+            <div class="modal-body">
+                <!--<form action="" class="form col-md-12 center-block">-->
+
+                <input id="loginAccount" type="text" class="form-control  input-lg" placeholder="电子邮件/账户名/昵称">
+
+                <input id="loginPassword" type="password" class="form-control  input-lg"  placeholder="登录密码">
+
+                <button id="loginNowButton" class="btn btn-primary btn-lg btn-block">立刻登录</button>
+
+                <!--</form>-->
+            </div>
+            <div class="modal-footer">
+                <span><a id="loginA1" data-toggle="modal" href="#resetDiv" class="pull-left">找回密码</a></span>
+                <span><a id="loginA2" data-toggle="modal" href="#registerDiv" class="pull-right">注册</a></span>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="registerDiv" class="modal fade"  tabindex="-1" role="dialog" aria-labelledby="registerTitle" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button id="registerCloseButton" data-dismiss="modal" type="button" class="close" >x</button>
+                <h1 id="registerTitle" class="text-center text-primarymodal-title">注册</h1>
+            </div>
+            <div class="modal-body">
+                <!--<form action="" class="form col-md-12 center-block">-->
+
+                <input id="registerAccount" type="text" class="form-control  input-lg" placeholder="设置账号名（以字母开头的数字和字母的组合）">
+
+                <input id="registerPassword" type="password" class="form-control  input-lg"  placeholder="原密码">
+                <input id="registerPassword2" type="password" class="form-control  input-lg"  placeholder="新密码">
+                <input id="registerPassword3" type="password" class="form-control  input-lg"  placeholder="确认密码">
+
+                <button id="registerNowButton" class="btn btn-primary btn-lg btn-block">立刻注册</button>
+                <!--</form>-->
+            </div>
+            <div class="modal-footer">
+                <span><a id="registerA1" data-toggle="modal" href="#loginDiv" class="pull-left">登录</a></span>
+                <span><a id="registerA2" data-toggle="modal" href="#resetDiv" class="pull-right">找回密码</a></span>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="resetDiv" class="modal fade"  tabindex="-3" role="dialog" aria-labelledby="resetTitle" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button id="resetCloseButton" data-dismiss="modal" type="button" class="close" >x</button>
+                <h1 id="resetTitle" class="text-center text-primarymodal-title">找回密码</h1>
+            </div>
+            <div class="modal-body">
+                <!--<form action="" class="form col-md-12 center-block">-->
+                <input id="resetAccount" type="text" class="form-control  input-lg" placeholder="电子邮件/账户名/昵称">
+                <input id="resetPassword" type="password" class="form-control  input-lg"  placeholder="新密码">
+                <input id="resetPassword2" type="password" class="form-control  input-lg"  placeholder="确认密码">
+                <button id="resetNowButton" class="btn btn-primary btn-lg btn-block">立刻修改</button>
+                <!--</form>-->
+            </div>
+            <div class="modal-footer">
+                <span><a id="resetA1" data-toggle="modal" href="#loginDiv" class="pull-left">登录</a></span>
+                <span><a id="resetA2" data-toggle="modal" href="#registerDiv" class="pull-right">注册</a></span>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!--登录、注册、找回页面-->
+
+<!-- 三个板指 -->
+<div class="features">
+    <div class="container">
+        <div class="title">
+            <h3 id="H3ForAll">板块</h3>
+            <p id="PForAll">Duis euismod massa ut sem fringilla blandit. Proin vel enim nec ipsum finibus. </p>
+        </div>
+
+        <!-- 三个板指 -->
+        <div class="features-w3ls-row">
+            <!-- 主板板指 -->
+            <div class="col-md-4 features-grids">
+                <div id="MainBoard">
+                <div class="features-img">
+                    <img class="img-responsive" src="images/img2.jpg" alt="">
+                    <div class="captn">
+                        <p id="P1ForM"><span class="glyphicon glyphicon-map-marker"></span> </p>
+                        <p id="P2ForM"><span class="glyphicon glyphicon-map-marker"></span> </p>
+                        <p id="P3ForM"><span class="glyphicon glyphicon-map-marker"></span> </p>
+                        <p id="P4ForM"><span class="glyphicon glyphicon-map-marker"></span> </p>
+                    </div>
+                </div>
+                <div class="features-agile">
+                    <h4 id="H4ForM">$15,000</h4>
+                    <h6 id="H6ForM">主板板指</h6>
+                </div>
+                </div>
+            </div>
+            <!-- //主板板指 -->
+
+            <!-- 中小板板指 -->
+            <div class="col-md-4 features-grids">
+                <div id="StartUpBoard">
+                <div class="features-img">
+                    <img class="img-responsive" src="images/img3.jpg" alt="">
+                    <div class="captn">
+                        <p id="P1ForS"><span class="glyphicon glyphicon-map-marker"></span> </p>
+                        <p id="P2ForS"><span class="glyphicon glyphicon-map-marker"></span> </p>
+                        <p id="P3ForS"><span class="glyphicon glyphicon-map-marker"></span> </p>
+                        <p id="P4ForS"><span class="glyphicon glyphicon-map-marker"></span> </p>
+                    </div>
+                </div>
+                <div class="features-agile">
+                    <h4 id="H4ForS">$19,000</h4>
+                    <h6 id="H6ForS">中小板板指</h6>
+                </div>
+                </div>
+            </div>
+            <!-- //中小板板指 -->
+
+            <!-- 创业板板指 -->
+            <div class="col-md-4 features-grids">
+                <div id="SmeBoard">
+                <div class="features-img">
+                    <img class="img-responsive" src="images/img4.jpg" alt="">
+                    <div class="captn">
+                        <p id="P1ForSU"><span class="glyphicon glyphicon-map-marker"></span> </p>
+                        <p id="P2ForSU"><span class="glyphicon glyphicon-map-marker"></span> </p>
+                        <p id="P3ForSU"><span class="glyphicon glyphicon-map-marker"></span> </p>
+                        <p id="P4ForSU"><span class="glyphicon glyphicon-map-marker"></span> </p>
+                    </div>
+                </div>
+                <div class="features-agile">
+                    <h4 id="H4ForSU">$25,000</h4>
+                    <h6 id="H6ForSU">创业板板指</h6>
+                </div>
+                </div>
+            </div>
+            <!-- //创业板板指 -->
+
+            <div class="clearfix"> </div>
+        </div>
+        <!-- //三个板指 -->
+
+    </div>
+</div>
+<!-- //三个板指 -->
+
+<!-- 各板块的推荐的股票排行榜 -->
+<div class="codes">
+    <div class="container">
+        <div class="services-w3ls-row">
+            <!-- 主板 -->
+            <div class="col-md-4 services-grid">
+                <h3 class="hdg">主板排行榜</h3>
+                <div class="bs-example bs-example-tabs" role="tabpanel" data-example-id="togglable-tabs">
+                    <ul  class="nav nav-tabs" role="tablist">
+                        <li role="presentation" class="active"><a href="#IncreasePaneForM" id="IncreaseTabForM" role="tab" data-toggle="tab" aria-controls="home" aria-expanded="true">涨幅榜</a></li>
+                        <li role="presentation"><a href="#DecreasePaneForM" role="tab" id="DecreaseTabForM" data-toggle="tab" aria-controls="profile">跌幅榜</a></li>
+                        <li role="presentation"><a href="#DealPaneForM" role="tab" id="DealTabForM" data-toggle="tab" aria-controls="profile">成交量榜</a></li>
+                        <li role="presentation"><a href="#PotentialPaneForM" role="tab" id="PotentialTabForM" data-toggle="tab" aria-controls="profile">潜力榜</a></li>
+                    </ul>
+                    <div  class="tab-content">
+                        <div role="tabpanel" class="tab-pane fade in active" id="IncreasePaneForM" aria-labelledby="home-tab">
+                                <div id="IncreaseForM">
+                                <table class="table table-hover">
+                                    <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>代码</th>
+                                        <th>名称</th>
+                                        <th>涨幅</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>000001</td>
+                                        <td>Otto</td>
+                                        <td>1.32%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>000002</td>
+                                        <td>Thornton</td>
+                                        <td>2.11%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>000003</td>
+                                        <td>Larry the Bird</td>
+                                        <!--colspan="2"-->
+                                        <td>0.12%</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                                </div>
+
+                        </div>
+                        <div role="tabpanel" class="tab-pane fade" id="DecreasePaneForM" aria-labelledby="profile-tab">
+                            <div id="DecreaseForM">
+                            <table class="table table-hover">
+                                <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>代码</th>
+                                    <th>名称</th>
+                                    <th>涨幅</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>000001</td>
+                                    <td>Otto</td>
+                                    <td>1.32%</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>000002</td>
+                                    <td>Thornton</td>
+                                    <td>2.11%</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>000003</td>
+                                    <td>Larry the Bird</td>
+                                    <!--colspan="2"-->
+                                    <td>0.12%</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                            </div>
+                        </div>
+                        <div role="tabpanel" class="tab-pane fade" id="DealPaneForM" aria-labelledby="dropdown1-tab">
+                            <div id="DealForM">
+                            <table class="table table-hover">
+                                <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>代码</th>
+                                    <th>名称</th>
+                                    <th>涨幅</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>000001</td>
+                                    <td>Otto</td>
+                                    <td>1.32%</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>000002</td>
+                                    <td>Thornton</td>
+                                    <td>2.11%</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>000003</td>
+                                    <td>Larry the Bird</td>
+                                    <!--colspan="2"-->
+                                    <td>0.12%</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                            </div>
+                        </div>
+                        <div role="tabpanel" class="tab-pane fade" id="PotentialPaneForM" aria-labelledby="dropdown2-tab">
+                            <div id="PotentialForM">
+                            <table class="table table-hover">
+                                <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>代码</th>
+                                    <th>名称</th>
+                                    <th>涨幅</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>000001</td>
+                                    <td>Otto</td>
+                                    <td>1.32%</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>000002</td>
+                                    <td>Thornton</td>
+                                    <td>2.11%</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>000003</td>
+                                    <td>Larry the Bird</td>
+                                    <!--colspan="2"-->
+                                    <td>0.12%</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- //主板 -->
+
+            <!-- 中小板 -->
+            <div class="col-md-4 services-grid">
+                <h3 class="hdg">中小板排行榜</h3>
+                <div class="bs-example bs-example-tabs" role="tabpanel" data-example-id="togglable-tabs">
+                    <ul  class="nav nav-tabs" role="tablist">
+                        <li role="presentation" class="active"><a href="#IncreasePaneForS" id="IncreaseTabForS" role="tab" data-toggle="tab" aria-controls="home" aria-expanded="true">涨幅榜</a></li>
+                        <li role="presentation"><a href="#DecreasePaneForS" role="tab" id="DecreaseTabForS" data-toggle="tab" aria-controls="profile">跌幅榜</a></li>
+                        <li role="presentation"><a href="#DealPaneForS" role="tab" id="DealTabForS" data-toggle="tab" aria-controls="profile">成交量榜</a></li>
+                        <li role="presentation"><a href="#PotentialPaneForS" role="tab" id="PotentialTabForS" data-toggle="tab" aria-controls="profile">潜力榜</a></li>
+                    </ul>
+                    <div  class="tab-content">
+                        <div role="tabpanel" class="tab-pane fade in active" id="IncreasePaneForS" aria-labelledby="home-tab">
+                            <div id="IncreaseForS">
+                                <table class="table table-hover">
+                                    <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>代码</th>
+                                        <th>名称</th>
+                                        <th>涨幅</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>000001</td>
+                                        <td>Otto</td>
+                                        <td>1.32%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>000002</td>
+                                        <td>Thornton</td>
+                                        <td>2.11%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>000003</td>
+                                        <td>Larry the Bird</td>
+                                        <!--colspan="2"-->
+                                        <td>0.12%</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div role="tabpanel" class="tab-pane fade" id="DecreasePaneForS" aria-labelledby="profile-tab">
+                            <div id="DecreaseForS">
+                            <table class="table table-hover">
+                                <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>代码</th>
+                                    <th>名称</th>
+                                    <th>涨幅</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>000001</td>
+                                    <td>Otto</td>
+                                    <td>1.32%</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>000002</td>
+                                    <td>Thornton</td>
+                                    <td>2.11%</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>000003</td>
+                                    <td>Larry the Bird</td>
+                                    <!--colspan="2"-->
+                                    <td>0.12%</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                            </div>
+                        </div>
+                        <div role="tabpanel" class="tab-pane fade" id="DealPaneForS" aria-labelledby="dropdown1-tab">
+                            <div id="DealForS">
+                            <table class="table table-hover">
+                                <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>代码</th>
+                                    <th>名称</th>
+                                    <th>涨幅</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>000001</td>
+                                    <td>Otto</td>
+                                    <td>1.32%</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>000002</td>
+                                    <td>Thornton</td>
+                                    <td>2.11%</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>000003</td>
+                                    <td>Larry the Bird</td>
+                                    <!--colspan="2"-->
+                                    <td>0.12%</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                            </div>
+                        </div>
+                        <div role="tabpanel" class="tab-pane fade" id="PotentialPaneForS" aria-labelledby="dropdown2-tab">
+                            <div id="PotentialForS">
+                            <table class="table table-hover">
+                                <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>代码</th>
+                                    <th>名称</th>
+                                    <th>涨幅</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>000001</td>
+                                    <td>Otto</td>
+                                    <td>1.32%</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>000002</td>
+                                    <td>Thornton</td>
+                                    <td>2.11%</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>000003</td>
+                                    <td>Larry the Bird</td>
+                                    <!--colspan="2"-->
+                                    <td>0.12%</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- //中小板 -->
+
+            <!-- 创业板 -->
+            <div class="col-md-4 services-grid">
+                <h3 class="hdg">创业板排行榜</h3>
+                <div class="bs-example bs-example-tabs" role="tabpanel" data-example-id="togglable-tabs">
+                    <ul  class="nav nav-tabs" role="tablist">
+                        <li role="presentation" class="active"><a href="#IncreasePaneForSU" id="IncreaseTabForSU" role="tab" data-toggle="tab" aria-controls="home" aria-expanded="true">涨幅榜</a></li>
+                        <li role="presentation"><a href="#DecreasePaneForSU" role="tab" id="DecreaseTabForSU" data-toggle="tab" aria-controls="profile">跌幅榜</a></li>
+                        <li role="presentation"><a href="#DealPaneForSU" role="tab" id="DealTabForSU" data-toggle="tab" aria-controls="profile">成交量榜</a></li>
+                        <li role="presentation"><a href="#PotentialPaneForSU" role="tab" id="PotentialTabForSU" data-toggle="tab" aria-controls="profile">潜力榜</a></li>
+                    </ul>
+                    <div  class="tab-content">
+                        <div role="tabpanel" class="tab-pane fade in active" id="IncreasePaneForSU" aria-labelledby="home-tab">
+                            <div id="IncreaseForSU">
+                                <table class="table table-hover">
+                                    <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>代码</th>
+                                        <th>名称</th>
+                                        <th>涨幅</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>000001</td>
+                                        <td>Otto</td>
+                                        <td>1.32%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>000002</td>
+                                        <td>Thornton</td>
+                                        <td>2.11%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>000003</td>
+                                        <td>Larry the Bird</td>
+                                        <!--colspan="2"-->
+                                        <td>0.12%</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div role="tabpanel" class="tab-pane fade" id="DecreasePaneForSU" aria-labelledby="profile-tab">
+                            <div id="DecreaseForSU">
+                            <table class="table table-hover">
+                                <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>代码</th>
+                                    <th>名称</th>
+                                    <th>涨幅</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>000001</td>
+                                    <td>Otto</td>
+                                    <td>1.32%</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>000002</td>
+                                    <td>Thornton</td>
+                                    <td>2.11%</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>000003</td>
+                                    <td>Larry the Bird</td>
+                                    <!--colspan="2"-->
+                                    <td>0.12%</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                            </div>
+                        </div>
+                        <div role="tabpanel" class="tab-pane fade" id="DealPaneForSU" aria-labelledby="dropdown1-tab">
+                            <div id="DealForSU">
+                            <table class="table table-hover">
+                                <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>代码</th>
+                                    <th>名称</th>
+                                    <th>涨幅</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>000001</td>
+                                    <td>Otto</td>
+                                    <td>1.32%</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>000002</td>
+                                    <td>Thornton</td>
+                                    <td>2.11%</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>000003</td>
+                                    <td>Larry the Bird</td>
+                                    <!--colspan="2"-->
+                                    <td>0.12%</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                            </div>
+                        </div>
+                        <div role="tabpanel" class="tab-pane fade" id="PotentialPaneForSU" aria-labelledby="dropdown2-tab">
+                            <div id="PotentialForSU">
+                            <table class="table table-hover">
+                                <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>代码</th>
+                                    <th>名称</th>
+                                    <th>涨幅</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>000001</td>
+                                    <td>Otto</td>
+                                    <td>1.32%</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>000002</td>
+                                    <td>Thornton</td>
+                                    <td>2.11%</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>000003</td>
+                                    <td>Larry the Bird</td>
+                                    <!--colspan="2"-->
+                                    <td>0.12%</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- //创业板 -->
+
+            <div class="clearfix"> </div>
+        </div>
+    </div>
+</div>
+<!-- //板块 -->
+
+<!-- slid -->
+<div class="slid about-w3ls-slid">
+    <div class="container">
+        <h3>对于理性投资者来说，要获得稳定持续的高收益，找到永不过时的行业很重要，但同样重要的是，在这个行业处于市场预期低估或被大众忽略时买入才能最终获得成功。  </h3>
+    </div>
+</div>
+<!-- //slid -->
+
+<!-- footer -->
+<div class="footer">
+    <div class="container">
+        <div class="footer-wthree-nav">
+            <ul>
+                <li><a href="index.html">主页</a></li>
+                <li><a href="plate.html">板块</a></li>
+                <li><a href="industry.html">行业</a></li>
+                <li><a href="stock.html">股票</a></li>
+                <li><a href="strategy.html">策略</a></li>
+                <li><a href="user.html">用户</a></li>
+            </ul>
+        </div>
+        <div class="footer-w3lsrow" style="margin-bottom: 20px;">
+            <div class="col-md-4 footer-grids footer-address">
+                <h3>Contact Us :</h3>
+                <ul>
+                    <li style="margin-bottom: 20px;"><i class="glyphicon glyphicon-envelope"></i> 151250006@smail.nju.edu.cn </li>
+                    <li style="margin-bottom: 20px;"><i class="glyphicon glyphicon-envelope"></i> 151250011@smail.nju.edu.cn </li>
+                    <li style="margin-bottom: 20px;"><i class="glyphicon glyphicon-envelope"></i> 151250013@smail.nju.edu.cn </li>
+                    <li style="margin-bottom: 15px;"><i class="glyphicon glyphicon-envelope"></i> 151099149@smail.nju.edu.cn </li>
+                    <li></li>
+                </ul>
+            </div>
+            <div class="col-md-4 footer-grids subscribe">
+                <h3>Join Us :</h3><br><br>
+                <form action="#" method="post">
+                    <input type="text" name="Email" placeholder="Your Email" required="">
+                    <input type="submit" value="Subscribe">
+                </form>
+                <div class="clearfix"> </div>
+            </div>
+            <div class="col-md-4 footer-grids footer-address footer-icons" style="alignment: right;" >
+                <!--footer-icons-->
+                <h3>Follow Us :</h3>
+                <ul ><br><br>
+                    <!--class="social-icons"-->
+                    <li>曹鸿荣</li>
+                    <li>常德隆</li>
+                    <li>陈进</li>
+                    <li>武秀峰</li>
+                </ul>
+                <div class="clearfix"> </div>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+    </div>
+</div>
+<!-- //footer -->
+<!-- smooth-scrolling-of-move-up -->
+<script type="text/javascript">
+    $(document).ready(function() {
+        /*
+         var defaults = {
+         containerID: 'toTop', // fading element id
+         containerHoverID: 'toTopHover', // fading element hover id
+         scrollSpeed: 1200,
+         easingType: 'linear'
+         };
+         */
+
+        $().UItoTop({ easingType: 'easeOutQuart' });
+
+    });
+</script>
+<!-- //smooth-scrolling-of-move-up -->
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="js/bootstrap.js"></script>
+<script src="js/StockBlSer/plate.js"></script>
+<script>
+    //    window.onload=ready();
+
+    var storage = window.localStorage;
+
+
+    function alertStorageInfo() {
+        var storageItems="";
+        for(var icount=0;icount<storage.length;icount++){
+            storageItems=storageItems+storage.key(icount)+":"+storage.getItem(storage.key(icount))+"  +  ";
+        }
+        alert(storageItems);
+    }
+
+    //输出现有的items
+    //    storage.setItem('alreadyLogin','true');
+    //    storage.setItem('account','a000001');
+    //    storage.setItem('mail','286674013@qq.com');
+    //    storage.setItem('username','helloworld');
+    //    storage.setItem('realName','chr');
+    //    storage.setItem('password','000001');
+    //    storage.setItem('birth','03/11/97');
+    //    storage.setItem('phone','13002506530');
+    //    storage.setItem('html','13002506530');
+    //
+    //    var initStatus = storage.getItem('alreadyLogin');
+    //    var getAccount = storage.getItem('account');
+    //    var getMail = storage.getItem('mail');
+    //    var getUser = storage.getItem('username');
+    //    var getReal = storage.getItem('realName');
+    //    var getPass = storage.getItem('password');
+    //    var getBir  = storage.getItem('birth');
+    //    var getPhone = storage.getItem('phone');
+
+    function initLogin() {
+        var getStatus = storage.getItem('alreadyLogin');
+        if(getStatus!="true"){//未登陆，初始化登录div
+            alert("如果您想获得更完善的服务，欢迎注册与登录 ");
+            initNoLoginInfo();
+            //一开始的尝试
+//            var LoginDiv=document.getElementById('loginDiv');
+//            var ADiv=document.createElement("div");
+//            LoginDiv.setAttribute("class","modal-dialog");
+//            var div1=document.createElement("div");
+//            div1.setAttribute("class","modal-content");
+//
+//            //header部分
+//            var div2_1=document.createElement("div");
+//            div2_1.setAttribute("class","modal-header");
+//            var closeButton4Login=document.createElement("button");
+//            closeButton4Login.setAttribute("id","loginCloseButton");
+//            closeButton4Login.setAttribute("type","button");
+//            closeButton4Login.setAttribute("class","close");
+//            closeButton4Login.innerHTML="x";
+//            var title4Login=document.createElement("h1");
+//            title4Login.setAttribute("id","loginTitle");
+//            title4Login.setAttribute("class","text-center text-primary");
+//            title4Login.innerHTML="登录";
+//            div2_1.appendChild(closeButton4Login);
+//            div2_1.appendChild(title4Login);
+//
+//            //body部分
+//            var div2_2=document.createElement("div");
+//            div2_2.setAttribute("class","modal-body");
+//            var inputAccount=document.createElement("input");
+//            inputAccount.setAttribute("id","loginAccount");
+//            inputAccount.setAttribute("class","form-control  input-lg");
+//            inputAccount.setAttribute("type","text");
+//            inputAccount.setAttribute("placeholder","电子邮件/账户名/昵称");
+//            var inputPassword=document.createElement("input");
+//            inputPassword.setAttribute("id","loginPassword");
+//            inputPassword.setAttribute("class","form-control  input-lg");
+//            inputPassword.setAttribute("type","password");
+//            inputPassword.setAttribute("placeholder","登录密码");
+//            var loginButton4Login=document.createElement("button");
+//            loginButton4Login.setAttribute("id","loginNowButton");
+//            loginButton4Login.setAttribute("class","btn btn-primary btn-lg btn-block");
+//            loginButton4Login.innerHTML="立即登录";
+//            var resetSpan=document.createElement("span");
+//            var resetA=document.createElement("a");
+//            resetA.setAttribute("id","resetA");
+//            resetA.setAttribute("href","#");
+//            resetA.innerHTML="忘记密码";
+//            resetSpan.appendChild(resetA);
+//            var registerSpan=document.createElement("span");
+//            var registerA=document.createElement("a");
+//            registerA.setAttribute("id","registerA");
+//            registerA.setAttribute("href","#");
+//            registerA.setAttribute("class","pull-right");
+//            registerA.innerHTML="注册";
+//            registerSpan.appendChild(registerA);
+//
+//            div2_2.appendChild(inputAccount);
+//            div2_2.appendChild(inputPassword);
+//            div2_2.appendChild(loginButton4Login);
+//            div2_2.appendChild(resetSpan);
+//            div2_2.appendChild(registerSpan);
+//
+//            var div2_3=document.createElement("div");
+//            div2_3.setAttribute("class","modal-footer");
+//
+//            div1.appendChild(div2_1);
+//            div1.appendChild(div2_2);
+//            div1.appendChild(div2_3);
+//
+//
+//            ADiv.appendChild(div1);
+//            LoginDiv.innerHTML=ADiv.innerHTML;
+        }else{
+            initLoginInfo();
+        }
+    }
+    initLogin();
+
+
+    //未登录情况下的初始化工作
+    function initNoLoginInfo() {
+        var deleteOrigin = document.getElementById('userButton');
+        deleteOrigin.parentNode.removeChild(deleteOrigin);
+
+        var IorOButton=document.createElement("button");
+        IorOButton.setAttribute("class","btn btn-primary btn-lg");
+        IorOButton.setAttribute("id","userButton");
+        IorOButton.setAttribute("data-toggle","modal");
+        IorOButton.setAttribute("data-target","#loginDiv");
+        IorOButton.innerHTML="登录";
+
+        var ADiv=document.createElement("div");
+        ADiv.appendChild(IorOButton);
+
+        var buttonDiv=document.getElementById('buttonDiv');
+        buttonDiv.innerHTML=ADiv.innerHTML;
+    }
+
+    //已登录情况下的初始化工作
+    function initLoginInfo() {
+
+        var deleteOrigin = document.getElementById('userButton');
+        deleteOrigin.parentNode.removeChild(deleteOrigin);
+
+        var IorOButton2=document.createElement("button");
+        IorOButton2.setAttribute("id","userButton");
+        IorOButton2.setAttribute("class","btn btn-primary btn-lg dropdown-toggle");
+        IorOButton2.setAttribute("type","button");
+        IorOButton2.setAttribute("data-toggle","dropdown");
+        IorOButton2.innerHTML=storage.getItem('username');
+
+        var ASpan=document.createElement("span");
+        ASpan.setAttribute("class","caret");
+        IorOButton2.appendChild(ASpan);
+
+        var AUl=document.createElement("ul");
+        AUl.setAttribute("class","dropdown-menu");
+        var li1=document.createElement("li");
+        var a1=document.createElement("a");
+        a1.setAttribute("href","user.html");
+        /*********        涉及页面跳转           ************/
+        a1.innerHTML="个人主页";
+        li1.appendChild(a1);
+
+        var li2=document.createElement("li");
+        var AButton2=document.createElement("button");
+        AButton2.setAttribute("class","btn  btn-block");
+        AButton2.setAttribute("id","logoutButton");
+        AButton2.innerHTML="登出";
+        li2.appendChild(AButton2);
+
+        AUl.appendChild(li1);
+        AUl.appendChild(li2);
+
+        var ADiv=document.createElement("div");
+        ADiv.appendChild(IorOButton2);
+        ADiv.appendChild(AUl);
+
+
+        var buttonDiv=document.getElementById('buttonDiv');
+        buttonDiv.setAttribute("class","btn-group-vertical");
+        buttonDiv.innerHTML=ADiv.innerHTML;
+    }
+    function login(){
+        var getStatus = storage.getItem('alreadyLogin');
+        var account=document.getElementById('loginAccount').value;
+        var password=document.getElementById('loginPassword').value;
+//        var accountInput=document.getElementById('loginAccount').value="";
+//        var passwordInput=document.getElementById('loginPassword').value="";
+        $('#loginDiv').modal('hide');
+        if(getStatus!="true"){//未登录情况下
+            var loginResult="true";
+
+            /*****             登录逻辑部分       ***********/
+            if(loginResult=="true"){
+                storage.setItem('alreadyLogin','true');
+                storage.setItem('account','000001');
+                storage.setItem('mail','0286674013@qq.com');
+                storage.setItem('username','helloworld');
+                storage.setItem('realName','0chr');
+                storage.setItem('password','0000001');
+                storage.setItem('birth','003/11/97');
+                storage.setItem('phone','013002506530');
+                initLoginInfo();
+                return "登录成功";
+            }else{
+                return "登录失败";
+            }
+
+        }else{
+            return "已登陆,请勿再次登录";
+        }
+    }
+    function logout(){
+        storage.clear();
+        initNoLoginInfo();
+        alert("已成功登出");
+
+    }
+
+    var loginNowButton=document.getElementById('loginNowButton');
+    loginNowButton.onclick=function () {
+        alert(login());
+    }//立即登录
+    var registerNowButton=document.getElementById('registerNowButton');
+    registerNowButton.onclick=function () {
+
+    }//立即注册
+    var logoutButton=document.getElementById('logoutButton');
+    logoutButton.onclick=function () {
+        logout();
+    }//立即登出
+    //        var modals = $('.modal')
+    //        for(var i = 0, len = modals.length; i < len; i++){
+    //            $(modals[i]).modal('hide');
+    //        }
+    //        //关闭所有model
+    //    打开一个，关闭其他;实现界面切换
+    $('#loginDiv').on('show.bs.modal', function () {
+        $('#registerDiv').modal('hide');
+        $('#resetDiv').modal('hide');
+    });
+    $('#registerDiv').on('show.bs.modal', function () {
+        $('#loginDiv').modal('hide');
+        $('#resetDiv').modal('hide');
+    });
+    $('#resetDiv').on('show.bs.modal', function () {
+        $('#registerDiv').modal('hide');
+        $('#loginDiv').modal('hide');
+    });
+</script>
+</body>
+</html>

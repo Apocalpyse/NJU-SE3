@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<SplitPane fx:id="MessageUI" dividerPositions="0.09671532846715329" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="350.0" prefWidth="450.0" stylesheets="@MessageFrame.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Presetation.messageUI.MessageController">
+  <items>
+    <AnchorPane fx:id="TopAnchorPane" maxHeight="50.0" minHeight="50.0" minWidth="0.0" prefHeight="100.0" prefWidth="450.0">
+         <children>
+            <Button fx:id="CloseButton" layoutX="391.0" layoutY="8.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="35.0" />
+            <Button fx:id="minButton" layoutX="340.0" layoutY="8.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="35.0" />
+            <Label fx:id="StockHubForMessage" layoutX="12.0" layoutY="6.0" text="StockHub" />
+         </children></AnchorPane>
+    <AnchorPane fx:id="BottomAnchorPane" minHeight="0.0" minWidth="0.0" prefHeight="386.0" prefWidth="449.0">
+         <children>
+            <Label fx:id="MessageLabel" alignment="CENTER" layoutX="95.0" layoutY="86.0" prefHeight="50.0" prefWidth="258.0" text="请先登录再进行该操作" textAlignment="CENTER" />
+            <Button fx:id="LoginButtonForMessage" layoutX="134.0" layoutY="200.0" mnemonicParsing="false" onMouseClicked="#LoginButtonForMessageOnClicked" prefHeight="30.0" prefWidth="74.0" text="立即登录" />
+            <Button fx:id="NotLoginButtonForMessage" layoutX="224.0" layoutY="200.0" mnemonicParsing="false" onMouseClicked="#NotLoginButtonForMessageOnClicked" prefHeight="30.0" prefWidth="74.0" text="暂不登录" />
+         </children></AnchorPane>
+  </items>
+</SplitPane>

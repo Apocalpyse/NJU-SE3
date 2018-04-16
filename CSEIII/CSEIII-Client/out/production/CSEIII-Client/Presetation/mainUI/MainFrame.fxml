@@ -1,0 +1,882 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.media.*?>
+<?import java.lang.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.chart.AreaChart?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="810.0" prefWidth="1440.0" style="-fx-background-color: #00000099;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Presetation.mainUI.MainController">
+   <children>
+      <TabPane fx:id="MainTabPane" layoutX="250.0" layoutY="110.0" prefHeight="700.0" prefWidth="1190.0" side="LEFT" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+            <Tab fx:id="MarketTab" text="市场">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="700.0" prefWidth="1190.0">
+                     <children>
+                        <PieChart fx:id="PieChartForM" layoutX="850.0" layoutY="480.0" prefHeight="200.0" prefWidth="300.0" />
+                        <LineChart fx:id="Hushen300ForMarket" layoutX="50.0" layoutY="40.0" onMouseClicked="#goToHushen300Stock" prefHeight="200.0" prefWidth="230.0" title="沪深300">
+                          <xAxis>
+                            <CategoryAxis side="BOTTOM" />
+                          </xAxis>
+                          <yAxis>
+                            <NumberAxis side="LEFT" />
+                          </yAxis>
+                        </LineChart>
+                        <TabPane fx:id="TabPaneForNews" layoutX="50.0" layoutY="270.0" prefHeight="410.0" prefWidth="730.0" tabClosingPolicy="UNAVAILABLE">
+                          <tabs>
+                            <Tab fx:id="ImportantnewsForMarket" text="要闻">
+                              <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <ScrollPane fx:id="SPForImportantnews" prefHeight="410.0" prefWidth="730.0">
+                                            <content>
+                                              <AnchorPane fx:id="APForImportantnews" minHeight="0.0" minWidth="0.0" prefHeight="410.0" prefWidth="730.0" />
+                                            </content>
+                                          </ScrollPane>
+                                       </children>
+                                    </AnchorPane>
+                              </content>
+                            </Tab>
+                            <Tab fx:id="OutburstnewsForMarket" text="突发">
+                              <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="730.0">
+                                       <children>
+                                          <ScrollPane fx:id="SPForOutburetnews" prefHeight="410.0" prefWidth="730.0">
+                                            <content>
+                                              <AnchorPane fx:id="APForOutburetnews" minHeight="0.0" minWidth="0.0" prefHeight="377.0" prefWidth="728.0" />
+                                            </content>
+                                          </ScrollPane>
+                                       </children>
+                                    </AnchorPane>
+                              </content>
+                            </Tab>
+                          </tabs>
+                        </TabPane>
+                        <TabPane fx:id="TabPaneForM" layoutX="850.0" layoutY="100.0" prefHeight="350.0" prefWidth="300.0" tabClosingPolicy="UNAVAILABLE">
+                          <tabs>
+                            <Tab fx:id="StatisticTab1" text="涨幅榜">
+                              <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="403.0" prefWidth="518.0">
+                                       <children>
+                                          <TableView fx:id="IncreaseRank" prefHeight="319.0" prefWidth="300.0">
+                                            <columns>
+                                              <TableColumn prefWidth="75.0" text="涨幅榜" />
+                                            </columns>
+                                          </TableView>
+                                       </children>
+                                    </AnchorPane>
+                              </content>
+                            </Tab>
+                            <Tab fx:id="StatisticTab2" text="跌幅榜">
+                              <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <TableView fx:id="DecreaseRank" prefHeight="319.0" prefWidth="300.0">
+                                             <columns>
+                                                <TableColumn prefWidth="75.0" text="跌幅榜" />
+                                             </columns>
+                                          </TableView>
+                                       </children>
+                                    </AnchorPane>
+                              </content>
+                            </Tab>
+                              <Tab fx:id="StatisticTab3" text="成交量榜">
+                                <content>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <TableView fx:id="VolumeRank" layoutX="1.0" prefHeight="319.0" prefWidth="299.0">
+                                             <columns>
+                                                <TableColumn prefWidth="104.0" text="成交量榜" />
+                                             </columns>
+                                          </TableView>
+                                       </children>
+                                    </AnchorPane>
+                                </content>
+                              </Tab>
+                              <Tab fx:id="StatisticTab4" text="潜力榜">
+                                <content>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <TableView fx:id="PotentialRank" layoutX="1.0" prefHeight="319.0" prefWidth="299.0">
+                                            <columns>
+                                              <TableColumn prefWidth="104.0" text="潜力榜" />
+                                            </columns>
+                                          </TableView>
+                                       </children>
+                                    </AnchorPane>
+                                </content>
+                              </Tab>
+                          </tabs>
+                        </TabPane>
+                        <LineChart fx:id="ShangzhengForMarket" layoutX="300.0" layoutY="40.0" onMouseClicked="#goToShangzhengStock" prefHeight="200.0" prefWidth="230.0" title="上证指数">
+                           <xAxis>
+                              <CategoryAxis side="BOTTOM" />
+                           </xAxis>
+                           <yAxis>
+                              <NumberAxis side="LEFT" />
+                           </yAxis>
+                        </LineChart>
+                        <LineChart fx:id="ShenzhenForMarket" layoutX="550.0" layoutY="40.0" onMouseClicked="#goToShenzhenStock" prefHeight="200.0" prefWidth="230.0" title="深圳成指">
+                           <xAxis>
+                              <CategoryAxis side="BOTTOM" />
+                           </xAxis>
+                           <yAxis>
+                              <NumberAxis side="LEFT" />
+                           </yAxis>
+                        </LineChart>
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+            <Tab fx:id="DetailsTab" text="板块">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="700.0" prefWidth="1190.0">
+                     <children>
+                        <TableView fx:id="Hushen300WholeSimpleForPlate" layoutX="85.0" layoutY="272.0" prefHeight="120.0" prefWidth="280.0" />
+                        <TableView fx:id="Hushen300tableForPlate" layoutX="85.0" layoutY="404.0" prefHeight="300.0" prefWidth="280.0">
+                          <columns>
+                            <TableColumn prefWidth="60.0" text="代码" />
+                            <TableColumn prefWidth="60.0" text="名称" />
+                              <TableColumn prefWidth="40.0" text="开盘" />
+                              <TableColumn prefWidth="40.0" text="收盘" />
+                              <TableColumn prefWidth="40.0" text="涨幅" />
+                              <TableColumn prefWidth="40.0" text="评分" />
+                          </columns>
+                        </TableView>
+                        <LineChart fx:id="Hushen300chartForPlate" layoutX="50.0" layoutY="-3.0" onMouseClicked="#goToHushen300SpecificPlate" prefHeight="250.0" prefWidth="330.0" title="沪深300">
+                          <xAxis>
+                            <CategoryAxis side="BOTTOM" />
+                          </xAxis>
+                          <yAxis>
+                            <NumberAxis side="LEFT" />
+                          </yAxis>
+                        </LineChart>
+                        <Button fx:id="BackToAllPlate" layoutX="1083.0" layoutY="646.0" mnemonicParsing="false" onMouseClicked="#BackToAllPlateButtonClicked" prefHeight="40.0" prefWidth="40.0" />
+                        <LineChart fx:id="ZhongxiaochartForPlate" layoutX="425.0" layoutY="-3.0" onMouseClicked="#goToZhongxiaoSpecificPlate" prefHeight="250.0" prefWidth="330.0" title="中小板指">
+                           <xAxis>
+                              <CategoryAxis side="BOTTOM" />
+                           </xAxis>
+                           <yAxis>
+                              <NumberAxis side="LEFT" />
+                           </yAxis>
+                        </LineChart>
+                        <LineChart fx:id="ChuangyechartForPlate" layoutX="800.0" layoutY="-3.0" onMouseClicked="#goToChuangyeSpecificPlate" prefHeight="250.0" prefWidth="330.0" title="创业板指">
+                           <xAxis>
+                              <CategoryAxis side="BOTTOM" />
+                           </xAxis>
+                           <yAxis>
+                              <NumberAxis side="LEFT" />
+                           </yAxis>
+                        </LineChart>
+                        <TableView fx:id="ZhongxiaotableForPlate" layoutX="460.0" layoutY="404.0" prefHeight="300.0" prefWidth="280.0">
+                           <columns>
+                              <TableColumn prefWidth="60.0" text="代码" />
+                              <TableColumn prefWidth="60.0" text="名称" />
+                              <TableColumn prefWidth="40.0" text="开盘" />
+                              <TableColumn prefWidth="40.0" text="收盘" />
+                              <TableColumn prefWidth="40.0" text="涨幅" />
+                              <TableColumn prefWidth="40.0" text="评分" />
+                           </columns>
+                        </TableView>
+                        <TableView fx:id="ChuangyetableForPlate" layoutX="835.0" layoutY="404.0" prefHeight="300.0" prefWidth="280.0">
+                           <columns>
+                              <TableColumn prefWidth="60.0" text="代码" />
+                              <TableColumn prefWidth="60.0" text="名称" />
+                              <TableColumn prefWidth="40.0" text="开盘" />
+                              <TableColumn prefWidth="40.0" text="收盘" />
+                              <TableColumn prefWidth="40.0" text="涨幅" />
+                              <TableColumn prefWidth="40.0" text="评分" />
+                           </columns>
+                        </TableView>
+                        <TableView fx:id="ZhongxiaoWholeSimpleForPlate" layoutX="460.0" layoutY="272.0" prefHeight="120.0" prefWidth="280.0" />
+                        <TableView fx:id="ChuangyeWholeSimpleForPlate" layoutX="835.0" layoutY="272.0" prefHeight="120.0" prefWidth="280.0" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab fx:id="IndustryTab" text="行业">
+              <content>
+                <AnchorPane fx:id="AnchorPaneForIndustry" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <PieChart fx:id="PieForIndustry" layoutX="416.0" layoutY="26.0" prefHeight="150.0" prefWidth="150.0" />
+                        <TableView fx:id="TableForIndustry" layoutY="200.0" prefHeight="500.0" prefWidth="750.0">
+                          <columns>
+                            <TableColumn prefWidth="75.0" text="行业名称" />
+                            <TableColumn prefWidth="75.0" text="公司家数" />
+                              <TableColumn prefWidth="75.0" text="平均开盘价" />
+                              <TableColumn prefWidth="75.0" text="平均收盘价" />
+                              <TableColumn prefWidth="75.0" text="涨跌额" />
+                              <TableColumn prefWidth="75.0" text="涨跌幅" />
+                              <TableColumn prefWidth="75.0" text="总成交量" />
+                          </columns>
+                        </TableView>
+                        <TabPane fx:id="TabPaneForIndustry" layoutX="827.0" layoutY="200.0" prefHeight="350.0" prefWidth="300.0" tabClosingPolicy="UNAVAILABLE">
+                           <tabs>
+                              <Tab fx:id="IncForIndustry" text="涨幅榜">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="403.0" prefWidth="518.0">
+                                       <children>
+                                          <TableView fx:id="IncreaseRank1" prefHeight="319.0" prefWidth="300.0">
+                                             <columns>
+                                                <TableColumn prefWidth="75.0" text="行业名称" />
+                                                <TableColumn prefWidth="75.0" text="公司家数" />
+                                                <TableColumn prefWidth="75.0" text="涨跌幅" />
+                                                <TableColumn prefWidth="75.0" text="涨跌额" />
+                                                <TableColumn prefWidth="75.0" text="总成交量" />
+                                                <TableColumn prefWidth="75.0" text="行业潜力" />
+                                             </columns>
+                                          </TableView>
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </Tab>
+                              <Tab fx:id="DecForIndustry" text="跌幅榜">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <TableView fx:id="DecreaseRank1" prefHeight="319.0" prefWidth="300.0">
+                                             <columns>
+                                                <TableColumn prefWidth="75.0" text="行业名称" />
+                                                <TableColumn prefWidth="75.0" text="公司家数" />
+                                                <TableColumn prefWidth="75.0" text="涨跌幅" />
+                                                <TableColumn prefWidth="75.0" text="涨跌额" />
+                                                <TableColumn prefWidth="75.0" text="总成交量" />
+                                                <TableColumn prefWidth="75.0" text="行业潜力" />
+                                             </columns>
+                                          </TableView>
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </Tab>
+                              <Tab fx:id="VolumeForIndustry" text="成交量榜">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <TableView fx:id="VolumeRank11" layoutX="1.0" prefHeight="319.0" prefWidth="299.0">
+                                             <columns>
+                                                <TableColumn prefWidth="104.0" text="行业名称" />
+                                                <TableColumn prefWidth="75.0" text="公司家数" />
+                                                <TableColumn prefWidth="75.0" text="涨跌幅" />
+                                                <TableColumn prefWidth="75.0" text="涨跌额" />
+                                                <TableColumn prefWidth="75.0" text="总成交量" />
+                                                <TableColumn prefWidth="75.0" text="行业潜力" />
+                                             </columns>
+                                          </TableView>
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </Tab>
+                              <Tab fx:id="PotentialForIndustry" text="潜力榜">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="403.0" prefWidth="518.0">
+                                       <children>
+                                          <TableView fx:id="PotentialRank1" prefHeight="319.0" prefWidth="300.0">
+                                             <columns>
+                                                <TableColumn prefWidth="75.0" text="行业名称" />
+                                                <TableColumn prefWidth="75.0" text="公司家数" />
+                                                <TableColumn prefWidth="75.0" text="涨跌幅" />
+                                                <TableColumn prefWidth="75.0" text="涨跌额" />
+                                                <TableColumn prefWidth="75.0" text="总成交量" />
+                                                <TableColumn prefWidth="75.0" text="行业潜力" />
+                                             </columns>
+                                          </TableView>
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </Tab>
+                           </tabs>
+                        </TabPane>
+                        <TextField fx:id="SearchIndustryText" layoutX="659.0" layoutY="80.0" onKeyPressed="#SearchFieldPressed" prefHeight="40.0" prefWidth="240.0" promptText="请输入行业名称" />
+                        <Button fx:id="SearchButtonForIndustry" layoutX="864.0" layoutY="83.0" mnemonicParsing="false" onMouseClicked="#searchIndustry" prefHeight="35.0" prefWidth="35.0" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+          <Tab fx:id="SingleStockTab" text="个股">
+            <content>
+              <AnchorPane fx:id="SingleStockPane" minHeight="0.0" minWidth="0.0" prefHeight="700.0" prefWidth="1190.0">
+                     <children>
+                        <ScrollPane fx:id="DiscussBoardForStock" layoutX="820.0" layoutY="300.0" prefHeight="385.0" prefWidth="330.0">
+                          <content>
+                            <AnchorPane fx:id="APForDiscussBoard" minHeight="0.0" minWidth="0.0" prefHeight="385.0" prefWidth="330.0" />
+                          </content>
+                        </ScrollPane>
+                        <TabPane fx:id="TabPaneForK" layoutY="250.0" prefHeight="445.0" prefWidth="800.0" tabClosingPolicy="UNAVAILABLE">
+                          <tabs>
+                            <Tab text="涨跌情况">
+                              <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <PieChart fx:id="PieChartForK" layoutX="153.0" layoutY="8.0" prefHeight="400.0" prefWidth="600.0" />
+                                          <Label fx:id="StockNameForPieChart" layoutX="50.0" layoutY="60.0" prefHeight="32.0" prefWidth="120.0" text="股票名称" textFill="WHITE">
+                                             <font>
+                                                <Font size="24.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="StockCodeForPieChart" layoutX="50.0" layoutY="120.0" prefHeight="32.0" prefWidth="120.0" text="股票代码" textFill="WHITE">
+                                             <font>
+                                                <Font size="24.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </AnchorPane>
+                              </content>
+                            </Tab>
+                            <Tab text="K线图">
+                              <content>
+                                <AnchorPane fx:id="KChartPane" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <Label fx:id="StockNameForKChart" layoutX="50.0" layoutY="60.0" prefHeight="32.0" prefWidth="120.0" text="股票名称" textFill="WHITE">
+                                             <font>
+                                                <Font size="24.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="StockCodeForKChart" layoutX="50.0" layoutY="120.0" prefHeight="32.0" prefWidth="120.0" text="股票代码" textFill="WHITE">
+                                             <font>
+                                                <Font size="24.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </AnchorPane>
+                              </content>
+                            </Tab>
+                              <Tab text="5日均线图">
+                                <content>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <LineChart fx:id="EMAChartForK5" layoutX="195.0" layoutY="10.0" prefHeight="560.0" prefWidth="950.0">
+                                            <xAxis>
+                                              <CategoryAxis side="BOTTOM" />
+                                            </xAxis>
+                                            <yAxis>
+                                              <NumberAxis side="LEFT" />
+                                            </yAxis>
+                                          </LineChart>
+                                          <Label fx:id="StockNameForEMA5" layoutX="50.0" layoutY="60.0" prefHeight="32.0" prefWidth="120.0" text="股票名称" textFill="WHITE">
+                                             <font>
+                                                <Font size="24.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="StockCodeForEMA5" layoutX="50.0" layoutY="120.0" prefHeight="32.0" prefWidth="120.0" text="股票代码" textFill="WHITE">
+                                             <font>
+                                                <Font size="24.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </AnchorPane>
+                                </content>
+                              </Tab>
+                              <Tab text="10日均线图">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <LineChart fx:id="EMAChartForK10" layoutX="195.0" layoutY="10.0" prefHeight="560.0" prefWidth="950.0">
+                                             <xAxis>
+                                                <CategoryAxis side="BOTTOM" />
+                                             </xAxis>
+                                             <yAxis>
+                                                <NumberAxis side="LEFT" />
+                                             </yAxis>
+                                          </LineChart>
+                                          <Label fx:id="StockNameForEMA10" layoutX="50.0" layoutY="60.0" prefHeight="32.0" prefWidth="120.0" text="股票名称" textFill="WHITE">
+                                             <font>
+                                                <Font size="24.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="StockCodeForEMA10" layoutX="50.0" layoutY="120.0" prefHeight="32.0" prefWidth="120.0" text="股票代码" textFill="WHITE">
+                                             <font>
+                                                <Font size="24.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </Tab>
+                              <Tab text="20日均线图">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <LineChart fx:id="EMAChartForK30" layoutX="195.0" layoutY="10.0" prefHeight="560.0" prefWidth="950.0">
+                                             <xAxis>
+                                                <CategoryAxis side="BOTTOM" />
+                                             </xAxis>
+                                             <yAxis>
+                                                <NumberAxis side="LEFT" />
+                                             </yAxis>
+                                          </LineChart>
+                                          <Label fx:id="StockNameForEMA30" layoutX="50.0" layoutY="60.0" prefHeight="32.0" prefWidth="120.0" text="股票名称" textFill="WHITE">
+                                             <font>
+                                                <Font size="24.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="StockCodeForEMA30" layoutX="50.0" layoutY="120.0" prefHeight="32.0" prefWidth="120.0" text="股票代码" textFill="WHITE">
+                                             <font>
+                                                <Font size="24.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </Tab>
+                              <Tab text="30日均线图">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <LineChart fx:id="EMAChartForK60" layoutX="195.0" layoutY="10.0" prefHeight="560.0" prefWidth="950.0">
+                                             <xAxis>
+                                                <CategoryAxis side="BOTTOM" />
+                                             </xAxis>
+                                             <yAxis>
+                                                <NumberAxis side="LEFT" />
+                                             </yAxis>
+                                          </LineChart>
+                                          <Label fx:id="StockNameForEMA60" layoutX="50.0" layoutY="60.0" prefHeight="32.0" prefWidth="120.0" text="股票名称" textFill="WHITE">
+                                             <font>
+                                                <Font size="24.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="StockCodeForEMA60" layoutX="50.0" layoutY="120.0" prefHeight="32.0" prefWidth="120.0" text="股票代码" textFill="WHITE">
+                                             <font>
+                                                <Font size="24.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </Tab>
+                              <Tab text="60日均线图">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <LineChart fx:id="EMAChartForK120" layoutX="195.0" layoutY="10.0" prefHeight="560.0" prefWidth="950.0">
+                                             <xAxis>
+                                                <CategoryAxis side="BOTTOM" />
+                                             </xAxis>
+                                             <yAxis>
+                                                <NumberAxis side="LEFT" />
+                                             </yAxis>
+                                          </LineChart>
+                                          <Label fx:id="StockNameForEMA120" layoutX="50.0" layoutY="60.0" prefHeight="32.0" prefWidth="120.0" text="股票名称" textFill="WHITE">
+                                             <font>
+                                                <Font size="24.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="StockCodeForEMA120" layoutX="50.0" layoutY="120.0" prefHeight="32.0" prefWidth="120.0" text="股票代码" textFill="WHITE">
+                                             <font>
+                                                <Font size="24.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </Tab>
+                          </tabs>
+                        </TabPane>
+                        <Label layoutX="317.0" layoutY="30.0" text="起始日期" textFill="WHITE">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <DatePicker fx:id="StartTimeForK" layoutX="399.0" layoutY="24.0" maxHeight="30.0" prefHeight="30.0" prefWidth="160.0" />
+                        <Label layoutX="634.0" layoutY="30.0" text="结束日期" textFill="WHITE">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <DatePicker fx:id="EndTimeForK" layoutX="723.0" layoutY="24.0" prefHeight="30.0" prefWidth="180.0" />
+                        <Button fx:id="QueryButtonForK" layoutX="938.0" layoutY="20.0" mnemonicParsing="false" onMouseClicked="#QueryForK" prefHeight="50.0" prefWidth="50.0" />
+                        <Label layoutX="20.0" layoutY="30.0" text="股票名称" textFill="WHITE">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="StockNameForK" layoutX="106.0" layoutY="25.0" prefHeight="30.0" prefWidth="160.0" />
+                        <Button fx:id="CollectionButton" layoutX="1064.0" layoutY="17.0" mnemonicParsing="false" onMouseClicked="#CollectionButtonOnClicked" prefHeight="50.0" prefWidth="50.0" />
+                        <Label fx:id="StockNameForPieChart1" layoutX="100.0" layoutY="121.0" prefHeight="32.0" prefWidth="120.0" text="股票代码" textFill="WHITE">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="StockNameForPieChart2" layoutX="100.0" layoutY="159.0" prefHeight="32.0" prefWidth="120.0" text="股票名称" textFill="WHITE">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                        <TitledPane fx:id="CompanyProfileForStock" animated="false" layoutX="820.0" layoutY="89.0" text="公司简介">
+                          <content>
+                            <AnchorPane fx:id="APForCompanyProfile" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="330.0">
+                                 <children>
+                                    <ScrollPane fx:id="CompanyScrollForStock" prefHeight="180.0" prefWidth="330.0">
+                                      <content>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0" />
+                                      </content>
+                                    </ScrollPane>
+                                 </children></AnchorPane>
+                          </content>
+                        </TitledPane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab fx:id="QuantitativeInvestmentTab" text="策略">
+              <content>
+                <AnchorPane fx:id="QPane" minHeight="0.0" minWidth="0.0" prefHeight="700.0" prefWidth="1190.0">
+                     <children>
+                        <TabPane fx:id="TabPaneForQ" layoutY="100.0" prefHeight="700.0" prefWidth="1190.0" tabClosingPolicy="UNAVAILABLE">
+                           <tabs>
+                              <Tab fx:id="MomentumStrategyTab" text="累计收益率比较图">
+                                 <content>
+                                    <AnchorPane fx:id="StrategyPane" minHeight="0.0" minWidth="0.0" prefHeight="600.0" prefWidth="1190.0">
+                                       <children>
+                                          <LineChart fx:id="LineChartForStrategy" layoutX="355.0" layoutY="105.0" prefHeight="420.0" prefWidth="800.0">
+                                             <xAxis>
+                                                <CategoryAxis side="BOTTOM" />
+                                             </xAxis>
+                                             <yAxis>
+                                                <NumberAxis side="LEFT" />
+                                             </yAxis>
+                                          </LineChart>
+                                          <TableView fx:id="TableViewForStrategy" layoutX="355.0" layoutY="33.0" prefHeight="75.0" prefWidth="810.0">
+                                             <columns>
+                                                <TableColumn prefWidth="90.0" text="年化收益率" />
+                                                <TableColumn prefWidth="90.0" text="基准年化收益率" />
+                                                <TableColumn prefWidth="90.0" text="阿尔法" />
+                                                <TableColumn prefWidth="90.0" text="贝塔" />
+                                                <TableColumn prefWidth="90.0" text="夏普比率" />
+                                                <TableColumn prefWidth="90.0" text="收益波动率" />
+                                                <TableColumn prefWidth="90.0" text="信息比率" />
+                                                <TableColumn prefWidth="90.0" text="最大回撤" />
+                                                <TableColumn prefWidth="90.0" text="换手率" />
+                                             </columns>
+                                          </TableView>
+                                          <TableView fx:id="StockPoolForStrategy" layoutX="30.0" layoutY="40.0" prefHeight="488.0" prefWidth="310.0">
+                                            <columns>
+                                              <TableColumn prefWidth="100.0" text="股票名称" />
+                                              <TableColumn prefWidth="100.0" text="股票代码" />
+                                                <TableColumn prefWidth="100.0" text="板块信息" />
+                                            </columns>
+                                          </TableView>
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </Tab>
+                              <Tab fx:id="ExcessReturn" text="最优形成期/持有期">
+                                 <content>
+                                    <AnchorPane fx:id="ExcessReturnPane" minHeight="0.0" minWidth="0.0" onMouseClicked="#ExcessReturnPaneOnClicked" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <AreaChart fx:id="AreaChartForExcessReturn" layoutX="350.0" layoutY="120.0" prefHeight="387.0" prefWidth="416.0">
+                                             <xAxis>
+                                                <CategoryAxis side="BOTTOM" />
+                                             </xAxis>
+                                             <yAxis>
+                                                <NumberAxis side="LEFT" />
+                                             </yAxis>
+                                          </AreaChart>
+                                          <AreaChart fx:id="AreaChartForWinRate" layoutX="770.0" layoutY="120.0" prefHeight="387.0" prefWidth="416.0">
+                                             <xAxis>
+                                                <CategoryAxis side="BOTTOM" />
+                                             </xAxis>
+                                             <yAxis>
+                                                <NumberAxis side="LEFT" />
+                                             </yAxis>
+                                          </AreaChart>
+                                          <TableView fx:id="StockPoolForER" layoutX="30.0" layoutY="40.0" prefHeight="488.0" prefWidth="310.0">
+                                             <columns>
+                                                <TableColumn prefWidth="100.0" text="股票名称" />
+                                                <TableColumn prefWidth="100.0" text="股票代码" />
+                                                <TableColumn prefWidth="100.0" text="板块信息" />
+                                             </columns>
+                                          </TableView>
+                                          <Button fx:id="FormationBasedButton" layoutX="605.0" layoutY="40.0" mnemonicParsing="false" onMouseClicked="#FormationBasedButtonOnClicked" text="以形成期为基准" />
+                                          <Button fx:id="HoldingPeriodBasedButton" layoutX="798.0" layoutY="40.0" mnemonicParsing="false" onMouseClicked="#HoldingPeriodBasedButtonOnClicked" text="以持有期为基准" />
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </Tab>
+                              <Tab fx:id="RelativeIndexReturn" text="相对指数收益">
+                                 <content>
+                                    <AnchorPane fx:id="RelativeIndexReturnPane" minHeight="0.0" minWidth="0.0" onMouseClicked="#RelativeIndexReturnPaneOnClicked" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <BarChart fx:id="BarChartForRelativeIndexReturn" layoutX="379.0" layoutY="108.0" prefHeight="416.0" prefWidth="750.0">
+                                             <xAxis>
+                                                <CategoryAxis side="BOTTOM" />
+                                             </xAxis>
+                                             <yAxis>
+                                                <NumberAxis side="LEFT" />
+                                             </yAxis>
+                                          </BarChart>
+                                          <TableView fx:id="StockPoolForIR" layoutX="30.0" layoutY="40.0" prefHeight="488.0" prefWidth="310.0">
+                                             <columns>
+                                                <TableColumn prefWidth="100.0" text="股票名称" />
+                                                <TableColumn prefWidth="100.0" text="股票代码" />
+                                                <TableColumn prefWidth="100.0" text="板块信息" />
+                                             </columns>
+                                          </TableView>
+                                          <TableView fx:id="TableViewForRelativeIndexReturn" layoutX="564.0" layoutY="33.0" prefHeight="75.0" prefWidth="380.0">
+                                            <columns>
+                                              <TableColumn prefWidth="120.0" text="正收益周期数" />
+                                              <TableColumn prefWidth="120.0" text="负收益周期数" />
+                                                <TableColumn prefWidth="120.0" text="赢率" />
+                                            </columns>
+                                          </TableView>
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </Tab>
+                           </tabs>
+                        </TabPane>
+                        <Label fx:id="HoldingPeriodLabelForQ" layoutX="270.0" layoutY="11.0" text="形成期" textFill="WHITE">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="FormationLabelForQ" layoutX="270.0" layoutY="50.0" text="持有期" textFill="WHITE">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="HoldingPeriodFieldForQ" layoutX="340.0" layoutY="47.0" prefHeight="30.0" prefWidth="130.0" />
+                        <TextField fx:id="FormationFieldForQ" layoutX="340.0" layoutY="8.0" prefHeight="30.0" prefWidth="130.0" />
+                        <Label fx:id="BeginTimeLabelForQ" layoutX="510.0" layoutY="11.0" text="起始日期" textFill="WHITE">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="EndTimeLabelForQ" layoutX="510.0" layoutY="50.0" text="结束日期" textFill="WHITE">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <DatePicker fx:id="StartTimeForQ" layoutX="600.0" layoutY="8.0" prefHeight="30.0" prefWidth="130.0" />
+                        <DatePicker fx:id="EndTimeForQ" layoutX="600.0" layoutY="47.0" prefHeight="30.0" prefWidth="130.0" />
+                        <Label fx:id="PlateChoiceLabelForStrategy" layoutX="20.0" layoutY="50.0" text="板块选择" textFill="WHITE">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <ChoiceBox fx:id="PlateChoiceForQ" layoutX="102.0" layoutY="47.0" prefHeight="30.0" prefWidth="130.0" />
+                        <Button fx:id="QueryButtonForQ" layoutX="764.0" layoutY="22.0" mnemonicParsing="false" onMouseClicked="#QueryForQ" prefHeight="50.0" prefWidth="50.0" />
+                        <Label fx:id="ErrorTextForQ" layoutX="460.0" layoutY="83.0" prefHeight="35.0" prefWidth="280.0" text="请输入完整信息" textFill="#d70303">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                        <ChoiceBox fx:id="FormationChoiceBoxForQ" layoutX="340.0" layoutY="8.0" prefHeight="30.0" prefWidth="130.0" visible="false" />
+                        <Label fx:id="StrategyChoiceLabelForQ" layoutX="20.0" layoutY="11.0" text="策略选择" textFill="WHITE">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <ChoiceBox fx:id="StrategyChoiceBoxForQ" layoutX="102.0" layoutY="8.0" onMouseClicked="#StrategyChoiceBoxForQOnClicked" prefHeight="30.0" prefWidth="130.0" />
+                        <TableView fx:id="EvaluationTable" layoutX="825.0" layoutY="11.0" prefHeight="103.0" prefWidth="344.0">
+                          <columns>
+                            <TableColumn prefWidth="75.0" text="C1" />
+                            <TableColumn prefWidth="75.0" text="C2" />
+                          </columns>
+                        </TableView>
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+          <Tab fx:id="QuantourCompareTab" text="股票比较">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="700.0" prefWidth="1190.0">
+                     <children>
+                        <TextField fx:id="StockNameAForC" layoutX="87.0" layoutY="27.0" prefHeight="30.0" prefWidth="150.0" />
+                        <TextField fx:id="StockNameBForC" layoutX="311.0" layoutY="27.0" prefHeight="30.0" prefWidth="150.0" />
+                        <TabPane fx:id="TabPaneForC" layoutY="100.0" prefHeight="600.0" prefWidth="1240.0" tabClosingPolicy="UNAVAILABLE">
+                          <tabs>
+                            <Tab text="对数收益率">
+                              <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <LineChart fx:id="LogarithmicYield" layoutX="100.0" layoutY="10.0" prefHeight="560.0" prefWidth="1000.0">
+                                            <xAxis>
+                                              <CategoryAxis side="BOTTOM" />
+                                            </xAxis>
+                                            <yAxis>
+                                              <NumberAxis side="LEFT" />
+                                            </yAxis>
+                                          </LineChart>
+                                       </children></AnchorPane>
+                              </content>
+                            </Tab>
+                            <Tab text="均线图">
+                              <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <LineChart fx:id="EMAChartForC" layoutX="100.0" layoutY="10.0" prefHeight="560.0" prefWidth="1000.0">
+                                            <xAxis>
+                                              <CategoryAxis side="BOTTOM" />
+                                            </xAxis>
+                                            <yAxis>
+                                              <NumberAxis side="LEFT" />
+                                            </yAxis>
+                                          </LineChart>
+                                       </children></AnchorPane>
+                              </content>
+                            </Tab>
+                              <Tab text="涨跌情况">
+                                <content>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <PieChart fx:id="PieChartAForC" layoutX="40.0" layoutY="70.0" prefHeight="450.0" prefWidth="550.0" />
+                                          <PieChart fx:id="PieChartBForC" layoutX="650.0" layoutY="70.0" prefHeight="450.0" prefWidth="550.0" />
+                                       </children></AnchorPane>
+                                </content>
+                              </Tab>
+                              <Tab text="数据对比">
+                                <content>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <TableView fx:id="CompareTableForC" layoutX="31.0" layoutY="10.0" prefHeight="540.0" prefWidth="1114.0">
+                                            <columns>
+                                              <TableColumn prefWidth="75.0" text="股票A" />
+                                              <TableColumn prefWidth="75.0" text="股票B" />
+                                            </columns>
+                                          </TableView>
+                                       </children></AnchorPane>
+                                </content>
+                              </Tab>
+                          </tabs>
+                        </TabPane>
+                        <Label layoutX="22.0" layoutY="32.0" text="股票A" textFill="WHITE">
+                           <font>
+                              <Font size="18.0" />
+                           </font></Label>
+                        <Label layoutX="256.0" layoutY="32.0" text="股票B" textFill="WHITE">
+                           <font>
+                              <Font size="18.0" />
+                           </font></Label>
+                        <DatePicker fx:id="StartTimeForC" layoutX="569.0" layoutY="26.0" prefHeight="30.0" prefWidth="170.0" />
+                        <DatePicker fx:id="EndTimeForC" layoutX="868.0" layoutY="26.0" prefHeight="30.0" prefWidth="170.0" />
+                        <Label layoutX="480.0" layoutY="32.0" text="起始日期" textFill="WHITE">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="772.0" layoutY="32.0" text="结束日期" textFill="WHITE">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="QueryButtonForC" layoutX="1094.0" layoutY="19.0" mnemonicParsing="false" onMouseClicked="#QueryForC" prefHeight="50.0" prefWidth="50.0" />
+                        <Label fx:id="ErrorTextForC" layoutX="470.0" layoutY="72.0" prefHeight="35.0" prefWidth="280.0" text="请输入完整信息" textFill="#d70303">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+            <Tab fx:id="SelfSelectStockTab" text="用户">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="700.0" prefWidth="1190.0">
+                     <children>
+                        <TabPane fx:id="TabPaneForUser" prefHeight="670.0" prefWidth="1190.0" tabClosingPolicy="UNAVAILABLE">
+                          <tabs>
+                            <Tab fx:id="MyStockTabForUser" text="我的股票">
+                              <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="670.0" prefWidth="1190.0">
+                                       <children>
+                                          <Button fx:id="AnalyzeButton" layoutX="1025.0" layoutY="580.0" mnemonicParsing="false" onMouseClicked="#AnalyzeButtonClicked" text="策略" />
+                                          <TableView fx:id="StockPoolForSelfSelect" prefHeight="560.0" prefWidth="1100.0">
+                                             <columns>
+                                                <TableColumn prefWidth="396.0" text="股票名称" />
+                                                <TableColumn prefWidth="396.0" text="股票代码" />
+                                                <TableColumn prefWidth="396.0" text="板块信息" />
+                                             </columns>
+                                          </TableView>
+                                          <Label fx:id="ErrorTextForS" layoutX="1000.0" layoutY="610.0" text="股票池数量不足100" textFill="#e40000" />
+                                       </children>
+                                    </AnchorPane>
+                              </content>
+                            </Tab>
+                              <Tab fx:id="HistoryTabForUser" text="历史交易">
+                                <content>
+                                  <AnchorPane fx:id="HistoryAnchorPaneForUser" minHeight="0.0" minWidth="0.0" prefHeight="625.0" prefWidth="1190.0">
+                                       <children>
+                                          <TableView fx:id="HistoryTableForUser" prefHeight="670.0" prefWidth="1190.0">
+                                            <columns>
+                                              <TableColumn prefWidth="75.0" text="日期" />
+                                              <TableColumn prefWidth="75.0" text="代码" />
+                                                <TableColumn prefWidth="75.0" text="名称" />
+                                                <TableColumn prefWidth="75.0" text="操作" />
+                                                <TableColumn prefWidth="75.0" text="金额" />
+                                                <TableColumn prefWidth="75.0" text="份数" />
+                                            </columns>
+                                          </TableView>
+                                       </children>
+                                    </AnchorPane>
+                                </content>
+                              </Tab>
+                            <Tab fx:id="ImitateTabForUser" text="模拟盈亏">
+                              <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                              </content>
+                            </Tab>
+                              <Tab fx:id="MyCollectTabForUser" text="我的收藏">
+                                <content>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                                </content>
+                              </Tab>
+                              <Tab fx:id="MyCommentTabForUser" text="我的评论">
+                                <content>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                                </content>
+                              </Tab>
+                              <Tab fx:id="SelfInfoTabForUser" text="个人信息">
+                                <content>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                                </content>
+                              </Tab>
+                          </tabs>
+                        </TabPane>
+                     </children></AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <Button fx:id="CloseButton" layoutX="1386.0" layoutY="50.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" />
+      <Button fx:id="MinButton" layoutX="1333.0" layoutY="50.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" />
+      <Button fx:id="User" layoutX="1252.0" layoutY="50.0" mnemonicParsing="false" onMouseClicked="#UserClicked" prefHeight="40.0" prefWidth="40.0" />
+      <Label fx:id="StockMain" layoutX="47.0" layoutY="17.0" text="StockHub" textFill="WHITE">
+         <font>
+            <Font size="42.0" />
+         </font>
+      </Label>
+      <TextField fx:id="SearchText" layoutX="937.0" layoutY="50.0" onKeyPressed="#SearchFieldPressed" prefHeight="40.0" prefWidth="240.0" promptText="请输入股票名称或代码" />
+      <VBox fx:id="VBoxForMain" alignment="CENTER_LEFT" layoutY="110.0" prefHeight="700.0" prefWidth="250.0">
+         <children>
+            <Button fx:id="BForMarketTab" mnemonicParsing="false" onMouseClicked="#MarketButtonClicked" prefHeight="55.0" prefWidth="250.0" text="市场" />
+            <Button fx:id="BForPlateTab" mnemonicParsing="false" onMouseClicked="#DetailsButtonClicked" prefHeight="55.0" prefWidth="250.0" text="板块" />
+            <Button fx:id="BForIndustryTab" mnemonicParsing="false" onMouseClicked="#IndustryButtonClicked" prefHeight="55.0" prefWidth="250.0" text="行业" />
+            <Button fx:id="BForSingleStockTab" mnemonicParsing="false" onMouseClicked="#SingleStockButtonClicked" prefHeight="55.0" prefWidth="250.0" text="个股" />
+            <Button fx:id="BForQuantitativeInvestmentTab" mnemonicParsing="false" onMouseClicked="#QuantitativeInvestmentButtonClicked" prefHeight="55.0" prefWidth="250.0" text="策略" />
+            <Button fx:id="BForQuantourCompareTab" mnemonicParsing="false" onMouseClicked="#QuantourCompareButtonClicked" prefHeight="55.0" prefWidth="250.0" text="股票比较" />
+            <Button fx:id="BForSelfSelectStockTab" mnemonicParsing="false" onMouseClicked="#SelfSelectButtonClicked" prefHeight="55.0" prefWidth="250.0" text="用户" />
+         </children>
+      </VBox>
+      <Button fx:id="SearchImage" layoutX="1140.0" layoutY="52.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="35.0" />
+   </children>
+</Pane>

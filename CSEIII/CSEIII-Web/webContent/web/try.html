@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script src="js/jquery-1.11.1.min.js"></script>
+<div id="IncreaseTable" class="bs-docs-example ">
+    <table  class="table table-hover">
+        <thead>
+        <tr>
+            <th>#</th>
+            <th>代码</th>
+            <th>名称</th>
+            <th>涨幅</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>1</td>
+            <td>000001</td>
+            <td>Otto</td>
+            <td>1.32%</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>000002</td>
+            <td>Thornton</td>
+            <td>2.11%</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>000003</td>
+            <td>Larry the Bird</td>
+            <td>0.12%</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<button id="AButton" onclick="here()">更新</button>
+<script>
+    function getData() {
+        alert("1");
+        var dataPack="";
+        $.ajax({
+            url: 'GetData',
+            type: 'POST',
+            dataType: 'json',
+			async:false,
+			data:{},
+            contentType: "application/json; charset=utf-8",
+            success: function (data) {
+                    dataPack=data;
+                    alert("values:"+data);
+            },
+            fail:function () {
+                alert("failed");
+            },
+            error:function () {
+                alert("error");
+            }
+        });
+        return dataPack;
+    }
+    function here() {
+        alert("start");
+        var data=getData();
+        alert("return"+data);
+        document.getElementById('IncreaseTable').innerHTML="";
+    }
+</script>
+</body>
+</html>

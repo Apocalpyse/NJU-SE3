@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<SplitPane fx:id="UserUI" dividerPositions="0.12773722627737227" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="550.0" prefWidth="450.0" stylesheets="@UserFrame.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Presetation.userUI.UserController">
+  <items>
+    <AnchorPane maxHeight="50.0" minHeight="50.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+         <children>
+            <Button fx:id="CloseButtonForUser" layoutX="399.0" layoutY="7.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="35.0" />
+            <Button fx:id="minButtonForUser" layoutX="349.0" layoutY="5.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="35.0" />
+         </children></AnchorPane>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+         <children>
+            <Pane fx:id="InfoPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="450.0">
+               <children>
+                  <Button fx:id="EditButton" layoutX="139.0" layoutY="380.0" mnemonicParsing="false" onMouseClicked="#EditButtonClicked" prefHeight="35.0" prefWidth="70.0" text="编辑" />
+                  <Button fx:id="SaveButton" layoutX="241.0" layoutY="380.0" mnemonicParsing="false" onMouseClicked="#SaveButtonClicked" prefHeight="35.0" prefWidth="70.0" text="保存" />
+                  <Label fx:id="UserNameLabel" layoutX="80.0" layoutY="140.0" prefHeight="20.0" prefWidth="70.0" text="用户名：" />
+                  <Label fx:id="RealNameLabel" layoutX="80.0" layoutY="180.0" prefHeight="20.0" prefWidth="70.0" text="姓名：" />
+                  <Label fx:id="PhoneNumberLabel" layoutX="80.0" layoutY="220.0" prefHeight="20.0" prefWidth="70.0" text="电话：" />
+                  <Label fx:id="MailLabel" layoutX="80.0" layoutY="260.0" prefHeight="20.0" prefWidth="70.0" text="邮箱：" />
+                  <Label fx:id="BirthdayLabel" layoutX="80.0" layoutY="300.0" prefHeight="20.0" prefWidth="70.0" text="生日：" />
+                  <Label fx:id="UserUILabel" alignment="CENTER" layoutX="135.0" layoutY="30.0" prefHeight="45.0" prefWidth="180.0" text="个人信息" textAlignment="CENTER" />
+                  <TextField fx:id="UserNameField" layoutX="166.0" layoutY="133.0" prefHeight="30.0" prefWidth="220.0" />
+                  <TextField fx:id="RealNameField" layoutX="166.0" layoutY="173.0" prefHeight="30.0" prefWidth="220.0" />
+                  <TextField fx:id="PhoneNumberField" layoutX="166.0" layoutY="215.0" prefHeight="30.0" prefWidth="220.0" />
+                  <TextField fx:id="MailField" layoutX="166.0" layoutY="255.0" prefHeight="30.0" prefWidth="220.0" />
+                  <TextField fx:id="BirthdayField" layoutX="166.0" layoutY="295.0" prefHeight="30.0" prefWidth="220.0" />
+                  <Label fx:id="ErrorLabelForInfo" alignment="CENTER" layoutX="150.0" layoutY="340.0" prefHeight="25.0" prefWidth="160.0" text="前后密码不一致" visible="false" />
+                  <Button fx:id="PasswordChangeButton" layoutX="305.0" layoutY="425.0" mnemonicParsing="false" onMouseClicked="#RegistButtonForLoginClicked" prefHeight="30.0" prefWidth="100.0" text="修改密码" />
+               </children>
+            </Pane>
+            <Pane fx:id="PasswordChangePane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="450.0" visible="false">
+               <children>
+                  <PasswordField fx:id="NewPasswordField" layoutX="75.0" layoutY="201.0" prefHeight="34.0" prefWidth="300.0" />
+                  <Button fx:id="RegistButtonForPassword" layoutX="73.0" layoutY="348.0" mnemonicParsing="false" onMouseClicked="#RegistButtonForRegistClicked" prefHeight="35.0" prefWidth="300.0" text="确认修改" />
+                  <Label fx:id="NewPasswordLabel" layoutX="75.0" layoutY="175.0" prefHeight="25.0" prefWidth="75.0" text="新密码：" />
+                  <PasswordField fx:id="SecondPasswordField" layoutX="75.0" layoutY="271.0" prefHeight="34.0" prefWidth="300.0" />
+                  <Label fx:id="SecondPasswordLabel" layoutX="75.0" layoutY="245.0" prefHeight="25.0" prefWidth="80.0" text="确认密码：" />
+                  <Label fx:id="PasswordUILabel" alignment="CENTER" layoutX="135.0" layoutY="28.0" prefHeight="45.0" prefWidth="180.0" text="StockHub" textAlignment="CENTER" />
+                  <Label fx:id="DifferentPassword" alignment="CENTER" layoutX="143.0" layoutY="310.0" prefHeight="25.0" prefWidth="160.0" text="前后密码不一致" visible="false" />
+                  <PasswordField fx:id="OriginalPasswordField" layoutX="73.0" layoutY="134.0" prefHeight="34.0" prefWidth="300.0" />
+                  <Label fx:id="OriginalPasswordLabel" layoutX="73.0" layoutY="109.0" prefHeight="25.0" prefWidth="75.0" text="原密码：" />
+               </children>
+            </Pane>
+         </children></AnchorPane>
+  </items>
+</SplitPane>

@@ -1,0 +1,920 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+    <display-name>Stock_Market_Analysing_System_Web</display-name>
+    <welcome-file-list>
+        <welcome-file>index.html</welcome-file>
+    </welcome-file-list>
+
+    <!-- AddBlSer1-->
+    <servlet>
+        <servlet-name>getCompanyInfo</servlet-name>
+        <servlet-class>Servlet.AddBlSer1.getCompanyInfo</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>getCompanyInfo</servlet-name>
+        <url-pattern>/StockHubWeb/getCompanyInfo</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>getSimpleKChartInfo</servlet-name>
+        <servlet-class>Servlet.AddBlSer1.getSimpleKChartInfo</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>getSimpleKChartInfo</servlet-name>
+        <url-pattern>/StockHubWeb/getSimpleKChartInfo</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>getSimpleEventInfo</servlet-name>
+        <servlet-class>Servlet.AddBlSer1.getSimpleEventInfo</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>getSimpleEventInfo</servlet-name>
+        <url-pattern>/StockHubWeb/getSimpleEventInfo</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>getDetialMainEventInfo</servlet-name>
+        <servlet-class>Servlet.AddBlSer1.getDetialMainEventInfo</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>getDetialMainEventInfo</servlet-name>
+        <url-pattern>/StockHubWeb/getDetialMainEventInfo</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>getSimpleTrendInfo</servlet-name>
+        <servlet-class>Servlet.AddBlSer1.getSimpleTrendInfo</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>getSimpleTrendInfo</servlet-name>
+        <url-pattern>/StockHubWeb/getSimpleTrendInfo</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>getDetialTrendInfo</servlet-name>
+        <servlet-class>Servlet.AddBlSer1.getDetialTrendInfo</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>getDetialTrendInfo</servlet-name>
+        <url-pattern>/StockHubWeb/getDetialTrendInfo</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>getSimpleInvestInfo</servlet-name>
+        <servlet-class>Servlet.AddBlSer1.getSimpleInvestInfo</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>getSimpleInvestInfo</servlet-name>
+        <url-pattern>/StockHubWeb/getSimpleInvestInfo</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>getDetialInvestNewsInfo</servlet-name>
+        <servlet-class>Servlet.AddBlSer1.getDetialInvestNewsInfo</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>getDetialInvestNewsInfo</servlet-name>
+        <url-pattern>/StockHubWeb/getDetialInvestNewsInfo</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>getAllIndustryName</servlet-name>
+        <servlet-class>Servlet.AddBlSer1.getAllIndustryName</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>getAllIndustryName</servlet-name>
+        <url-pattern>/StockHubWeb/getAllIndustryName</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>isStockExist</servlet-name>
+        <servlet-class>Servlet.AddBlSer1.isStockExist</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>isStockExist</servlet-name>
+        <url-pattern>/StockHubWeb/isStockExist</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>getIndustryAllStock</servlet-name>
+        <servlet-class>Servlet.AddBlSer1.getIndustryAllStock</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>getIndustryAllStock</servlet-name>
+        <url-pattern>/StockHubWeb/getIndustryAllStock</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>isTradeDate</servlet-name>
+        <servlet-class>Servlet.AddBlSer1.isTradeDate</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>isTradeDate</servlet-name>
+        <url-pattern>/StockHubWeb/isTradeDate</url-pattern>
+    </servlet-mapping>
+
+
+    <!-- AddBlSer2-->
+
+
+
+    <servlet>
+        <servlet-name>getNewsCl</servlet-name>
+        <servlet-class>Servlet.AddBlSer2.getNewsCl</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>getNewsCl</servlet-name>
+        <url-pattern>/StockHubWeb/getNewsCl</url-pattern>
+    </servlet-mapping>
+
+    <!-- BuyStockBlSer-->
+    <servlet>
+        <servlet-name>realBuy</servlet-name>
+        <servlet-class>Servlet.BuyStockBlSer.realBuy</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>realBuy</servlet-name>
+        <url-pattern>/StockHubWeb/realBuy</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>getRealBuy</servlet-name>
+        <servlet-class>Servlet.BuyStockBlSer.getRealBuy</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>getRealBuy</servlet-name>
+        <url-pattern>/StockHubWeb/getRealBuy</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>getHoldBuy</servlet-name>
+        <servlet-class>Servlet.BuyStockBlSer.getHoldBuy</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>getHoldBuy</servlet-name>
+        <url-pattern>/StockHubWeb/getHoldBuy</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>getRealBuyProfit</servlet-name>
+        <servlet-class>Servlet.BuyStockBlSer.getRealBuyProfit</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>getRealBuyProfit</servlet-name>
+        <url-pattern>/StockHubWeb/getRealBuyProfit</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>methodProfit</servlet-name>
+        <servlet-class>Servlet.BuyStockBlSer.methodProfit</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>methodProfit</servlet-name>
+        <url-pattern>/StockHubWeb/methodProfit</url-pattern>
+    </servlet-mapping>
+
+    <!-- ChooseAndReCommendBlSer-->
+    <servlet>
+        <servlet-name>choose</servlet-name>
+        <servlet-class>Servlet.ChooseAndReCommendBlSer.choose</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>choose</servlet-name>
+        <url-pattern>/StockHubWeb/choose</url-pattern>
+    </servlet-mapping>
+
+    <!-- IndustryBlSer-->
+    <servlet>
+        <servlet-name>findIndustryInfoOneday</servlet-name>
+        <servlet-class>Servlet.IndustryBlSer.findIndustryInfoOneday</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>findIndustryInfoOneday</servlet-name>
+        <url-pattern>/StockHubWeb/findIndustryInfoOneday</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>findTotalIndustryMaxInRate</servlet-name>
+        <servlet-class>Servlet.IndustryBlSer.findTotalIndustryMaxInRate</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>findTotalIndustryMaxInRate</servlet-name>
+        <url-pattern>/StockHubWeb/findTotalIndustryMaxInRate</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>findTotalIndustryMaxDeRate</servlet-name>
+        <servlet-class>Servlet.IndustryBlSer.findTotalIndustryMaxDeRate</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>findTotalIndustryMaxDeRate</servlet-name>
+        <url-pattern>/StockHubWeb/findTotalIndustryMaxDeRate</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>findTotalIndustryMaxInVolume</servlet-name>
+        <servlet-class>Servlet.IndustryBlSer.findTotalIndustryMaxInVolume</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>findTotalIndustryMaxInVolume</servlet-name>
+        <url-pattern>/StockHubWeb/findTotalIndustryMaxInVolume</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>findTotalIndustryPotential</servlet-name>
+        <servlet-class>Servlet.IndustryBlSer.findTotalIndustryPotential</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>findTotalIndustryPotential</servlet-name>
+        <url-pattern>/StockHubWeb/findTotalIndustryPotential</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>findTotalIndustryPieVO</servlet-name>
+        <servlet-class>Servlet.IndustryBlSer.findTotalIndustryPieVO</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>findTotalIndustryPieVO</servlet-name>
+        <url-pattern>/StockHubWeb/findTotalIndustryPieVO</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>findIndustryMaxInRate</servlet-name>
+        <servlet-class>Servlet.IndustryBlSer.findIndustryMaxInRate</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>findIndustryMaxInRate</servlet-name>
+        <url-pattern>/StockHubWeb/findIndustryMaxInRate</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>findIndustryMaxDeRate</servlet-name>
+        <servlet-class>Servlet.IndustryBlSer.findIndustryMaxDeRate</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>findIndustryMaxDeRate</servlet-name>
+        <url-pattern>/StockHubWeb/findIndustryMaxDeRate</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>findIndustryMaxInVolume</servlet-name>
+        <servlet-class>Servlet.IndustryBlSer.findIndustryMaxInVolume</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>findIndustryMaxInVolume</servlet-name>
+        <url-pattern>/StockHubWeb/findIndustryMaxInVolume</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>findIndustryPotential</servlet-name>
+        <servlet-class>Servlet.IndustryBlSer.findIndustryPotential</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>findIndustryPotential</servlet-name>
+        <url-pattern>/StockHubWeb/findIndustryPotential</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>findIndustryPieVO</servlet-name>
+        <servlet-class>Servlet.IndustryBlSer.findIndustryPieVO</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>findIndustryPieVO</servlet-name>
+        <url-pattern>/StockHubWeb/findIndustryPieVO</url-pattern>
+    </servlet-mapping>
+
+    <!-- InvestBlSer-->
+    <servlet>
+        <servlet-name>getInvestD</servlet-name>
+        <servlet-class>Servlet.InvestBlSer.getInvestD</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>getInvestD</servlet-name>
+        <url-pattern>/StockHubWeb/getInvestD</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>getInvestT</servlet-name>
+        <servlet-class>Servlet.InvestBlSer.getInvestT</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>getInvestT</servlet-name>
+        <url-pattern>/StockHubWeb/getInvestT</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>getInvestM</servlet-name>
+        <servlet-class>Servlet.InvestBlSer.getInvestM</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>getInvestM</servlet-name>
+        <url-pattern>/StockHubWeb/getInvestM</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>addPraise</servlet-name>
+        <servlet-class>Servlet.InvestBlSer.addPraise</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>addPraise</servlet-name>
+        <url-pattern>/StockHubWeb/addPraise</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>addCriticize</servlet-name>
+        <servlet-class>Servlet.InvestBlSer.addCriticize</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>addCriticize</servlet-name>
+        <url-pattern>/StockHubWeb/addCriticize</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>addView</servlet-name>
+        <servlet-class>Servlet.InvestBlSer.addView</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>addView</servlet-name>
+        <url-pattern>/StockHubWeb/addView</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>addComment</servlet-name>
+        <servlet-class>Servlet.InvestBlSer.addComment</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>addComment</servlet-name>
+        <url-pattern>/StockHubWeb/addComment</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>addCollectionInvest</servlet-name>
+        <servlet-class>Servlet.InvestBlSer.addCollectionInvest</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>addCollectionInvest</servlet-name>
+        <url-pattern>/StockHubWeb/addCollectionInvest</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>getCollectionInvest</servlet-name>
+        <servlet-class>Servlet.InvestBlSer.getCollectionInvest</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>getCollectionInvest</servlet-name>
+        <url-pattern>/StockHubWeb/getCollectionInvest</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>deleteCollectionInvest</servlet-name>
+        <servlet-class>Servlet.InvestBlSer.deleteCollectionInvest</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>deleteCollectionInvest</servlet-name>
+        <url-pattern>/StockHubWeb/deleteCollectionInvest</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>getAllInvestVO</servlet-name>
+        <servlet-class>Servlet.InvestBlSer.getAllInvestVO</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>getAllInvestVO</servlet-name>
+        <url-pattern>/StockHubWeb/getAllInvestVO</url-pattern>
+    </servlet-mapping>
+
+
+
+
+
+    <servlet>
+        <servlet-name>isAlreadyCollection</servlet-name>
+        <servlet-class>Servlet.InvestBlSer.isAlreadyCollection</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>isAlreadyCollection</servlet-name>
+        <url-pattern>/StockHubWeb/isAlreadyCollection</url-pattern>
+    </servlet-mapping>
+
+    <!-- KAndEMABlSer-->
+    <servlet>
+        <servlet-name>getDataByCode</servlet-name>
+        <servlet-class>Servlet.KAndEMABlSer.getDataByCode</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>getDataByCode</servlet-name>
+        <url-pattern>/StockHubWeb/getDataByCode</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>getDataByName</servlet-name>
+        <servlet-class>Servlet.KAndEMABlSer.getDataByName</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>getDataByName</servlet-name>
+        <url-pattern>/StockHubWeb/getDataByName</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>getEMAByCode</servlet-name>
+        <servlet-class>Servlet.KAndEMABlSer.getEMAByCode</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>getEMAByCode</servlet-name>
+        <url-pattern>/StockHubWeb/getEMAByCode</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>getEMAByName</servlet-name>
+        <servlet-class>Servlet.KAndEMABlSer.getEMAByName</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>getEMAByName</servlet-name>
+        <url-pattern>/StockHubWeb/getEMAByName</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>getPieDataByCode</servlet-name>
+        <servlet-class>Servlet.KAndEMABlSer.getPieDataByCode</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>getPieDataByCode</servlet-name>
+        <url-pattern>/StockHubWeb/getPieDataByCode</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>getPieDataByName</servlet-name>
+        <servlet-class>Servlet.KAndEMABlSer.getPieDataByName</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>getPieDataByName</servlet-name>
+        <url-pattern>/StockHubWeb/getPieDataByName</url-pattern>
+    </servlet-mapping>
+
+    <!-- MarketSituationBlSer-->
+    <servlet>
+        <servlet-name>getMarketSituation</servlet-name>
+        <servlet-class>Servlet.MarketSituationBlSer.getMarketSituation</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>getMarketSituation</servlet-name>
+        <url-pattern>/StockHubWeb/getMarketSituation</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>getIncreaseList</servlet-name>
+        <servlet-class>Servlet.MarketSituationBlSer.getIncreaseList</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>getIncreaseList</servlet-name>
+        <url-pattern>/StockHubWeb/getIncreaseList</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>getDecreaseList</servlet-name>
+        <servlet-class>Servlet.MarketSituationBlSer.getDecreaseList</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>getDecreaseList</servlet-name>
+        <url-pattern>/StockHubWeb/getDecreaseList</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>getVolumeList</servlet-name>
+        <servlet-class>Servlet.MarketSituationBlSer.getVolumeList</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>getVolumeList</servlet-name>
+        <url-pattern>/StockHubWeb/getVolumeList</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>getPotentialList</servlet-name>
+        <servlet-class>Servlet.MarketSituationBlSer.getPotentialList</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>getPotentialList</servlet-name>
+        <url-pattern>/StockHubWeb/getPotentialList</url-pattern>
+    </servlet-mapping>
+
+    <!-- NewsBlSer-->
+    <servlet>
+        <servlet-name>getNewsD</servlet-name>
+        <servlet-class>Servlet.NewsBlSer.getNewsD</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>getNewsD</servlet-name>
+        <url-pattern>/StockHubWeb/getNewsD</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>getNewsT</servlet-name>
+        <servlet-class>Servlet.NewsBlSer.getNewsT</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>getNewsT</servlet-name>
+        <url-pattern>/StockHubWeb/getNewsT</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>getNewsM</servlet-name>
+        <servlet-class>Servlet.NewsBlSer.getNewsM</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>getNewsM</servlet-name>
+        <url-pattern>/StockHubWeb/getNewsM</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>addNewsPraise</servlet-name>
+        <servlet-class>Servlet.NewsBlSer.addPraise</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>addNewsPraise</servlet-name>
+        <url-pattern>/StockHubWeb/addNewsPraise</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>addNewsCriticize</servlet-name>
+        <servlet-class>Servlet.NewsBlSer.addCriticize</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>addNewsCriticize</servlet-name>
+        <url-pattern>/StockHubWeb/addNewsCriticize</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>addNewsView</servlet-name>
+        <servlet-class>Servlet.NewsBlSer.addView</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>addNewsView</servlet-name>
+        <url-pattern>/StockHubWeb/addNewsView</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>addNewsComment</servlet-name>
+        <servlet-class>Servlet.NewsBlSer.addComment</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>addNewsComment</servlet-name>
+        <url-pattern>/StockHubWeb/addNewsComment</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>addCollectionNews</servlet-name>
+        <servlet-class>Servlet.NewsBlSer.addCollectionNews</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>addCollectionNews</servlet-name>
+        <url-pattern>/StockHubWeb/addCollectionNews</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>getCollectionNews</servlet-name>
+        <servlet-class>Servlet.NewsBlSer.getCollectionNews</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>getCollectionNews</servlet-name>
+        <url-pattern>/StockHubWeb/getCollectionNews</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>deleteCollectionNews</servlet-name>
+        <servlet-class>Servlet.NewsBlSer.deleteCollectionNews</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>deleteCollectionNews</servlet-name>
+        <url-pattern>/StockHubWeb/deleteCollectionNews</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>getAllNewsVO</servlet-name>
+        <servlet-class>Servlet.NewsBlSer.getAllNewsVO</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>getAllNewsVO</servlet-name>
+        <url-pattern>/StockHubWeb/getAllNewsVO</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>isAlreadyCollectionNews</servlet-name>
+        <servlet-class>Servlet.NewsBlSer.isAlreadyCollection</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>isAlreadyCollectionNews</servlet-name>
+        <url-pattern>/StockHubWeb/isAlreadyCollectionNews</url-pattern>
+    </servlet-mapping>
+
+
+
+
+    <!-- PlateBlser-->
+    <servlet>
+        <servlet-name>getTotalPlateInfo</servlet-name>
+        <servlet-class>Servlet.PlateBlSer.getTotalPlateInfo</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>getTotalPlateInfo</servlet-name>
+        <url-pattern>/StockHubWeb/getTotalPlateInfo</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>getOnePlateInfo</servlet-name>
+        <servlet-class>Servlet.PlateBlSer.getOnePlateInfo</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>getOnePlateInfo</servlet-name>
+        <url-pattern>/StockHubWeb/getOnePlateInfo</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>getOnePlateKChart</servlet-name>
+        <servlet-class>Servlet.PlateBlSer.getOnePlateKChart</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>getOnePlateKChart</servlet-name>
+        <url-pattern>/StockHubWeb/getOnePlateKChart</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>getRecommendStocks</servlet-name>
+        <servlet-class>Servlet.PlateBlSer.getRecommendStocks</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>getRecommendStocks</servlet-name>
+        <url-pattern>/StockHubWeb/getRecommendStocks</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>getPlateIncList</servlet-name>
+        <servlet-class>Servlet.PlateBlSer.getIncList</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>getPlateIncList</servlet-name>
+        <url-pattern>/StockHubWeb/getPlateIncList</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>getPlateDecList</servlet-name>
+        <servlet-class>Servlet.PlateBlSer.getDecList</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>getPlateDecList</servlet-name>
+        <url-pattern>/StockHubWeb/getPlateDecList</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>getPlateVolumeList</servlet-name>
+        <servlet-class>Servlet.PlateBlSer.getVolumeList</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>getPlateVolumeList</servlet-name>
+        <url-pattern>/StockHubWeb/getPlateVolumeList</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>getPlatePotentialList</servlet-name>
+        <servlet-class>Servlet.PlateBlSer.getVolumeList</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>getPlatePotentialList</servlet-name>
+        <url-pattern>/StockHubWeb/getPlatePotentialList</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>getPlatePieVO</servlet-name>
+        <servlet-class>Servlet.PlateBlSer.getPlatePieVO</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>getPlatePieVO</servlet-name>
+        <url-pattern>/StockHubWeb/getPlatePieVO</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>findSockPoolInfo</servlet-name>
+        <servlet-class>Servlet.PlateBlSer.findSockPoolInfo</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>findSockPoolInfo</servlet-name>
+        <url-pattern>/StockHubWeb/findSockPoolInfo</url-pattern>
+    </servlet-mapping>
+
+    <!-- QuantourCompareBlSer-->
+    <servlet>
+        <servlet-name>quantourTableCompareByCode</servlet-name>
+        <servlet-class>Servlet.QuantourCompareBlSer.quantourTableCompareByCode</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>quantourTableCompareByCode</servlet-name>
+        <url-pattern>/StockHubWeb/quantourTableCompareByCode</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>quantourChartCompareByCode</servlet-name>
+        <servlet-class>Servlet.QuantourCompareBlSer.quantourChartCompareByCode</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>quantourChartCompareByCode</servlet-name>
+        <url-pattern>/StockHubWeb/quantourChartCompareByCode</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>quantourTableCompareByName</servlet-name>
+        <servlet-class>Servlet.QuantourCompareBlSer.quantourTableCompareByName</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>quantourTableCompareByName</servlet-name>
+        <url-pattern>/StockHubWeb/quantourTableCompareByName</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>quantourChartCompareByName</servlet-name>
+        <servlet-class>Servlet.QuantourCompareBlSer.quantourChartCompareByName</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>quantourChartCompareByName</servlet-name>
+        <url-pattern>/StockHubWeb/quantourChartCompareByName</url-pattern>
+    </servlet-mapping>
+
+    <!-- StockBlSer-->
+    <servlet>
+        <servlet-name>getStockGoalOne</servlet-name>
+        <servlet-class>Servlet.StockBlSer.getStockGoalOne</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>getStockGoalOne</servlet-name>
+        <url-pattern>/StockHubWeb/getStockGoalOne</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>getStockGoal</servlet-name>
+        <servlet-class>Servlet.StockBlSer.getStockGoal</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>getStockGoal</servlet-name>
+        <url-pattern>/StockHubWeb/getStockGoal</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>getStockGoalTwenty</servlet-name>
+        <servlet-class>Servlet.StockBlSer.getStockGoalTwenty</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>getStockGoalTwenty</servlet-name>
+        <url-pattern>/StockHubWeb/getStockGoalTwenty</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>getStockGoalTwentyIn</servlet-name>
+        <servlet-class>Servlet.StockBlSer.getStockGoalTwentyIn</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>getStockGoalTwentyIn</servlet-name>
+        <url-pattern>/StockHubWeb/getStockGoalTwentyIn</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>getMaxProfit</servlet-name>
+        <servlet-class>Servlet.StockBlSer.getMaxProfit</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>getMaxProfit</servlet-name>
+        <url-pattern>/StockHubWeb/getMaxProfit</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>getMaxProfitIn</servlet-name>
+        <servlet-class>Servlet.StockBlSer.getMaxProfitIn</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>getMaxProfitIn</servlet-name>
+        <url-pattern>/StockHubWeb/getMaxProfitIn</url-pattern>
+    </servlet-mapping>
+
+
+
+    <!-- StrategyBlSer-->
+    <servlet>
+        <servlet-name>getStrategy</servlet-name>
+        <servlet-class>Servlet.StrategyBlSer.getStrategy</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>getStrategy</servlet-name>
+        <url-pattern>/StockHubWeb/getStrategy</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>getRelationGraphData</servlet-name>
+        <servlet-class>Servlet.StrategyBlSer.getRelationGraphData</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>getRelationGraphData</servlet-name>
+        <url-pattern>/StockHubWeb/getRelationGraphData</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>getYieldRateDistribution</servlet-name>
+        <servlet-class>Servlet.StrategyBlSer.getYieldRateDistribution</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>getYieldRateDistribution</servlet-name>
+        <url-pattern>/StockHubWeb/getYieldRateDistribution</url-pattern>
+    </servlet-mapping>
+
+    <!-- UserBlSer-->
+    <servlet>
+        <servlet-name>register</servlet-name>
+        <servlet-class>Servlet.UserBlSer.register</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>register</servlet-name>
+        <url-pattern>/StockHubWeb/register</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>login</servlet-name>
+        <servlet-class>Servlet.UserBlSer.login</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>login</servlet-name>
+        <url-pattern>/StockHubWeb/login</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>changeUserInfo</servlet-name>
+        <servlet-class>Servlet.UserBlSer.changeUserInfo</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>changeUserInfo</servlet-name>
+        <url-pattern>/StockHubWeb/changeUserInfo</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>getUserInfo</servlet-name>
+        <servlet-class>Servlet.UserBlSer.getUserInfo</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>getUserInfo</servlet-name>
+        <url-pattern>/StockHubWeb/getUserInfo</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>getSelfSelectStock</servlet-name>
+        <servlet-class>Servlet.UserBlSer.getSelfSelectStock</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>getSelfSelectStock</servlet-name>
+        <url-pattern>/StockHubWeb/getSelfSelectStock</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>addSelfSelectStock</servlet-name>
+        <servlet-class>Servlet.UserBlSer.addSelfSelectStock</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>addSelfSelectStock</servlet-name>
+        <url-pattern>/StockHubWeb/addSelfSelectStock</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>addOneSelfSelectStock</servlet-name>
+        <servlet-class>Servlet.UserBlSer.addOneSelfSelectStock</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>addOneSelfSelectStock</servlet-name>
+        <url-pattern>/StockHubWeb/addOneSelfSelectStock</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>deleteSelfSelectStock</servlet-name>
+        <servlet-class>Servlet.UserBlSer.deleteSelfSelectStock</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>deleteSelfSelectStock</servlet-name>
+        <url-pattern>/StockHubWeb/deleteSelfSelectStock</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>deleteOneSelfStock</servlet-name>
+        <servlet-class>Servlet.UserBlSer.deleteOneSelfStock</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>deleteOneSelfStock</servlet-name>
+        <url-pattern>/StockHubWeb/deleteOneSelfStock</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>isMySelfSelectStock</servlet-name>
+        <servlet-class>Servlet.UserBlSer.isMySelfSelectStock</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>isMySelfSelectStock</servlet-name>
+        <url-pattern>/StockHubWeb/isMySelfSelectStock</url-pattern>
+    </servlet-mapping>
+</web-app>

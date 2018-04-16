@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test1</title>
+    <script src="js/test.js"></script>
+    <script src="js/echarts.min.js"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="" />
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <!-- //mobile apps -->
+    <!-- Custom Theme files -->
+    <link href="css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
+    <link href="css/style.css" type="text/css" rel="stylesheet" media="all">
+    <!-- //Custom Theme files -->
+    <!-- js -->
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <!-- //js -->
+    <!-- web-fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Buda:300' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,300italic,400italic,700,700italic' rel='stylesheet' type='text/css'>
+    <!-- //web-fonts -->
+    <!-- start-smooth-scrolling -->
+    <script type="text/javascript" src="js/move-top.js"></script>
+    <script type="text/javascript" src="js/easing.js"></script>
+    <script type="text/javascript">
+        jQuery(document).ready(function($) {
+            $(".scroll").click(function(event){
+                event.preventDefault();
+
+                $('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+            });
+        });
+    </script>
+    <!-- //end-smooth-scrolling -->
+</head>
+<body>
+<h1 id="test">初始</h1>
+<input type="button" onclick="addButton()" value="改变">
+<div id="area">
+    <p>button up</p>
+    <p>button down</p>
+</div>
+<br>
+<br>
+
+<h2>next is chart</h2>
+<input type="button" onclick="getData()" value="加表格">
+<div id="chart" style="width: 300px;height: 300px;">
+</div>
+<p id="end">end</p>
+<div class="col-md-4 features-grids">
+    <div id="PieChartDiv"  style="width: 300px;height: 300px;">
+
+    </div>
+</div>
+<!--<input type="button" onclick="addChart()" value="加图形">-->
+<!--<div id="newChart"></div>-->
+</body>
+
+</html>

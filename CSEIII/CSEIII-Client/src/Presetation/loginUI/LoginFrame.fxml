@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<SplitPane fx:id="LoginUI" dividerPositions="0.09671532846715329" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="550.0" prefWidth="450.0" stylesheets="@LoginFrame.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Presetation.loginUI.LoginController">
+  <items>
+    <AnchorPane fx:id="TopAnchorPane" maxHeight="50.0" minHeight="50.0" minWidth="0.0" prefHeight="100.0" prefWidth="450.0">
+         <children>
+            <Button fx:id="CloseButton" layoutX="391.0" layoutY="8.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="35.0" />
+            <Button fx:id="minButton" layoutX="340.0" layoutY="8.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="35.0" />
+         </children></AnchorPane>
+    <AnchorPane fx:id="BottomAnchorPane" minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+         <children>
+            <Pane fx:id="LoginPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="450.0" visible="false">
+               <children>
+                  <TextField fx:id="UserNameField" layoutX="75.0" layoutY="160.0" prefHeight="34.0" prefWidth="300.0" />
+                  <PasswordField fx:id="PasswordField" layoutX="75.0" layoutY="230.0" prefHeight="34.0" prefWidth="300.0" />
+                  <Button fx:id="LoginButtonForLogin" layoutX="75.0" layoutY="313.0" mnemonicParsing="false" onMouseClicked="#LoginButtonFForLoginClicked" prefHeight="35.0" prefWidth="300.0" text="登录" />
+                  <Button fx:id="RegistButtonForLogin" layoutX="70.0" layoutY="376.0" mnemonicParsing="false" onMouseClicked="#RegistButtonForLoginClicked" prefHeight="30.0" prefWidth="60.0" text="注册" />
+                  <Label fx:id="NameLabel" layoutX="75.0" layoutY="135.0" prefHeight="25.0" prefWidth="70.0" text="用户名：" />
+                  <Label fx:id="PasswordLabel" layoutX="75.0" layoutY="205.0" prefHeight="25.0" prefWidth="50.0" text="密码：" />
+                  <Label fx:id="LoginUILabel" alignment="CENTER" layoutX="135.0" layoutY="40.0" prefHeight="50.0" prefWidth="180.0" text="StockHub" textAlignment="CENTER" />
+                  <Label fx:id="WrongNameOrPasswordForLogin" alignment="CENTER" layoutX="142.0" layoutY="276.0" prefHeight="20.0" prefWidth="150.0" text="用户名或密码错误" visible="false" />
+                  <Button fx:id="PasswordForgetButtonForLogin" layoutX="275.0" layoutY="376.0" mnemonicParsing="false" onMouseClicked="#RegistButtonForLoginClicked" prefHeight="30.0" prefWidth="100.0" text="忘记密码" />
+               </children>
+            </Pane>
+            <Pane fx:id="RegistPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="450.0">
+               <children>
+                  <TextField fx:id="UserNameFieldForRegist" layoutX="75.0" layoutY="135.0" prefHeight="34.0" prefWidth="300.0" />
+                  <PasswordField fx:id="PasswordFieldForRegist" layoutX="75.0" layoutY="201.0" prefHeight="34.0" prefWidth="300.0" />
+                  <Button fx:id="RegistButtonForRegist" layoutX="75.0" layoutY="339.0" mnemonicParsing="false" onMouseClicked="#RegistButtonForRegistClicked" prefHeight="35.0" prefWidth="300.0" text="下一步" />
+                  <Button fx:id="LoginButtonForRegist" layoutX="195.0" layoutY="395.0" mnemonicParsing="false" onMouseClicked="#LoginButtonForRegistClicked" prefHeight="30.0" prefWidth="60.0" text="登录" />
+                  <Label fx:id="NameLabelForRegist" layoutX="75.0" layoutY="110.0" prefHeight="25.0" prefWidth="70.0" text="用户名：" />
+                  <Label fx:id="PasswordLabelForRegist" layoutX="75.0" layoutY="175.0" prefHeight="25.0" prefWidth="50.0" text="密码：" />
+                  <PasswordField fx:id="SecondPasswordFieldForRegist" layoutX="75.0" layoutY="271.0" prefHeight="34.0" prefWidth="300.0" />
+                  <Label fx:id="SecondPasswordLabelForRegist" layoutX="75.0" layoutY="245.0" prefHeight="25.0" prefWidth="80.0" text="确认密码：" />
+                  <Label fx:id="RegistUILabel" alignment="CENTER" layoutX="135.0" layoutY="40.0" prefHeight="50.0" prefWidth="180.0" text="StockHub" textAlignment="CENTER" />
+                  <Label fx:id="WrongPasswordForRegist" alignment="CENTER" layoutX="143.0" layoutY="310.0" prefHeight="25.0" prefWidth="160.0" text="前后密码不一致" visible="false" />
+                  <Label fx:id="WrongNameForRegist" alignment="CENTER" layoutX="140.0" layoutY="172.0" prefHeight="25.0" prefWidth="160.0" text="请输入规范的用户名" visible="false" />
+               </children>
+            </Pane>
+            <Pane fx:id="RegistInfoPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="450.0" visible="false">
+               <children>
+                  <Button fx:id="BackButtonForRegistInfo" layoutX="126.0" layoutY="380.0" mnemonicParsing="false" onMouseClicked="#EditButtonClicked" prefHeight="35.0" prefWidth="80.0" text="上一步" />
+                  <Button fx:id="RegistButtonForRegistInfo" layoutX="236.0" layoutY="380.0" mnemonicParsing="false" onMouseClicked="#SaveButtonClicked" prefHeight="35.0" prefWidth="80.0" text="注册" />
+                  <Label fx:id="NickNameLabelForRegistInfo" layoutX="80.0" layoutY="140.0" prefHeight="20.0" prefWidth="70.0" text="昵称：" />
+                  <Label fx:id="RealNameLabelForRegistInfo" layoutX="80.0" layoutY="180.0" prefHeight="20.0" prefWidth="70.0" text="姓名：" />
+                  <Label fx:id="PhoneNumberLabelForRegistInfo" layoutX="80.0" layoutY="220.0" prefHeight="20.0" prefWidth="70.0" text="电话：" />
+                  <Label fx:id="MailLabelForRegistInfo" layoutX="80.0" layoutY="260.0" prefHeight="20.0" prefWidth="70.0" text="邮箱：" />
+                  <Label fx:id="BirthdayLabelForRegistInfo" layoutX="80.0" layoutY="300.0" prefHeight="20.0" prefWidth="70.0" text="生日：" />
+                  <Label fx:id="UserUILabelForRegistInfo" alignment="CENTER" layoutX="135.0" layoutY="40.0" prefHeight="50.0" prefWidth="180.0" text="StockHub" textAlignment="CENTER" />
+                  <TextField fx:id="NickNameFieldForRegistInfo" layoutX="166.0" layoutY="133.0" prefHeight="30.0" prefWidth="220.0" />
+                  <TextField fx:id="RealNameFieldForRegistInfo" layoutX="166.0" layoutY="173.0" prefHeight="30.0" prefWidth="220.0" />
+                  <TextField fx:id="PhoneNumberFieldForRegistInfo" layoutX="166.0" layoutY="215.0" prefHeight="30.0" prefWidth="220.0" />
+                  <TextField fx:id="MailFieldForRegistInfo" layoutX="166.0" layoutY="255.0" prefHeight="30.0" prefWidth="220.0" />
+                  <TextField fx:id="BirthdayFieldForRegistInfo" layoutX="166.0" layoutY="295.0" prefHeight="30.0" prefWidth="220.0" />
+                  <Label fx:id="ErrorForRegistInfo" alignment="CENTER" layoutX="130.0" layoutY="340.0" prefHeight="25.0" prefWidth="180.0" text="请输入正确的信息" visible="false" />
+               </children>
+            </Pane>
+         </children></AnchorPane>
+  </items>
+</SplitPane>

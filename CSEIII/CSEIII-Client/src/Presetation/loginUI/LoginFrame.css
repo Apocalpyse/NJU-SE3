@@ -1,0 +1,210 @@
+/*-----------------------          Basic Settings   Begin           -----------------------*/
+.split-pane .split-pane-divider {
+    -fx-background-color: #1A1A1A;
+
+}
+#LoginUI{
+    -fx-background-color: #444444;
+}
+#CloseButton{
+    -fx-background-color: rgba(0,0,0,0);
+    -fx-background-image: url("closeForLogin.png");
+}
+#CloseButton:hover{
+    -fx-background-color: rgba(0,0,0,0);
+    -fx-background-image: url("closeForLogin.png");
+    -fx-effect: dropshadow( three-pass-box , #F4F460 , 5 , 0.0 , 0 , 0 );
+}
+#minButton{
+    -fx-background-color: rgba(0,0,0,0);
+    -fx-background-image: url("minForLogin.png");
+}
+#minButton:hover{
+    -fx-background-color: rgba(0,0,0,0);
+    -fx-background-image: url("minForLogin.png");
+    -fx-effect: dropshadow( three-pass-box , #F4F460 , 5 , 0.0 , 0 , 0 );
+}
+/*-----------------------          Basic Settings    End          -----------------------*/
+
+
+
+/*-----------------------            Label Begin              -----------------------*/
+
+#LoginUILabel,
+#RegistUILabel,
+#UserUILabelForRegistInfo{
+    -fx-alignment: center;
+    -fx-text-fill: #F4F460;
+    -fx-font-size: 34px;
+    -fx-effect: dropshadow( three-pass-box , #F4F460 , 5 , 0.0 , 0 , 0 );
+
+}
+#NameLabel,
+#PasswordLabel,
+#NameLabelForRegist,
+#PasswordLabelForRegist,
+#SecondPasswordLabelForRegist,
+#NickNameLabelForRegistInfo,
+#RealNameLabelForRegistInfo,
+#PhoneNumberLabelForRegistInfo,
+#MailLabelForRegistInfo,
+#BirthdayLabelForRegistInfo{
+    -fx-alignment: center;
+    -fx-text-fill: #AAAAAA;
+    -fx-font-size: 15px;
+
+}
+
+
+
+#NameLabel:hover,
+#PasswordLabel:hover,
+#NameLabelForRegist:hover,
+#PasswordLabelForRegist:hover,
+#SecondPasswordLabelForRegist:hover,
+#NickNameLabelForRegistInfo:hover,
+#RealNameLabelForRegistInfo:hover,
+#PhoneNumberLabelForRegistInfo:hover,
+#MailLabelForRegistInfo:hover,
+#BirthdayLabelForRegistInfo:hover{
+    -fx-alignment: center;
+    -fx-text-fill: #DDDDDD;
+    -fx-font-size: 16px;
+    -fx-effect: dropshadow( three-pass-box , white , 5 , 0.0 , 0 , 0 );
+}
+/*-----------------------             Label End                 -----------------------*/
+
+
+
+/*-----------------------             Field Begin               -----------------------*/
+#UserNameField,
+ #PasswordField,
+ #UserNameFieldForRegist,
+ #PasswordFieldForRegist,
+ #SecondPasswordFieldForRegist,
+ #NickNameFieldForRegistInfo,
+ #RealNameFieldForRegistInfo,
+ #PhoneNumberFieldForRegistInfo,
+ #MailFieldForRegistInfo,
+ #BirthdayFieldForRegistInfo{
+     -fx-alignment: center;
+     -fx-text-fill: white;
+     -fx-font-size: 16px;
+     -fx-background-color: #333333;
+ }
+
+#UserNameField:focused,
+#PasswordField:focused,
+#UserNameFieldForRegist:focused,
+#PasswordFieldForRegist:focused,
+#SecondPasswordFieldForRegist:focused,
+#NickNameFieldForRegistInfo:focused,
+#RealNameFieldForRegistInfo:focused,
+#PhoneNumberFieldForRegistInfo:focused,
+#MailFieldForRegistInfo:focused,
+#BirthdayFieldForRegistInfo:focused{
+    -fx-alignment: center;
+    -fx-text-fill: #C4E6DF;
+    -fx-font-size: 16px;
+    -fx-background-color: #333333;
+    -fx-effect: dropshadow(  three-pass-box , #F4F460 , 3 , 0.1 , 0 , 0 );
+    /*
+    dropshadow 参数:
+    1.模式
+    2.颜色
+    3.边缘模糊程度参数
+    4.宽度参数
+    5、6.位置参数:相对位置
+     */
+}
+
+#UserNameField:hover,
+ #PasswordField:hover,
+ #UserNameFieldForRegist:hover,
+ #PasswordFieldForRegist:hover,
+ #SecondPasswordFieldForRegist:hover,
+ #NickNameFieldForRegistInfo:hover,
+ #RealNameFieldForRegistInfo:hover,
+ #PhoneNumberFieldForRegistInfo:hover,
+ #MailFieldForRegistInfo:hover,
+ #BirthdayFieldForRegistInfo:hover{
+     -fx-alignment: center;
+     -fx-text-fill: #C4E6DF;
+     -fx-font-size: 16px;
+     -fx-background-color: #333333;
+     -fx-effect: dropshadow(  three-pass-box , #BEBE0E , 5 , 0.1 , 0 , 0 );
+ }
+
+#UserNameField:focused:hover,
+#PasswordField:focused:hover,
+#UserNameFieldForRegist:focused:hover,
+#PasswordFieldForRegist:focused:hover,
+#SecondPasswordFieldForRegist:focused:hover,
+#NickNameFieldForRegistInfo:focused:hover,
+#RealNameFieldForRegistInfo:focused:hover,
+#PhoneNumberFieldForRegistInfo:focused:hover,
+#MailFieldForRegistInfo:focused:hover,
+#BirthdayFieldForRegistInfo:focused:hover{
+    -fx-alignment: center;
+    -fx-text-fill: #C4E6DF;
+    -fx-font-size: 16px;
+    -fx-background-color: #333333;
+    -fx-effect: dropshadow(  three-pass-box , #F4F460 , 10 , 0.1 , 0 , 0 );
+}
+/*-----------------------             Field  End                 -----------------------*/
+
+
+
+/*-----------------------            Button Begin                -----------------------*/
+
+#LoginButtonForLogin ,
+#RegistButtonForRegist,
+#BackButtonForRegistInfo,
+#RegistButtonForRegistInfo{
+    -fx-background-color: #2B6FD5;
+    -fx-text-fill: #C4E6DF;
+    -fx-font-size: 15px;
+}
+#LoginButtonForRegist,
+#RegistButtonForLogin,
+#PasswordForgetButtonForLogin{
+    -fx-background-color: rgba(0,0,0,0);
+    -fx-text-fill: #2B6FD5;
+    -fx-font-size: 14px;
+
+}
+#BackButtonForRegistInfo:hover,
+#RegistButtonForRegistInfo:hover,
+#LoginButtonForLogin :hover,
+#LoginButtonForRegist:hover,
+#RegistButtonForLogin:hover,
+#RegistButtonForRegist:hover,
+#PasswordForgetButtonForLogin:hover{
+    -fx-text-fill: #F4F460;
+    -fx-font-size: 16px;
+    -fx-effect: innershadow( three-pass-box , #F4F460 , 6 , 0.0 , 0 , 0 );
+}
+
+
+/*-----------------------            Button End                  -----------------------*/
+
+
+
+/*-----------------------          ErrorMessage   Begin            -----------------------*/
+
+#WrongNameOrPasswordForLogin,
+#WrongNameForRegist,
+#WrongPasswordForRegist,
+#ErrorForRegistInfo{
+
+    -fx-background-image: url("errorImg.png");
+    -fx-background-position: left;
+    -fx-background-repeat: no-repeat;
+    -fx-background-color: rgba(0,0,0,0);
+    -fx-text-fill: #FF3333;
+    -fx-font-size: 14px;
+
+
+}
+
+/*-----------------------          ErrorMessage    End           -----------------------*/

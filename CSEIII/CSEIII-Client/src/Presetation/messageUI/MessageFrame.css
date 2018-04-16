@@ -1,0 +1,51 @@
+/*-----------------------          Basic Settings   Begin           -----------------------*/
+.split-pane .split-pane-divider {
+    -fx-background-color: #1A1A1A;
+
+}
+#MessageUI{
+    -fx-background-color: #444444;
+}
+#CloseButton{
+    -fx-background-color: rgba(0,0,0,0);
+    -fx-background-image: url("closeForMessage.png");
+}
+#CloseButton:hover{
+    -fx-background-color: rgba(0,0,0,0);
+    -fx-background-image: url("closeForMessage.png");
+    -fx-effect: dropshadow( three-pass-box , #F4F460 , 5 , 0.0 , 0 , 0 );
+}
+#minButton{
+    -fx-background-color: rgba(0,0,0,0);
+    -fx-background-image: url("minForMessage.png");
+}
+#minButton:hover{
+    -fx-background-color: rgba(0,0,0,0);
+    -fx-background-image: url("minForMessage.png");
+    -fx-effect: dropshadow( three-pass-box , #F4F460 , 5 , 0.0 , 0 , 0 );
+}
+#MessageLabel{
+    -fx-background-image: url("errorImg.png");
+    -fx-background-position: left;
+    -fx-background-repeat: no-repeat;
+    -fx-background-color: rgba(0,0,0,0);
+    -fx-text-fill: #FF3333;
+    -fx-text-alignment: center;
+    -fx-font-size: 20px;
+}
+#StockHubForMessage{
+    -fx-alignment: center;
+    -fx-text-fill: #F4F460;
+    -fx-font-size: 25px;
+    -fx-effect: dropshadow( three-pass-box , #F4F460 , 5 , 0.0 , 0 , 0 );
+}
+.button{
+    -fx-background-color: #2B6FD5;
+    -fx-text-fill: #C4E6DF;
+    -fx-font-size: 12px;
+}
+.button:hover{
+    -fx-text-fill: #F4F460;
+    -fx-effect: innershadow( three-pass-box , #F4F460 , 6 , 0.0 , 0 , 0 );
+}
+/*-----------------------          Basic Settings    End          -----------------------*/

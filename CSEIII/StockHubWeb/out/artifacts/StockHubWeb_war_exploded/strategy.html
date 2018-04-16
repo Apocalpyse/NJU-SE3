@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>策略</title>
+    <!-- mobile apps -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="" />
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <!-- //mobile apps -->
+    <!-- Custom Theme files -->
+    <link href="css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
+    <link href="css/style.css" type="text/css" rel="stylesheet" media="all">
+    <!-- //Custom Theme files -->
+    <!-- js -->
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <!-- //js -->
+    <!-- web-fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Buda:300' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,300italic,400italic,700,700italic' rel='stylesheet' type='text/css'>
+    <!-- //web-fonts -->
+    <!-- start-smooth-scrolling -->
+    <script type="text/javascript" src="js/move-top.js"></script>
+    <script type="text/javascript" src="js/easing.js"></script>
+    <script type="text/javascript">
+        jQuery(document).ready(function($) {
+            $(".scroll").click(function(event){
+                event.preventDefault();
+
+                $('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+            });
+        });
+    </script>
+    <script type="text/javascript" src="js/strategyJS/strategy.js"></script>
+    <script src="js/echarts.min.js"></script>
+    <!-- //end-smooth-scrolling -->
+</head>
+<body>
+<!-- banner -->
+<div class="banner">
+    <div class="banner-info">
+        <div class="banner-top">
+            <div class="container">
+                <div class="banner-top-grids banner-top-left">
+                    <ul class="social-icons">
+
+                    </ul>
+                </div>
+                <div class="banner-top-grids banner-logo" >
+                    <a href="index.html">
+                        <img src="images/1-2.png" alt=""/>
+                        <h1>StockHub </h1>
+                        <p>Do the best investment.</p>
+                    </a>
+                </div>
+                <div class="banner-top-grids banner-top-right ">
+                    <div id="loginInOrOutDiv" class="pull-right">
+                        <span class="glyphicon glyphicon-globe col-md-3" style="font-size:28px;color:orange;margin-top: 10px;margin-right: 5px"></span>
+                        <div id="buttonDiv" class="btn-group col-md-7" style="background: #00000000" >
+                            <!--<button type="button" class="btn  dropdown-toggle" data-toggle="dropdown">-->
+                            <!--登录 <span class="caret"></span>-->
+                            <!--</button>-->
+                            <button id="userButton" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#loginDiv">
+                                登录
+                            </button>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+        </div>
+        <!-- banner-text -->
+        <div class="banner-text about-banner-text">
+            <h2>
+                <ol class="breadcrumb">
+                    <li><a href="index.html">主页</a></li>
+                    <li class="active">策略</li>
+                </ol>
+            </h2>
+        </div>
+        <!-- //banner-text -->
+        <!-- top-navigation -->
+        <div class="main ">
+            <div class="container">
+                <nav id="menu" class="nav top-nav" style="margin-left:15%!important;margin-right:0%!important;">
+                    <button  class="navtoogle">
+                        <span class="icon-menu glyphicon glyphicon-menu-hamburger"> </span> Menu
+                    </button>
+                    <ul>
+                        <li>
+                            <a href="index.html">
+									<span class="icon">
+										<i aria-hidden="true" class="icon-home glyphicon glyphicon-home"></i>
+									</span>
+                                <span>主页</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="industry.html" onclick="$('#section-2').animatescroll();">
+									<span class="icon">
+										<i aria-hidden="true" class="icon-portfolio glyphicon glyphicon-cog"></i>
+									</span>
+                                <span>行业</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="stock.html" onclick="$('#section-3').animatescroll();">
+									<span class="icon">
+										<i aria-hidden="true" class="icon-blog glyphicon glyphicon-picture"></i>
+									</span>
+                                <span>股票</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="strategy.html" onclick="$('#section-4').animatescroll();">
+									<span class="icon">
+										<i aria-hidden="true" class="icon-team glyphicon glyphicon-check"></i>
+									</span>
+                                <span>策略</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="user.html" onclick="$('#section-5').animatescroll();">
+									<span class="icon">
+										<i aria-hidden="true" class="icon-contact glyphicon glyphicon-envelope"></i>
+									</span>
+                                <span>用户</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- script-for-menu -->
+                <script>
+                    $(".navtoogle").click(function(){
+                        $(".top-nav ul").slideToggle("slow" , function(){
+                        });
+                    });
+                </script>
+                <!-- //script-for-menu -->
+                <script src="js/modernizr.custom.js"></script>
+            </div>
+        </div>
+        <!-- //top-navigation -->
+        <div class="clearfix"> </div>
+    </div>
+</div>
+<!-- //banner -->
+
+
+<!--登录、注册、找回页面-->
+<div id="loginDiv" class="modal fade"  tabindex="-2" role="dialog" aria-labelledby="loginTitle" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button id="loginCloseButton" data-dismiss="modal" type="button" class="close" >x</button>
+                <h1 id="loginTitle" class="text-center text-primarymodal-title">登录</h1>
+            </div>
+            <div class="modal-body">
+                <!--<form action="" class="form col-md-12 center-block">-->
+
+                <input id="loginAccount" type="text" class="form-control  input-lg" placeholder="账户名">
+
+                <input id="loginPassword" type="password" class="form-control  input-lg"  placeholder="登录密码">
+
+                <button id="loginNowButton" class="btn btn-primary btn-lg btn-block">立刻登录</button>
+
+                <!--</form>-->
+            </div>
+            <div class="modal-footer">
+                <span><a id="loginA1" data-toggle="modal" href="#resetDiv" class="pull-left">重设密码</a></span>
+                <span><a id="loginA2" data-toggle="modal" href="#registerDiv" class="pull-right">注册</a></span>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="registerDiv" class="modal fade"  tabindex="-1" role="dialog" aria-labelledby="registerTitle" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button id="registerCloseButton" data-dismiss="modal" type="button" class="close" >x</button>
+                <h1 id="registerTitle" class="text-center text-primarymodal-title">注册</h1>
+            </div>
+            <div class="modal-body">
+                <!--<form action="" class="form col-md-12 center-block">-->
+
+                <input id="registerAccount" type="text" class="form-control  input-lg" placeholder="设置账号名（以字母开头的数字和字母的组合）">
+                <input id="registerUserName" type="text" class="form-control  input-lg" placeholder="设置用户名">
+                <input id="registerPassword" type="password" class="form-control  input-lg"  placeholder="密码">
+                <input id="registerPassword2" type="password" class="form-control  input-lg"  placeholder="确认密码">
+
+                <button id="registerNowButton" class="btn btn-primary btn-lg btn-block">立刻注册</button>
+                <!--</form>-->
+            </div>
+            <div class="modal-footer">
+                <span><a id="registerA1" data-toggle="modal" href="#loginDiv" class="pull-left">登录</a></span>
+                <span><a id="registerA2" data-toggle="modal" href="#resetDiv" class="pull-right">重设密码</a></span>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="resetDiv" class="modal fade"  tabindex="-3" role="dialog" aria-labelledby="resetTitle" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button id="resetCloseButton" data-dismiss="modal" type="button" class="close" >x</button>
+                <h1 id="resetTitle" class="text-center text-primarymodal-title">重设密码</h1>
+            </div>
+            <div class="modal-body">
+                <!--<form action="" class="form col-md-12 center-block">-->
+                <input id="resetAccount" type="text" class="form-control  input-lg" placeholder="账户名">
+                <input id="resetPassword" type="password" class="form-control  input-lg"  placeholder="原密码">
+                <input id="resetPassword2" type="password" class="form-control  input-lg"  placeholder="新密码">
+                <input id="resetPassword3" type="password" class="form-control  input-lg"  placeholder="确认密码">
+                <button id="resetNowButton" class="btn btn-primary btn-lg btn-block">立刻修改</button>
+                <!--</form>-->
+            </div>
+            <div class="modal-footer">
+                <span><a id="resetA1" data-toggle="modal" href="#loginDiv" class="pull-left">登录</a></span>
+                <span><a id="resetA2" data-toggle="modal" href="#registerDiv" class="pull-right">注册</a></span>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!--登录、注册、找回页面-->
+
+<!--Short codes-->
+<div class="codes">
+    <div class="container">
+
+        <div class="col-md-9">
+            <!--搜索区-->
+            <div>
+                <!-- 策略用户填充即搜索区域 -->
+                <div class="row ">
+                    <!--填充内容区域-->
+                    <div class="col-lg-10 in-gp-tl">
+                        <div>
+                            <div class="col-lg-4 in-gp-tl">
+                                <tr>
+                                    <nobr>策略</nobr>
+                                    <select id="strategySelect" class="form-control" style="width: 80%">
+                                        <option value="0" selected="">动量策略</option>
+                                        <option value="1">均值回归策略</option>
+                                        <option value="2">MA择时策略</option>
+                                    </select>
+                                </tr>
+                            </div>
+
+                            <div class="col-lg-3 in-gp-tl">
+                                <div class="input-group">
+                                    <nobr>形成期</nobr><br>
+                                    <input id="formationInput" type="text" value="10" class="form-control" style="width: 80%">
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 in-gp-tl">
+                                <div class="input-group">
+                                    <nobr>开始日期</nobr>
+                                    <input id="startDate" type="date" class="form-control" value="2017-02-01" min="2014-05-19" max="2017-06-15"/>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="col-lg-4 in-gp-tl">
+                                <tr>
+                                    <nobr>板块</nobr>
+                                    <select id="plateSelect" class="form-control" style="width: 80%">
+                                        <option value="0" selected="">所有</option>
+                                        <option value="1">上证</option>
+                                        <option value="2">深证</option>
+                                        <option value="3">沪深300</option>
+                                        <option value="4">中小板</option>
+                                        <option value="5">创业板</option>
+                                    </select>
+                                </tr>
+                            </div>
+
+                            <div class="col-lg-3 in-gp-tl">
+                                <div class="input-group">
+                                    <nobr>持有期</nobr><br>
+                                    <input id="holdInput" type="text" value="5" class="form-control" style="width: 80%">
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 in-gp-tl">
+                                <div class="input-group">
+                                    <nobr>结束日期</nobr>
+                                    <input id="endDate" type="date" value="2017-06-08" class="form-control" min="2014-05-19" max="2017-06-15"/>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!--/填充内容区域-->
+                    <!--搜索按钮-->
+                    <div class="col-lg-2 in-gp-tl">
+                        <input type="image" src="images/搜索.png" width="30%" height="30%" onclick="searchStrategy()"/>
+                    </div>
+                    <div class="clearfix"></div>
+                    <!--/搜索按钮-->
+                </div>
+                <!-- /策略用户填充即搜索区域 -->
+            </div>
+            <div style="height: 35px;"></div>
+            <!--//搜索区-->
+
+            <!--策略具体-->
+            <div>
+                <!--显示策略的评分-->
+                <div id="strategyRadar" style="height: 200px;width: 200px"></div>
+                <!--//显示策略的评分-->
+
+                <!--累计收益率比较图-->
+                <div>
+                    <div id="yearYieldRate" class="col-lg-2 in-gp-tl">
+                    </div>
+                    <div id="benchmarkYearYieldRate" class="col-lg-2 in-gp-tl">
+                    </div>
+                    <div id="alpha" class="col-lg-2 in-gp-tl">
+                    </div>
+                    <div id="beta" class="col-lg-2 in-gp-tl">
+                    </div>
+                    <div id="sharpeRatio" class="col-lg-2 in-gp-tl">
+                    </div>
+                    <div id="maxWithdraw" class="col-lg-2 in-gp-tl">
+                    </div>
+                </div>
+                <div id="yieldChart" style="height: 450px;width: 700px;">
+
+                </div>
+                <div style="height: 35px;"></div>
+                <!--/累计收益率比较图-->
+
+                <!--最优形成期/持有期-->
+                <div id="bestFormationAndPeriod">
+                    <!--显示表格在界面左边-->
+
+                    <div id="bestFormationTable" class="col-lg-5 in-gp-tl">
+                    </div>
+                    <!--/显示表格在界面左边-->
+
+                    <div class="col-lg-7 in-gp-tl">
+                        <!--显示图在界面右边-->
+                        <div style="height: 35px;"></div>
+                        <div id="bestFormationChart1" style="height: 340px;width: 100%;">
+                            <!--超额收益vs全样本-->
+                        </div>
+                        <div id="bestFormationChart2" style="height: 340px;width: 100%;">
+                            <!--策略胜率-->
+                        </div>
+                        <!--/显示图在界面右边-->
+                    </div>
+
+                    <!--选择以形成期还是以持有期为基准的选择按钮-->
+                    <div>
+                        <div class="col-lg-3 in-gp-tl"></div>
+                        <div class="col-lg-6 in-gp-tl">
+                            <div id="ForOrHoldSelect"></div>
+                        </div>
+                        <div class="col-lg-3 in-gp-tl"></div>
+                    </div>
+                    <!--/选择以形成期还是以持有期为基准的选择按钮-->
+                </div>
+                <!--/最优形成期/持有期-->
+
+                <!--相对指数收益-->
+                <div style="height: 35px;"></div>
+                <div id="relativeIndexReturn" style="height: 1300px;width: 700px;"></div>
+                <!--/相对指数收益-->
+
+                <!-- /策略具体 -->
+            </div>
+            <!--//策略具体-->
+
+        </div>
+
+        <!--界面左边，策略介绍区-->
+        <div class="col-md-3">
+            <div class="grid_3 grid_5 ">
+                <h3 class="hdg ">策略简介</h3>
+                <div style="height: 25px;"></div>
+                <h3 style="color: salmon;">动量策略</h3>
+                <div class="well">
+                    <h4>
+                        <span style="font-size:36px;">&nbsp;&nbsp;&nbsp;</span>价格动量是指价格变化的速度，或一段时间内价格的变化率。正的价格动量告诉我们，某只股票买家数量正在不断增加，目前需求超过供应；相反，负的价格动量则告诉我们股票的卖家数量正显著增加，供应超过需求。
+                    </h4>
+                    <h4>
+                        <span style="font-size:36px;">&nbsp;&nbsp;&nbsp;</span>在一般情况下，我们预期表现最好的股票将会继续表现强劲，而表现最差的将继续表现不佳。用通俗的话来讲就是“追涨杀跌”。
+                    </h4>
+                </div>
+
+                <div style="height: 25px;"></div>
+                <h3 style="color: salmon;">均值回归策略</h3>
+                <div class="well">
+                    <h4>
+                        <span style="font-size:36px;">&nbsp;&nbsp;&nbsp;</span>均值回归，是在价格震荡中博取反弹的交易思路，如果要用一句话总结，那就是“跌下去的迟早要涨上来”。
+                    </h4>
+                    <h4>
+                        <span style="font-size:36px;">&nbsp;&nbsp;&nbsp;</span>价格的波动一般会以它的均线为中心。也就是说，当标的价格由于波动而偏离移动均线时，它将调整并重新归于均线。那么如果我们如果能捕捉偏离股价的回归，就可以从此获利。
+                    </h4>
+                    <small style="font-weight: bold" ><span style="font-size:36px;">&nbsp;&nbsp;&nbsp;</span>温馨提醒：</small>
+                    <small>
+                        均值回归的思路做出的简单策略虽然收益可观，但实则回撤猛烈，很不稳定。
+                    </small>
+                </div>
+
+                <div style="height: 25px;"></div>
+                <h3 style="color: salmon;">MA择时策略</h3>
+                <div class="well">
+                    <h4>
+                        <span style="font-size:36px;">&nbsp;&nbsp;&nbsp;</span>择时交易是指利用某种方法来判断大势的走势情况，是上涨还是下跌或者是盘整。如果判断是上涨，则买入持有;如果判断是下跌，则卖出清仓;如果判断是震荡，则进行高抛低吸，这样可以获得远远超越简单买入持有策略的收益率。
+                    </h4>
+                </div>
+
+            </div>
+
+        </div>
+        <!--//界面左边，策略介绍区-->
+
+    </div>
+</div>
+<!--//short-codes-->
+<!-- slid -->
+<div class="slid about-w3ls-slid">
+    <div class="container">
+        <h3>对于理性投资者来说，要获得稳定持续的高收益，找到永不过时的行业很重要，但同样重要的是，在这个行业处于市场预期低估或被大众忽略时买入才能最终获得成功。  </h3>
+    </div>
+</div>
+<!-- //slid -->
+
+<!-- footer -->
+<div class="footer">
+    <div class="container">
+        <div class="footer-wthree-nav">
+            <ul>
+                <li><a href="index.html">主页</a></li>
+                <li><a href="industry.html">行业</a></li>
+                <li><a href="stock.html">股票</a></li>
+                <li><a href="strategy.html">策略</a></li>
+                <li><a href="user.html">用户</a></li>
+            </ul>
+        </div>
+        <div class="footer-w3lsrow" style="margin-bottom: 20px;">
+            <div class="col-md-4 footer-grids footer-address">
+                <h3>Contact Us :</h3>
+                <ul>
+                    <li style="margin-bottom: 20px;"><i class="glyphicon glyphicon-envelope"></i> 151250006@smail.nju.edu.cn </li>
+                    <li style="margin-bottom: 20px;"><i class="glyphicon glyphicon-envelope"></i> 151250011@smail.nju.edu.cn </li>
+                    <li style="margin-bottom: 20px;"><i class="glyphicon glyphicon-envelope"></i> 151250013@smail.nju.edu.cn </li>
+                    <li style="margin-bottom: 15px;"><i class="glyphicon glyphicon-envelope"></i> 151099149@smail.nju.edu.cn </li>
+                    <li></li>
+                </ul>
+            </div>
+            <div class="col-md-4 footer-grids subscribe">
+                <h3>Join Us :</h3><br><br>
+                <form action="#" method="post">
+                    <input type="text" name="Email" placeholder="Your Email" required="">
+                    <input type="submit" value="Subscribe">
+                </form>
+                <div class="clearfix"> </div>
+            </div>
+            <div class="col-md-4 footer-grids footer-address footer-icons" style="alignment: right;" >
+                <!--footer-icons-->
+                <h3>Follow Us :</h3>
+                <ul ><br><br>
+                    <!--class="social-icons"-->
+                    <li>曹鸿荣</li>
+                    <li>常德隆</li>
+                    <li>陈进</li>
+                    <li>武秀峰</li>
+                </ul>
+                <div class="clearfix"> </div>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+    </div>
+</div>
+<!-- //footer -->
+<!-- smooth-scrolling-of-move-up -->
+<script type="text/javascript">
+    $(document).ready(function() {
+        /*
+         var defaults = {
+         containerID: 'toTop', // fading element id
+         containerHoverID: 'toTopHover', // fading element hover id
+         scrollSpeed: 1200,
+         easingType: 'linear'
+         };
+         */
+
+        $().UItoTop({ easingType: 'easeOutQuart' });
+
+    });
+</script>
+<!-- //smooth-scrolling-of-move-up -->
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="js/bootstrap.js"></script>
+<script src="js/StockBlSer/logInOutOrRegister.js"></script>
+</body>
+</html>

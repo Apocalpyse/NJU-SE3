@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.media.*?>
+<?import java.lang.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.chart.AreaChart?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="810.0" prefWidth="1440.0" style="-fx-background-color: #00000099;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Presetation.industryUI.SpecificIndustryController">
+   <children>
+      <PieChart fx:id="PieChartForSpecificIndustry" layoutX="500.0" layoutY="100.0" prefHeight="200.0" prefWidth="200.0" />
+      <AnchorPane fx:id="AnchorPaneForSpecificIndustry" minHeight="0.0" minWidth="0.0" prefHeight="830.0" prefWidth="1450.0">
+         <children>
+            <TableView fx:id="TableForSpecificIndustry" layoutY="320.0" prefHeight="480.0" prefWidth="750.0">
+               <columns>
+                  <TableColumn prefWidth="75.0" text="行业名称" />
+                  <TableColumn prefWidth="75.0" text="公司家数" />
+                  <TableColumn prefWidth="75.0" text="平均开盘价" />
+                  <TableColumn prefWidth="75.0" text="平均收盘价" />
+                  <TableColumn prefWidth="75.0" text="涨跌额" />
+                  <TableColumn prefWidth="75.0" text="涨跌幅" />
+                  <TableColumn prefWidth="75.0" text="总成交量" />
+               </columns>
+            </TableView>
+            <TabPane fx:id="TabPaneForSpecificIndustry" layoutX="900.0" layoutY="300.0" prefHeight="350.0" prefWidth="300.0" tabClosingPolicy="UNAVAILABLE">
+               <tabs>
+                  <Tab fx:id="IncreaseTabForSpecificIndustry" text="涨幅榜">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="403.0" prefWidth="518.0">
+                           <children>
+                              <TableView fx:id="IncreaseForSpecificIndustry" prefHeight="319.0" prefWidth="300.0">
+                                 <columns>
+                                    <TableColumn prefWidth="75.0" text="行业名称" />
+                                    <TableColumn prefWidth="75.0" text="公司家数" />
+                                    <TableColumn prefWidth="75.0" text="涨跌幅" />
+                                    <TableColumn prefWidth="75.0" text="涨跌额" />
+                                    <TableColumn prefWidth="75.0" text="总成交量" />
+                                    <TableColumn prefWidth="75.0" text="行业潜力" />
+                                 </columns>
+                              </TableView>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab fx:id="DecreaseTabForSpecificIndustry" text="跌幅榜">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <TableView fx:id="DecreaseForSpecificIndustry" prefHeight="319.0" prefWidth="300.0">
+                                 <columns>
+                                    <TableColumn prefWidth="75.0" text="行业名称" />
+                                    <TableColumn prefWidth="75.0" text="公司家数" />
+                                    <TableColumn prefWidth="75.0" text="涨跌幅" />
+                                    <TableColumn prefWidth="75.0" text="涨跌额" />
+                                    <TableColumn prefWidth="75.0" text="总成交量" />
+                                    <TableColumn prefWidth="75.0" text="行业潜力" />
+                                 </columns>
+                              </TableView>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab fx:id="VolumeTabForSpecificIndustry" text="成交量榜">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <TableView fx:id="VolumeForSpecificIndustry" layoutX="1.0" prefHeight="319.0" prefWidth="299.0">
+                                 <columns>
+                                    <TableColumn prefWidth="104.0" text="行业名称" />
+                                    <TableColumn prefWidth="75.0" text="公司家数" />
+                                    <TableColumn prefWidth="75.0" text="涨跌幅" />
+                                    <TableColumn prefWidth="75.0" text="涨跌额" />
+                                    <TableColumn prefWidth="75.0" text="总成交量" />
+                                    <TableColumn prefWidth="75.0" text="行业潜力" />
+                                 </columns>
+                              </TableView>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab fx:id="PotentialTabForSpecificIndustry" text="潜力榜">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="403.0" prefWidth="518.0">
+                           <children>
+                              <TableView fx:id="PotentialForSpecificIndustry" prefHeight="319.0" prefWidth="300.0">
+                                 <columns>
+                                    <TableColumn prefWidth="75.0" text="行业名称" />
+                                    <TableColumn prefWidth="75.0" text="公司家数" />
+                                    <TableColumn prefWidth="75.0" text="涨跌幅" />
+                                    <TableColumn prefWidth="75.0" text="涨跌额" />
+                                    <TableColumn prefWidth="75.0" text="总成交量" />
+                                    <TableColumn prefWidth="75.0" text="行业潜力" />
+                                 </columns>
+                              </TableView>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+               </tabs>
+            </TabPane>
+            <Button fx:id="CloseButton" layoutX="1380.0" layoutY="50.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" />
+            <Button fx:id="MinButton" layoutX="1333.0" layoutY="50.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" />
+            <Label layoutX="960.0" layoutY="130.0" prefWidth="30.0" text="日期">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <DatePicker fx:id="DatePickerForSpecificIndustry" layoutX="1000.0" layoutY="130.0" prefWidth="120.0" />
+            <Button fx:id="SearchForSpecificPlate" layoutX="1140.0" layoutY="130.0" mnemonicParsing="false" onMouseClicked="#searchIndustry" text="搜索" />
+            <Label fx:id="Icon" layoutX="47.0" layoutY="17.0" text="StockHub" textFill="WHITE">
+               <font>
+                  <Font size="42.0" />
+               </font>
+            </Label>
+            <Label fx:id="IndustryNameLabel" layoutX="189.0" layoutY="163.0" text="行业名称">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</Pane>

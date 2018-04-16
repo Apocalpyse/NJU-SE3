@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<SplitPane fx:id="MainUI" dividerPositions="0.09671532846715329" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="572.0" prefWidth="525.0" stylesheets="@MainFrame.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="presentation.MainController">
+  <items>
+    <AnchorPane fx:id="TopAnchorPane" maxHeight="50.0" minHeight="50.0" minWidth="0.0" prefHeight="100.0" prefWidth="450.0">
+         <children>
+            <Button fx:id="CloseButton" layoutX="474.0" layoutY="8.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="35.0" />
+            <Button fx:id="minButton" layoutX="423.0" layoutY="8.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="35.0" />
+         </children></AnchorPane>
+    <AnchorPane fx:id="BottomAnchorPane" minHeight="0.0" minWidth="0.0" prefHeight="492.0" prefWidth="488.0">
+         <children>
+            <TextArea fx:id="TextArea" layoutX="27.0" layoutY="145.0" prefHeight="194.0" prefWidth="473.0" />
+            <Button fx:id="StartButton" layoutX="229.0" layoutY="389.0" mnemonicParsing="false" onMouseClicked="#StartButtonOnClicked" prefHeight="70.0" prefWidth="70.0" />
+            <Label fx:id="UILabel" alignment="CENTER" layoutX="173.0" layoutY="28.0" prefHeight="50.0" prefWidth="180.0" text="StockHub" textAlignment="CENTER" />
+            <Label fx:id="ErrorText" layoutX="133.0" layoutY="354.0" prefHeight="35.0" prefWidth="280.0" text="连接中断" textFill="#d70303">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+         </children></AnchorPane>
+  </items>
+</SplitPane>

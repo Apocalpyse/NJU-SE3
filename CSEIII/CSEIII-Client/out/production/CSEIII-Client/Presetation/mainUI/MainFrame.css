@@ -1,0 +1,1143 @@
+
+#CloseButton{
+    -fx-background-color: rgba(0,0,0,0);
+    -fx-background-image: url("images/close.png");
+}
+#CloseButton:hover{
+    -fx-background-color: rgba(0,0,0,0);
+    -fx-effect: dropshadow( three-pass-box , #F4F460 , 2 , 0.4 , 0 , 0 );
+}
+
+#MinButton{
+    -fx-background-color: rgba(0,0,0,0);
+    -fx-background-image: url("images/min.png");
+}
+#MinButton:hover{
+    -fx-background-color: rgba(0,0,0,0);
+    -fx-effect: dropshadow( three-pass-box , #F4F460 , 2 , 0.4 , 0 , 0 );
+}
+
+#User{
+    -fx-background-color: rgba(0,0,0,0);
+    -fx-background-image: url("images/user.png");
+}
+#User:hover{
+    -fx-background-color: rgba(0,0,0,0);
+    -fx-effect: dropshadow( three-pass-box , #F4F460 , 2 , 0.2 , 0 , 0 );
+}
+#SearchImage{
+    -fx-background-color: rgba(0,0,0,0);
+    -fx-background-image: url("images/search-small.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+}
+
+#SearchImage:hover{
+    -fx-background-color: rgba(0,0,0,0);
+    -fx-background-image: url("images/search-small.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-effect: dropshadow( three-pass-box , white , 5 , 0.4 , 0 , 0 );
+}
+#SearchText{
+    -fx-background-color: #222222;
+    -fx-text-fill: #DDDDDD;
+    -fx-font-size: 18px;
+}
+#SearchText:focused{
+    -fx-background-color: #333333;
+    -fx-effect: dropshadow(  three-pass-box , #BEBE0E , 5 , 0.1 , 0 , 0 );
+}
+#SearchText:hover{
+    -fx-background-color: #333333;
+    -fx-effect: dropshadow(  three-pass-box , #BEBE0E , 5 , 0.1 , 0 , 0 );
+}
+
+
+#StockMain,
+#Icon{
+     -fx-alignment: center;
+     -fx-text-fill: #F4F460;
+     -fx-font-size: 40px;
+     -fx-effect: dropshadow( three-pass-box , #F4F460 , 5 , 0.0 , 0 , 0 );
+}
+
+
+/*
+#222222 basic color
+#333333 table-label basic color
+black&#2A2A2A table-label more color
+ */
+/***********                     tab-pane begin                     ***********/
+.tab-pane{
+    -fx-background-color: #222222;
+    -fx-start-margin: 10px;
+    -fx-end-margin: 10px;
+}
+.tab-pane > .tab-header-area > .tab-header-background {
+    -fx-background-color: #222222;
+}/*选项卡块背景*/
+.tab-pane > .tab-header-area > .headers-region{
+    -fx-background-color: #222222;
+}/*选项卡块*/
+
+#TabPaneForK > .tab-header-area > .headers-region > .tab ,
+#TabPaneForC > .tab-header-area > .headers-region > .tab,
+#TabPaneForD > .tab-header-area > .headers-region > .tab,
+#TabPaneForM > .tab-header-area > .headers-region > .tab,
+#TabPaneForQ > .tab-header-area > .headers-region > .tab,
+#TabPaneForNews > .tab-header-area > .headers-region > .tab,
+#TabPaneForIndustry > .tab-header-area > .headers-region > .tab,
+#TabPaneForSpecificIndustry > .tab-header-area > .headers-region > .tab{
+    -fx-background-color: #333333;
+    /*-fx-border-color: #2B6FD5;*/
+
+    /*-fx-background-radius: 28%;*/
+    /*-fx-border-radius: 15%;*/
+    -fx-border-insets: 1 1 1 1;
+    /*椭圆特效边框*/
+
+    /*-fx-border-insets: 1 1 1 1;*/
+
+}/*选项卡*/
+
+/*#TabPaneForK > .tab-header-area > .headers-region > .tab:left,*/
+/*#TabPaneForK > .tab-header-area > .headers-region > .tab:right,*/
+/*#TabPaneForK > .tab-header-area > .headers-region > .tab:top,*/
+/*#TabPaneForK > .tab-header-area > .headers-region > .tab:bottom{*/
+    /*-fx-background-radius: 30%;*/
+    /*-fx-border-radius: 30%;*/
+/*}!*选项卡详细设置方式*!*/
+
+#TabPaneForK > .tab-header-area > .headers-region > .tab > .tab-container > .tab-label ,
+#TabPaneForC > .tab-header-area > .headers-region > .tab > .tab-container > .tab-label ,
+#TabPaneForD > .tab-header-area > .headers-region > .tab > .tab-container > .tab-label ,
+#TabPaneForM > .tab-header-area > .headers-region > .tab > .tab-container > .tab-label ,
+#TabPaneForQ > .tab-header-area > .headers-region > .tab > .tab-container > .tab-label,
+#TabPaneForNews > .tab-header-area > .headers-region > .tab > .tab-container > .tab-label,
+#TabPaneForIndustry > .tab-header-area > .headers-region > .tab > .tab-container > .tab-label,
+#TabPaneForSpecificIndustry > .tab-header-area > .headers-region > .tab > .tab-container > .tab-label{
+    -fx-background-color: #333333;
+    -fx-alignment: CENTER;
+    -fx-text-fill: #BEBEBE;
+    -fx-font-size: 13px;
+
+}/*标签内容设置*/
+#TabPaneForK:focused > .tab-header-area > .headers-region > .tab:selected .focus-indicator,
+#TabPaneForC:focused > .tab-header-area > .headers-region > .tab:selected .focus-indicator,
+#TabPaneForD:focused > .tab-header-area > .headers-region > .tab:selected .focus-indicator,
+#TabPaneForM:focused > .tab-header-area > .headers-region > .tab:selected .focus-indicator,
+#TabPaneForQ:focused > .tab-header-area > .headers-region > .tab:selected .focus-indicator,
+#TabPaneForNews:focused > .tab-header-area > .headers-region > .tab:selected .focus-indicator,
+#TabPaneForIndustry:focused > .tab-header-area > .headers-region > .tab:selected .focus-indicator,
+#TabPaneForSpecificIndustry:focused > .tab-header-area > .headers-region > .tab:selected .focus-indicator{
+    -fx-border-color: rgba(0,0,0,0);
+}/*环选项卡圈*/
+/*#TabPaneForK>.control-buttons-tab{*/
+    /*-fx-background-color: black;*/
+/*}!*应当为选项按钮样式*!*/
+#TabPaneForK > .tab-header-area > .headers-region > .tab:hover ,
+#TabPaneForC > .tab-header-area > .headers-region > .tab:hover ,
+#TabPaneForD > .tab-header-area > .headers-region > .tab:hover ,
+#TabPaneForM > .tab-header-area > .headers-region > .tab:hover,
+#TabPaneForQ > .tab-header-area > .headers-region > .tab:hover,
+#TabPaneForNews > .tab-header-area > .headers-region > .tab:hover,
+#TabPaneForIndustry > .tab-header-area > .headers-region > .tab:hover,
+#TabPaneForSpecificIndustry > .tab-header-area > .headers-region > .tab:hover{
+    -fx-background-color: #2A2A2A;
+    -fx-effect: innershadow( three-pass-box , white , 2 , 0.0 , 0 , 0 );
+
+}/*选项卡特效*/
+#TabPaneForK > .tab-header-area > .headers-region > .tab:selected,
+#TabPaneForC > .tab-header-area > .headers-region > .tab:selected,
+#TabPaneForD > .tab-header-area > .headers-region > .tab:selected,
+#TabPaneForM > .tab-header-area > .headers-region > .tab:selected,
+#TabPaneForQ > .tab-header-area > .headers-region > .tab:selected,
+#TabPaneForNews > .tab-header-area > .headers-region > .tab:selected,
+#TabPaneForIndustry > .tab-header-area > .headers-region > .tab:selected,
+#TabPaneForSpecificIndustry > .tab-header-area > .headers-region > .tab:selected{
+    -fx-background-color: black;
+    -fx-font-size: 15px;
+    -fx-effect: innershadow( three-pass-box , white , 2 , 0.0 , 0 , 0 );
+}/*选项卡特效*/
+#TabPaneForK > .tab-header-area > .headers-region > .tab:selected> .tab-container > .tab-label,
+#TabPaneForC > .tab-header-area > .headers-region > .tab:selected> .tab-container > .tab-label,
+#TabPaneForD > .tab-header-area > .headers-region > .tab:selected> .tab-container > .tab-label,
+#TabPaneForM > .tab-header-area > .headers-region > .tab:selected> .tab-container > .tab-label,
+#TabPaneForQ > .tab-header-area > .headers-region > .tab:selected> .tab-container > .tab-label,
+#TabPaneForNews > .tab-header-area > .headers-region > .tab:selected> .tab-container > .tab-label,
+#TabPaneForIndustry > .tab-header-area > .headers-region > .tab:selected> .tab-container > .tab-label,
+#TabPaneForSpecificIndustry > .tab-header-area > .headers-region > .tab:selected> .tab-container > .tab-label{
+    -fx-background-color: black;
+    -fx-font-size: 15px;
+    -fx-text-fill: #FFFF93;
+}
+#TabPaneForK > .tab-header-area > .headers-region > .tab:hover> .tab-container > .tab-label ,
+#TabPaneForC > .tab-header-area > .headers-region > .tab:hover> .tab-container > .tab-label ,
+#TabPaneForD > .tab-header-area > .headers-region > .tab:hover> .tab-container > .tab-label ,
+#TabPaneForM > .tab-header-area > .headers-region > .tab:hover> .tab-container > .tab-label,
+#TabPaneForQ > .tab-header-area > .headers-region > .tab:hover> .tab-container > .tab-label,
+#TabPaneForNews > .tab-header-area > .headers-region > .tab:hover> .tab-container > .tab-label,
+#TabPaneForIndustry > .tab-header-area > .headers-region > .tab:hover> .tab-container > .tab-label,
+#TabPaneForSpecificIndustry > .tab-header-area > .headers-region > .tab:hover> .tab-container > .tab-label{
+    -fx-background-color: #2A2A2A;
+    -fx-font-size: 15px;
+    -fx-text-fill: white;
+}
+
+#TabPaneForK > .tab-header-area > .headers-region > .tab:selected:hover> .tab-container > .tab-label ,
+#TabPaneForC > .tab-header-area > .headers-region > .tab:selected:hover> .tab-container > .tab-label,
+#TabPaneForD > .tab-header-area > .headers-region > .tab:selected:hover> .tab-container > .tab-label,
+#TabPaneForM > .tab-header-area > .headers-region > .tab:selected:hover> .tab-container > .tab-label,
+#TabPaneForQ > .tab-header-area > .headers-region > .tab:selected:hover> .tab-container > .tab-label,
+#TabPaneForNews > .tab-header-area > .headers-region > .tab:selected:hover> .tab-container > .tab-label,
+#TabPaneForIndustry > .tab-header-area > .headers-region > .tab:selected:hover> .tab-container > .tab-label,
+#TabPaneForSpecificIndustry > .tab-header-area > .headers-region > .tab:selected:hover> .tab-container > .tab-label{
+    -fx-background-color: black;
+    -fx-text-fill: white;
+}
+/***********         main tab-pane         ***********/
+/*delete the original tabs*/
+#MainTabPane {
+    -fx-skin: "com.sun.javafx.scene.control.skin.TabPaneSkin";
+    -fx-tab-min-height: 0;
+    -fx-tab-max-height: 0;
+}
+
+#MainTabPane .tab-header-area {
+    -fx-padding: 0 0 0 0;
+}
+
+#MainTabPane .tab-header-area .headers-region .tab {
+
+    -fx-padding: 0 0 1 0;
+}
+/***********      main tab-pane       ***********/
+/***********      tab-pane for K      ***********/
+#TabPaneForK{
+    -fx-tab-min-height: 30px;
+    -fx-tab-max-height: 30px;
+    -fx-tab-min-width: 90px;
+    -fx-tab-max-width: 90px;
+}
+/*
+设置tab的宽高
+ */
+
+/**********        tab-pane for K     ***********/
+/***********       tab-pane for C     ***********/
+#TabPaneForC{
+    -fx-tab-min-height: 30px;
+    -fx-tab-max-height: 30px;
+    -fx-tab-min-width: 100px;
+    -fx-tab-max-width: 100px;
+}
+/**********        tab-pane for C     ***********/
+/***********       tab-pane for D     ***********/
+#TabPaneForD{
+    -fx-tab-min-height: 30px;
+    -fx-tab-max-height: 30px;
+    -fx-tab-min-width: 100px;
+    -fx-tab-max-width: 100px;
+}
+/**********        tab-pane for D     ***********/
+/***********       tab-pane for I     ***********/
+#TabPaneForIndustry{
+    -fx-tab-min-height: 27px;
+    -fx-tab-max-height: 27px;
+    -fx-tab-min-width: 65px;
+    -fx-tab-max-width: 65px;
+}
+/**********        tab-pane for I     ***********/
+/***********       tab-pane for M     ***********/
+#TabPaneForM{
+    -fx-tab-min-height: 27px;
+    -fx-tab-max-height: 27px;
+    -fx-tab-min-width: 70px;
+    -fx-tab-max-width: 70px;
+}
+/**********        tab-pane for M     ***********/
+/***********       tab-pane for Q     ***********/
+#TabPaneForQ{
+    -fx-tab-min-height: 30px;
+    -fx-tab-max-height: 30px;
+    -fx-tab-min-width: 150px;
+    -fx-tab-max-width: 150px;
+}
+/**********        tab-pane for Q     ***********/
+/***********       tab-pane for plateUI.SI     ***********/
+#TabPaneForSpecificIndustry{
+    -fx-tab-min-height: 30px;
+    -fx-tab-max-height: 30px;
+    -fx-tab-min-width: 50px;
+    -fx-tab-max-width: 60px;
+}
+#SearchForSpecificPlate{
+    -fx-background-color: rgba(0,0,0,0);
+    -fx-background-image: url("images/search.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+}
+#SearchForSpecificPlate:hover{
+    -fx-background-color:  rgba(0,0,0,0);
+    -fx-background-image: url("images/search.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-effect: dropshadow( three-pass-box , white , 5 , 0.4 , 0 , 0 );
+}
+/**********        tab-pane for plateUI.SI     ***********/
+/***********       tab-pane for news     ***********/
+#TabPaneForNews{
+    -fx-tab-min-height: 30px;
+    -fx-tab-max-height: 30px;
+    -fx-tab-min-width: 150px;
+    -fx-tab-max-width: 150px;
+}
+#APForImportantnews,#APForOutburetnews{
+    -fx-background-color: #00000030;
+}
+/**********        tab-pane for news     ***********/
+.scroll-pane{
+    -fx-background-color: #00000000;
+}
+.scroll-pane>  .scroll-bar:vertical,
+.scroll-pane >  .scroll-bar:vertical > .track,
+.scroll-pane >  .scroll-bar:vertical > .track-background,
+.scroll-pane >  .scroll-bar:horizontal,
+.scroll-pane >  .scroll-bar:horizontal > .track,
+.scroll-pane >  .scroll-bar:horizontal > .track-background {
+    -fx-background-color: #1A1A1A;
+}/*滚动条背景*/
+.scroll-pane >  .scroll-bar >.thumb {
+    -fx-background-color: black, gray, #3a3a3a;
+    /*-fx-background-insets: 1, 2, 3;*/
+    -fx-background-insets: 2, 3, 4;
+    /*-fx-background-radius: 0.416667em, 0.333333em, 0.25em; *//* 5, 4,3 */
+    -fx-background-radius: 3, 2, 1;
+}
+.scroll-pane> .scroll-bar >.thumb:pressed {
+    -fx-background-color: black, white,#A1A1A1;
+
+}
+.scroll-pane >  .scroll-bar > .increment-button,
+.scroll-pane >  .scroll-bar > .decrement-button {
+    -fx-background-color: rgba(0,0,0,0);
+    -fx-background-radius: 30%;
+}/*滚动条指示器*/
+.scroll-pane >  .scroll-bar > .increment-button:hover,
+.scroll-pane >  .scroll-bar > .decrement-button :hover{
+    -fx-effect: dropshadow(one-pass-box, white, 2, 1.0, 0, 0);
+}/*滚动条指示器*/
+.scroll-pane>.corner{
+    -fx-background-color: #1A1A1A90;
+}
+#APForCompanyProfile{
+    -fx-background-color: #00000030;
+}
+#APForDiscussBoard{
+    -fx-background-color: #00000030;
+}
+#APForCompanyProfile>.label{
+    -fx-background-color: #1A1A1A;
+    -fx-fill: #000000;
+}
+/***********                     tab-pane end                       ***********/
+
+
+/*-------------------------------------VBox---------------------------------------------*/
+#VBoxForMain{
+    -fx-background-color: #2A2A2A;
+}
+#BForIndustryTab,
+#BForSingleStockTab,
+#BForPlateTab,
+#BForMarketTab,
+#BForQuantitativeInvestmentTab,
+#BForQuantourCompareTab,
+#BForSelfSelectStockTab{
+    -fx-background-color: #2A2A2A;
+    -fx-font-size: 20px;
+    -fx-text-fill: #2B6FD5;
+}
+#BForSingleStockTab{
+    -fx-background-image: url("images/VBS.png");
+    -fx-background-position: 15px 10px;
+    -fx-background-repeat: no-repeat;
+}
+#BForPlateTab{
+    -fx-background-image: url("images/VBD.png");
+    -fx-background-position: 15px 10px;
+    -fx-background-repeat: no-repeat;
+}
+#BForQuantourCompareTab{
+    -fx-background-image: url("images/VBC.png");
+    -fx-background-position: 15px 10px;
+    -fx-background-repeat: no-repeat;
+}
+#BForIndustryTab{
+    -fx-background-image: url("images/VBI.png");
+    -fx-background-position: 17px 5px;
+    -fx-background-repeat: no-repeat;
+}
+
+#BForMarketTab{
+    -fx-background-image: url("images/VBM.png");
+    -fx-background-position: 15px 10px;
+    -fx-background-repeat: no-repeat;
+}
+#BForQuantitativeInvestmentTab{
+    -fx-background-image: url("images/VBQ.png");
+    -fx-background-position: 8px 5px;
+    -fx-background-repeat: no-repeat;
+}
+#BForSelfSelectStockTab{
+    -fx-background-image: url("images/VBSSS.png");
+    -fx-background-position: 15px 10px;
+    -fx-background-repeat: no-repeat;
+}
+
+#BForSingleStockTab:hover,
+#BForPlateTab:hover,
+#BForMarketTab:hover,
+#BForQuantitativeInvestmentTab:hover,
+#BForQuantourCompareTab:hover,
+#BForSelfSelectStockTab:hover,
+#BForIndustryTab:hover{
+    -fx-background-color: #202020;
+    -fx-font-size: 20px;
+    -fx-text-fill: #FFFF93;
+    /*-fx-effect: dropshadow(three-pass-box, white , 5, 0.3, 0, 0);*/
+}
+
+
+/*-------------------------------------VBox---------------------------------------------*/
+
+/*-----------------------------------------------------mainFrame------------------------------------------ */
+#StockNameForK{
+    -fx-background-color: #666666;
+    -fx-text-fill: #DDDDDD;
+    -fx-font-size: 15px;
+}
+#StockNameForK:focused{
+    -fx-effect: dropshadow(  three-pass-box , #BEBE0E , 3 , 0.1 , 0 , 0 );
+}
+#StockNameForK:hover{
+    -fx-effect: dropshadow(  three-pass-box , #BEBE0E , 3 , 0.1 , 0 , 0 );
+}
+#QueryButtonForK{
+    -fx-background-color: rgba(0,0,0,0);
+    -fx-background-image: url("images/search.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+
+}
+
+#QueryButtonForK:hover{
+    -fx-background-color:  rgba(0,0,0,0);
+    -fx-background-image: url("images/search.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-effect: dropshadow( three-pass-box , white , 5 , 0.4 , 0 , 0 );
+}
+
+#CollectionButton{
+    -fx-background-color: rgba(0,0,0,0);
+    -fx-background-image: url("images/collectForK.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+
+}
+#CollectionButton:hover{
+    -fx-background-color: rgba(0,0,0,0);
+    -fx-background-image: url("images/collectForK.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-effect: dropshadow( three-pass-box ,#BEBE0E, 5 , 0.2 , 0 , 0 );
+}
+
+#ErrorTextForK,
+#ErrorTextForC,
+#ErrorTextForD,
+#ErrorTextForM,
+#ErrorTextForQ,
+#ErrorTextForS,
+#ErrorTextForP{
+    -fx-alignment: center;
+    -fx-text-fill: #FF3333;
+    -fx-background-color: rgba(0,0,0,0);
+    -fx-background-image: url("images/errorImage.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: left ;
+}
+
+/*-------------------------------------------------------KAndEMA----------------------------------------------*/
+
+#StockNameAForC{
+    -fx-background-color: #666666;
+    -fx-text-fill: #DDDDDD;
+    -fx-font-size: 15px;
+}
+#StockNameAForC:focused{
+    -fx-effect: dropshadow(  three-pass-box , #BEBE0E , 5 , 0.1 , 0 , 0 );
+}
+#StockNameAForC:hover{
+    -fx-effect: dropshadow(  three-pass-box , #BEBE0E , 5 , 0.1 , 0 , 0 );
+}
+#StockNameBForC{
+    -fx-background-color: #666666;
+    -fx-text-fill: #DDDDDD;
+    -fx-font-size: 15px;
+}
+#StockNameBForC:focused{
+    -fx-effect: dropshadow(  three-pass-box , #BEBE0E , 5 , 0.1 , 0 , 0 );
+}
+#StockNameBForC:hover{
+    -fx-effect: dropshadow(  three-pass-box , #BEBE0E , 5 , 0.1 , 0 , 0 );
+}
+#QueryButtonForC{
+    -fx-background-color:  rgba(0,0,0,0);
+    -fx-background-image: url("images/search.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+
+}
+
+#QueryButtonForC:hover{
+    -fx-background-color:  rgba(0,0,0,0);
+    -fx-background-image: url("images/search.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-effect: dropshadow( three-pass-box , white , 5 , 0.4 , 0 , 0 );
+
+}
+
+/*------------------------------------------------------QuantourCompare---------------------------------------*/
+
+#QueryButtonForM{
+    -fx-background-color:  rgba(0,0,0,0);
+    -fx-background-image: url("images/search.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+
+}
+
+#QueryButtonForM:hover{
+    -fx-background-color:  rgba(0,0,0,0);
+    -fx-background-image: url("images/search.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-effect: dropshadow( three-pass-box , white , 5 , 0.4 , 0 , 0 );
+}
+
+/*-------------------------------------------------------MarketSituation--------------------------------------*/
+
+#QueryButtonForP{
+     -fx-background-color:  rgba(0,0,0,0);
+     -fx-background-image: url("images/search.png");
+     -fx-background-repeat: no-repeat;
+     -fx-background-position: center;
+
+ }
+
+#QueryButtonForP:hover{
+    -fx-background-color:  rgba(0,0,0,0);
+    -fx-background-image: url("images/search.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-effect: dropshadow( three-pass-box , white , 5 , 0.4 , 0 , 0 );
+}
+#BackToAllPlate{
+    -fx-background-color:  rgba(0,0,0,0);
+    -fx-background-image: url("images/backToPlate.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+}
+#BackToAllPlate:hover{
+    -fx-background-color:  rgba(0,0,0,0);
+    -fx-background-image: url("images/backToPlate.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-effect: dropshadow( three-pass-box , white , 5 , 0.4 , 0 , 0 );
+}
+
+/*-------------------------------------------------------Plate--------------------------------------*/
+
+#HoldingPeriodFieldForQ,
+#FormationFieldForQ{
+    -fx-background-color: #666666;
+    -fx-text-fill: #DDDDDD;
+    -fx-font-size: 15px;
+}
+#HoldingPeriodFieldForQ:hover,
+#FormationFieldForQ:hover{
+    -fx-effect: dropshadow(  three-pass-box , #BEBE0E , 3 , 0.1 , 0 , 0 );
+}
+
+#HoldingPeriodFieldForQ:focused,
+#FormationFieldForQ:focused{
+    -fx-effect: dropshadow(  three-pass-box , #BEBE0E , 3 , 0.1 , 0 , 0 );
+}
+
+#FormationBasedButton,
+#HoldingPeriodBasedButton{
+    -fx-background-color: #88777E;
+    -fx-text-fill: #C4E6DF;
+    -fx-font-size: 15px;
+}
+#FormationBasedButton:hover,
+#HoldingPeriodBasedButton:hover{
+    -fx-text-fill: #F4F460;
+    -fx-font-size: 16px;
+    -fx-effect: innershadow( three-pass-box , #F4F460 , 2 , 0.0 , 0 , 0 );
+}
+
+#QueryButtonForQ{
+    -fx-background-color:  rgba(0,0,0,0);
+    -fx-background-image: url("images/search.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+
+}
+#QueryButtonForQ:hover{
+    -fx-background-color:  rgba(0,0,0,0);
+    -fx-background-image: url("images/search.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-effect: dropshadow( three-pass-box , white , 5 , 0.4 , 0 , 0 );
+}
+/*-------------------------------------------------------QuantitativeInvestment--------------------------------------*/
+
+#AnalyzeButton{
+     -fx-background-image: url("images/analyze.png");
+     -fx-background-repeat: no-repeat;
+     -fx-background-position: center;
+     -fx-background-color: rgba(0,0,0,0);
+ }
+
+#AnalyzeButton:hover{
+    -fx-background-image: url("images/analyze.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-background-color: rgba(0,0,0,0);
+    -fx-effect: dropshadow( three-pass-box , white , 5 , 0.0 , 0 , 0 );
+}
+
+
+
+
+/*-------------------------------------------------------   SelfSelectStock    --------------------------------------*/
+
+/**********             line-chart(also bar chart&area chart)  css  begin           *********/
+
+
+
+
+/****************    Chart CSS      ***************/
+.chart {
+    -fx-padding: 5px;
+}
+.chart-content {
+    -fx-padding: 10px;
+}
+.chart-title {
+    -fx-text-fill: white;
+    -fx-alignment: center;
+    -fx-font-size: 1.8em;
+    /*-fx-padding: 5px 0 10px 0;*/
+}
+.chart-legend {
+    -fx-background-color:  rgba(40,150,250,2);
+}/*提示*/
+.chart-legend-item-symbol{
+    -fx-background-radius: 0;
+}/*提示中的单个项目符号*/
+.chart-legend-item{
+    -fx-text-fill: white;
+}/*提示中的单个项目label*/
+.chart-plot-background {
+    -fx-background-color: rgba(0,0,0,0.25);
+}/*格子背景*/
+.chart-vertical-grid-lines {
+    -fx-stroke: #3278fa60;
+    -fx-stroke-width: 140%;
+
+}/*竖行*/
+.chart-horizontal-grid-lines {
+    -fx-stroke: #3278fa60;
+    -fx-stroke-width: 140%;
+
+}/*横行*/
+.axis {
+    -fx-tick-label-fill: navajowhite;
+    -fx-font-size: 0.8em;
+    -fx-tick-length: 5;
+    -fx-minor-tick-length: 2;
+}
+
+.axis-label {
+    -fx-text-fill: gray;
+}
+.axis-tick-mark {
+    -fx-stroke: #637040;
+    -fx-stroke-width: 2;
+}
+.axis-minor-tick-mark {
+    -fx-stroke: #859656;
+}
+
+/****************    Chart CSS      *******************/
+
+
+
+/*Line Chart CSS*/
+
+
+.default-color0.chart-line-symbol {
+    -fx-background-color: #F9F900, gray;
+}
+.default-color1.chart-line-symbol {
+    -fx-background-color: #E73408, gray;
+    -fx-shape: "M5,0 L10,9 L5,18 L0,9 Z";
+}
+.default-color2.chart-line-symbol {
+    -fx-background-color: #f0e68c, gray;
+    -fx-shape: "M5,0 L10,8 L0,8 Z";
+}
+.default-color3.chart-line-symbol { -fx-background-color: #dda0dd, gray; }
+.default-color4.chart-line-symbol { -fx-background-color: CHART_COLOR_5, gray; }
+.default-color5.chart-line-symbol { -fx-background-color: CHART_COLOR_6, gray; }
+.default-color6.chart-line-symbol { -fx-background-color: CHART_COLOR_7, gray; }
+.default-color7.chart-line-symbol { -fx-background-color: CHART_COLOR_8, gray; }
+.default-color0.chart-series-line {
+    -fx-stroke: #93934A;
+}
+.default-color1.chart-series-line {
+    -fx-stroke: #108CDE;
+}
+.default-color2.chart-series-line { -fx-stroke: #f0e68c; }
+.default-color3.chart-series-line { -fx-stroke: #dda0dd; }
+.default-color4.chart-series-line { -fx-stroke: CHART_COLOR_5; }
+.default-color5.chart-series-line { -fx-stroke: CHART_COLOR_6; }
+.default-color6.chart-series-line { -fx-stroke: CHART_COLOR_7; }
+.default-color7.chart-series-line { -fx-stroke: CHART_COLOR_8; }
+.chart-series-symbol{
+    -fx-stroke-width: 1px;
+}/*节点*/
+.chart-series-line {
+    -fx-stroke-width: 3px;
+    -fx-effect: null;
+}/*折线*/
+
+
+
+
+
+
+
+/*Pie Chart CSS*/
+.chart-pie-label-line {
+    -fx-stroke: #DDDD22;
+    -fx-fill: white;
+}/*指示连线*/
+.chart-pie-label {
+    -fx-fill: white;
+    -fx-font-size: 0.9em;
+}/*指示label*/
+.chart-pie {
+    -fx-border-color: derive(-fx-pie-color, -40%);
+}/*饼状图-边框*/
+.pie-legend-symbol{
+    -fx-background-radius: 8px;
+    -fx-padding: 8px;
+    -fx-border-color: null;
+}/*提示*/
+.default-color0.chart-pie { -fx-pie-color: #ffd700; }
+.default-color1.chart-pie { -fx-pie-color: #ffa500; }
+.default-color2.chart-pie { -fx-pie-color: #860061; }
+.default-color3.chart-pie { -fx-pie-color: #adff2f; }
+.default-color4.chart-pie { -fx-pie-color: #ff5700; }
+
+
+
+
+
+
+
+
+
+
+.chart-bar {
+    -fx-border-color: white ;
+    -fx-background-radius: 0;
+    -fx-background-position:  center;
+}
+.default-color0.chart-bar { -fx-bar-fill: #EB6848; }
+.default-color1.chart-bar { -fx-bar-fill: #4EE44E; }
+.default-color2.chart-bar { -fx-bar-fill: CHART_COLOR_3; }
+.default-color3.chart-bar { -fx-bar-fill: CHART_COLOR_4; }
+.default-color4.chart-bar { -fx-bar-fill: CHART_COLOR_5; }
+.default-color5.chart-bar { -fx-bar-fill: CHART_COLOR_6; }
+.default-color6.chart-bar { -fx-bar-fill: CHART_COLOR_7; }
+.default-color7.chart-bar { -fx-bar-fill: CHART_COLOR_8; }
+.bar-legend-symbol {
+    -fx-padding: 8px;
+
+}
+.data0.chart-bar {
+-fx-background-color: #EB6848;
+}
+.data1.chart-bar {
+-fx-background-color: #4EE44E;
+}/*根据数据的第几组来设置*/
+
+
+
+
+.chart-area-symbol {
+    -fx-background-insets: 0, 1;
+    -fx-background-radius: 4px; /* makes sure this remains circular */
+    -fx-padding: 3px;
+}
+.default-color0.chart-series-area-line {
+    -fx-stroke: #DEDE10;
+}
+.default-color1.chart-series-area-line {
+    -fx-stroke: #BE540E;
+}
+.default-color2.chart-series-area-line { -fx-stroke: CHART_COLOR_3; }
+.default-color3.chart-series-area-line { -fx-stroke: CHART_COLOR_4; }
+.default-color4.chart-series-area-line { -fx-stroke: CHART_COLOR_5; }
+.default-color5.chart-series-area-line { -fx-stroke: CHART_COLOR_6; }
+.default-color6.chart-series-area-line { -fx-stroke: CHART_COLOR_7; }
+.default-color7.chart-series-area-line { -fx-stroke: CHART_COLOR_8; }
+.chart-series-area-fill {
+    -fx-stroke: null;
+    -fx-fill: CHART_COLOR_1_TRANS_20;
+}
+.default-color0.chart-series-area-fill {
+    -fx-fill: #E66B1A;
+}
+.default-color1.chart-series-area-fill {
+    -fx-fill: #3FAFAF;
+}
+.default-color2.chart-series-area-fill { -fx-fill: CHART_COLOR_3_TRANS_20; }
+.default-color3.chart-series-area-fill { -fx-fill: CHART_COLOR_4_TRANS_20; }
+.default-color4.chart-series-area-fill { -fx-fill: CHART_COLOR_5_TRANS_20; }
+.default-color5.chart-series-area-fill { -fx-fill: CHART_COLOR_6_TRANS_20; }
+.default-color6.chart-series-area-fill { -fx-fill: CHART_COLOR_7_TRANS_20; }
+.default-color7.chart-series-area-fill { -fx-fill: CHART_COLOR_8_TRANS_20; }
+.area-legend-symbol {
+    -fx-padding: 6px;
+    -fx-background-radius: 6px; /* makes sure this remains circular */
+    -fx-background-insets: 0, 3;
+}
+.default-color0.chart-area-symbol {
+    -fx-background-color: CHART_COLOR_1, white;
+    -fx-shape: "M5,0 L10,9 L5,18 L0,9 Z";
+}
+.default-color1.chart-area-symbol {
+    -fx-background-color: CHART_COLOR_2, white;
+    -fx-shape: "M5,0 L10,8 L0,8 Z";
+}
+.default-color2.chart-area-symbol { -fx-background-color: CHART_COLOR_3, white; }
+.default-color3.chart-area-symbol { -fx-background-color: CHART_COLOR_4, white; }
+.default-color4.chart-area-symbol { -fx-background-color: CHART_COLOR_5, white; }
+.default-color5.chart-area-symbol { -fx-background-color: CHART_COLOR_6, white; }
+.default-color6.chart-area-symbol { -fx-background-color: CHART_COLOR_7, white; }
+.default-color7.chart-area-symbol { -fx-background-color: CHART_COLOR_8, white; }
+
+
+
+
+
+
+
+
+
+/*#EMAChartForK5>*>.chart-plot-background,*/
+/*#EMAChartForK10>*>.chart-plot-background,*/
+/*#EMAChartForK30>*>.chart-plot-background,*/
+/*#EMAChartForK60>*>.chart-plot-background,*/
+/*#EMAChartForK120>*>.chart-plot-background{*/
+    /*-fx-background-color: #222222;*/
+/*}!*背景设置*!*/
+/*#EMAChartForK5>*>.chart-alternative-row-fill,*/
+/*#EMAChartForK10>*>.chart-alternative-row-fill,*/
+/*#EMAChartForK30>*>.chart-alternative-row-fill,*/
+/*#EMAChartForK60>*>.chart-alternative-row-fill,*/
+/*#EMAChartForK120>*>.chart-alternative-row-fill{*/
+    /*-fx-fill: 	#272727;//颜色填充*/
+/*}!*背景填充*!*/
+/*#EMAChartForK5>*>.chart-line-symbol,*/
+/*#EMAChartForK10>*>.chart-line-symbol,*/
+/*#EMAChartForK30>*>.chart-line-symbol,*/
+/*#EMAChartForK60>*>.chart-line-symbol,*/
+/*#EMAChartForK120>*>.chart-line-symbol{*/
+    /*-fx-background-color: black;*/
+    /*-fx-background-radius: 5px;*/
+    /*-fx-padding: 5px;*/
+/*}!*节点设置*!*/
+/*#EMAChartForK5>*>.chart-series-line,*/
+/*#EMAChartForK10>*>.chart-series-line,*/
+/*#EMAChartForK30>*>.chart-series-line,*/
+/*#EMAChartForK60>*>.chart-series-line,*/
+/*#EMAChartForK120>*>.chart-series-line{*/
+    /*-fx-stroke: CHART_COLOR_1;*/
+    /*-fx-stroke-width: 3px;*/
+/*}!*折线设置*!*/
+/*#EMAChartForK5>*>.axis,*/
+/*#EMAChartForK10>*>.axis,*/
+/*#EMAChartForK30>*>.axis,*/
+/*#EMAChartForK60>*>.axis,*/
+/*#EMAChartForK120>*>.axis{*/
+    /*-fx-text-fill: #FFFFFF;*/
+    /*-fx-font-color: #FFFFFF;*/
+    /*-fx-tick-label-fill: #FFFFFF;//刻度字颜色*/
+    /*-fx-font-size: 10pt;*/
+    /*-fx-font-family: "Segoe UI Light";*/
+    /*-fx-tick-length: 20;*/
+    /*-fx-minor-tick-length: 10;//左刻度长度*/
+
+/*}!*X-行设置*!*/
+
+
+/*.chart-bar {*/
+           /*-fx-bar-fill: CHART_COLOR_1;*/
+           /*-fx-background-color:   #222222;*/
+           /*-fx-background-insets: 0;*/
+       /*}!*总体*!*/
+
+/**********                             chart  css  end                            *********/
+
+/***********              table view             **********/
+
+.table-view {
+    /* Constants used throughout the tableview. */
+    -fx-table-header-border-color: black;
+    -fx-table-cell-border-color: white;//行划分线
+-fx-background-color: rgba(0,0,0,0);//背景色
+-fx-border-width: 5px;
+    -fx-border-color: black;
+    -fx-border-radius: 3px;
+}
+.table-view:focused{
+    -fx-effect: dropshadow(gaussian, aliceblue, 1.75,0.1, 0, 0);
+}
+.table-view .column-header{
+    -fx-background-color: #1A1A1A;
+    -fx-background-insets: 0, 0 1 1 0, 1 2 2 1;
+    -fx-font-weight: bold;
+    -fx-size: 2em;
+    -fx-text-fill: -fx-selection-bar-text;
+    -fx-padding: 0.166667em;
+
+}/*表头样式*/
+.table-view .column-header-background{
+    /*-fx-background-color: linear-gradient(#131313 0%, #424141 100%);*/
+    -fx-background-color: #1A1A1A;
+}/*渐变背景颜色设置*/
+.table-view .column-header-background .label{
+    -fx-background-color: transparent;
+    -fx-text-fill: #2B6FD5;
+}
+
+.table-row-cell{
+    -fx-background-color: -fx-table-cell-border-color, #9D9D9D;
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-text-fill: BLACK;
+    -fx-padding: 0.0em; /* 0 */
+}/*单行样式*/
+
+.table-row-cell:odd{
+    -fx-background-color: -fx-table-cell-border-color, #7F7F7F;
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-text-fill: BLACK;
+    -fx-padding: 0.0em; /* 0 */
+}/*双行样式*/
+
+
+
+.table-view > .virtual-flow > .scroll-bar:vertical,
+.table-view > .virtual-flow > .scroll-bar:vertical > .track,
+.table-view > .virtual-flow > .scroll-bar:vertical > .track-background,
+.table-view > .virtual-flow > .scroll-bar:horizontal,
+.table-view > .virtual-flow > .scroll-bar:horizontal > .track,
+.table-view > .virtual-flow > .scroll-bar:horizontal > .track-background {
+    -fx-background-color: #1A1A1A;
+}/*滚动条背景*/
+.table-view > .virtual-flow > .scroll-bar >.thumb {
+    -fx-background-color: black, gray, #3a3a3a;
+    /*-fx-background-insets: 1, 2, 3;*/
+    -fx-background-insets: 2, 3, 4;
+    /*-fx-background-radius: 0.416667em, 0.333333em, 0.25em; *//* 5, 4,3 */
+    -fx-background-radius: 3, 2, 1;
+}
+.table-view > .virtual-flow > .scroll-bar >.thumb:pressed {
+    -fx-background-color: black, white,#A1A1A1;
+
+}
+.table-view > .virtual-flow > .scroll-bar > .increment-button,
+.table-view > .virtual-flow > .scroll-bar > .decrement-button {
+    -fx-background-color: rgba(0,0,0,0);
+    -fx-background-radius: 30%;
+}/*滚动条指示器*/
+.table-view > .virtual-flow > .scroll-bar > .increment-button:hover,
+.table-view > .virtual-flow > .scroll-bar > .decrement-button :hover{
+    -fx-effect: dropshadow(one-pass-box, white, 2, 1.0, 0, 0);
+}/*滚动条指示器*/
+
+.table-view .filler {
+    -fx-background-color: black;
+}/*填充部分样式*/
+.table-view>.corner{
+    -fx-background-color: #1A1A1A90;
+    -fx-pref-height: 5px;
+    -fx-end-margin: 0;
+    -fx-start-margin: 0;
+}/*角落方块*/
+
+
+/***********              table view  end           **********/
+
+/***********         DatePicker CSS BEGIN           ***********/
+
+/**********         样式        **************/
+.date-picker > .arrow-button > .arrow {
+    -fx-shape: "M0,0v9h9V0H0z M2,8H1V7h1V8z M2,6H1V5h1V6z M2,4H1V3h1V4z M4,8H3V7h1V8z M4,6H3V5h1V6z M4,4H3V3h1V4z M6,8H5V7h1V8z M6,6H5 V5h1V6z M6,4H5V3h1V4z M8,8H7V7h1V8z M8,6H7V5h1V6z M8,4H7V3h1V4z";
+    -fx-background-color: black,gray;/*网格二制颜色*/
+    -fx-background-insets: 1 0 -1 0, 0;
+    -fx-padding: 0.416667em 0.416667em 0.333333em 0.333333em; /* 5 5 4 4 */
+    -fx-scale-shape: true;
+
+}/*右侧网格图标*/
+.date-picker > .text-field {
+    -fx-background-color: #444444;
+    -fx-text-fill: #DDDDDD;
+    -fx-font-size: 15px;/*height*/
+}/*输入框*/
+.date-picker{
+    -fx-background-color: #444444;
+}/*边框*/
+.date-picker-popup {
+    -fx-text-fill: #9D9D9D;
+    -fx-border-color: rgba(255,255,55,0.7);
+    -fx-effect: dropshadow( gaussian , rgba(255,255,55,0.3) , 12, 0.0 , 0 , 8 );
+} /*总体设置*/
+.date-picker-popup > * > .cell{
+    -fx-border-color: #859656;
+    -fx-background-color: black;
+    -fx-text-fill: #9D9D9D;
+}/*星期*/
+.date-picker-popup > .month-year-pane {
+    -fx-padding: 0.588883em 0.5em 0.666667em 0.5em; /* 7 6 8 6 */
+    -fx-background-color: black;
+    -fx-background-insets: 0 0 0 0, 0 0 1 0;
+    -fx-font-size: 150%;
+    -fx-highlight-text-fill: #9D9D9D;
+}/*日月*/
+.date-picker-popup > * > .spinner {
+    -fx-spacing: 0.25em; /* 3 */
+    -fx-alignment: CENTER;
+    -fx-fill-height: false;
+}/*微调*/
+.date-picker-popup > * > .day-cell {
+    -fx-background-color: black;
+    -fx-border-color: #859656;
+    -fx-text-fill: #9D9D9D;
+}/*日期格*/
+.date-picker-popup > * > .today {
+    -fx-background-color:rgba(1,1,1,0.8);
+    -fx-text-fill: 	#FFFF93;
+    -fx-background-insets: 1, 2, 3;
+}/*本日格*/
+.date-picker-popup > * > .week-number-cell {
+    -fx-padding: 0.333333em 0.583333em 0.333333em 0.583333em; /* 4 7 4 7 */
+    -fx-border-color: #859656;
+    -fx-border-width: 1px;
+    -fx-background: -fx-control-inner-background;
+    -fx-background-color:black ;
+    -fx-text-fill: -fx-accent;
+}/*星期格*/
+.date-picker-popup > * > .spinner > .button {
+    -fx-color:white;
+    -fx-background-color: rgba(0,0,0,0);
+    -fx-background-insets: 0, 1, 2;
+
+}/*按钮*/
+.date-picker .day-name-cell {
+    -fx-padding: 2px ;
+    -fx-text-fill: #177B93;
+}/*星期*/
+.spinner-label {
+    -fx-text-fill: #b99205;
+}/*年月*/
+.date-picker-popup > * > .previous-month,
+.date-picker-popup > * > .next-month {
+    -fx-background-color: #101010;
+    -fx-border-color: #859656;
+    -fx-text-fill: #9D9D9D;
+}
+
+/**********         特效        **************/
+.date-picker>.text-field:focused{
+    -fx-background-color: #444444;
+    -fx-text-fill: #DDDDDD;
+    -fx-font-size: 15px;/*height*/
+    -fx-effect: dropshadow(  three-pass-box , #BEBE0E , 5 , 0.1 , 0 , 0 );
+}/*输入框*/
+.date-picker>.text-field:hover{
+    -fx-background-color: #444444;
+    -fx-text-fill: #DDDDDD;
+    -fx-font-size: 15px;/*height*/
+    -fx-effect: dropshadow(  three-pass-box , #BEBE0E , 5 , 0.1 , 0 , 0 );
+}/*输入框*/
+.date-picker-popup > * > .day-cell:hover {
+    -fx-background-color: rgba(1,1,1,0.6);
+    -fx-border-color: #E0E0E0;
+    -fx-text-fill: #FFFF6F;
+}/*任意格 悬浮*/
+.date-picker-popup > * > .today:hover {
+    -fx-background-color:#4F4F4F;
+    -fx-border-color: #E0E0E0;
+    -fx-text-fill: #F9F900;
+}/*本日格 悬浮*/
+.date-picker-popup > * > .day-cell.selected {
+    -fx-text-fill: #F9F900;
+    -fx-background-color:	#2828FF;
+}/*每日格 选择*/
+.date-picker-popup > * > .today.selected {
+    -fx-background-color:	#0000E3;
+}/*本日格 选择*/
+.date-picker-popup > * > .previous-month.day-cell:hover,
+.date-picker-popup > * > .next-month.day-cell:hover {
+    -fx-border-color: #E0E0E0;
+    -fx-background-color: rgba(1,1,1,0.6);
+}
+.date-picker-popup > * > .spinner > .button:hover {
+    -fx-color:#F9F900;
+    -fx-background-insets: 0, 1, 2;
+    -fx-effect: dropshadow(gaussian, aliceblue, 5,0.3, 0, 0);
+}/*按钮*/
+
+
+/***********         DatePicker CSS END            ***********/
+
+/***********         ChoiceBox CSS Begin            ***********/
+.choice-box{
+    -fx-background-color: #666666;
+    -fx-font-size: 15px;
+}/*总体样式*/
+.choice-box > .label {
+    -fx-text-fill: white;
+}
+.choice-box > .open-button > .arrow {
+    -fx-background-color: black;
+    -fx-background-insets: 1 0 -1 0, 0;
+    -fx-shape: "M 0 0 h 7 l -3.5 4 z";
+}/*开启提示按钮*/
+.choice-box > .context-menu {
+    -fx-background-radius: 6, 5, 4;
+}/*选项*/
+
+/***********          ChoiceBox CSS End             ***********/
+

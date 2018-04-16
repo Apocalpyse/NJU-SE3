@@ -1,0 +1,177 @@
+/*-----------------------          Basic Settings   Begin           -----------------------*/
+.split-pane .split-pane-divider {
+    -fx-background-color: #00000095;
+
+}
+#UserUI{
+    -fx-background-color: #11111195;
+}
+
+#CloseButtonForUser{
+    -fx-background-color: rgba(0,0,0,0);
+    -fx-background-image: url("closeForUser.png");
+}
+#CloseButtonForUser:hover{
+    -fx-effect: dropshadow( three-pass-box , #F4F460 , 5 , 0.0 , 0 , 0 );
+}
+#minButtonForUser{
+    -fx-background-color: rgba(0,0,0,0);
+    -fx-background-image: url("minForUser.png");
+}
+#minButtonForUser:hover{
+    -fx-effect: dropshadow( three-pass-box , #F4F460 , 5 , 0.0 , 0 , 0 );
+}
+/*-----------------------          Basic Settings   End           -----------------------*/
+
+
+
+
+/*-----------------------             Label Begin                 -----------------------*/
+#UserUILabel,
+ #PasswordUILabel{
+     -fx-alignment: center;
+     -fx-text-fill: #F4F460;
+     -fx-font-size: 34px;
+     -fx-effect: dropshadow( three-pass-box , #F4F460 , 5 , 0.0 , 0 , 0 );
+ }
+
+#UserNameLabel,
+#RealNameLabel,
+#PhoneNumberLabel,
+#MailLabel,
+#BirthdayLabel ,
+#OriginalPasswordLabel,
+#NewPasswordLabel,
+#SecondPasswordLabel{
+    -fx-text-fill: #AAAAAA;
+    -fx-font-size: 14px;
+}
+
+
+
+#UserNameLabel:hover,
+#RealNameLabel:hover,
+#PhoneNumberLabel:hover,
+#MailLabel:hover,
+#BirthdayLabel:hover ,
+#OriginalPasswordLabel:hover,
+#NewPasswordLabel:hover,
+#SecondPasswordLabel:hover{
+    -fx-alignment: center;
+    -fx-text-fill: #FFFFFF;
+    -fx-font-size: 15px;
+    -fx-effect: dropshadow( three-pass-box , white , 5 , 0.0 , 0 , 0 );
+}
+
+/*-----------------------             Label End                 -----------------------*/
+
+
+
+
+
+/*-----------------------             Field Begin               -----------------------*/
+#UserNameField,
+#RealNameField,
+#PhoneNumberField,
+#MailField,
+#BirthdayField,
+#OriginalPasswordField,
+#NewPasswordField,
+#SecondPasswordField{
+    -fx-alignment: center;
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-background-color: #33333390;
+}
+
+#UserNameField:hover,
+#RealNameField:hover,
+#PhoneNumberField:hover,
+#MailField:hover,
+#BirthdayField:hover,
+#OriginalPasswordField:hover,
+#NewPasswordField:hover,
+#SecondPasswordField:hover{
+    -fx-alignment: center;
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-background-color: #333333;
+    -fx-effect: dropshadow(  three-pass-box , #BEBE0E , 5 , 0.1 , 0 , 0 );
+}
+
+#UserNameField:focused,
+#RealNameField:focused,
+#PhoneNumberField:focused,
+#MailField:focused,
+#BirthdayField:focused,
+#OriginalPasswordField:focused,
+#NewPasswordField:focused,
+#SecondPasswordField:focused{
+    -fx-alignment: center;
+    -fx-text-fill: #C4E6DF;
+    -fx-font-size: 16px;
+    -fx-background-color: #333333;
+    -fx-effect: dropshadow(  three-pass-box , #F4F460 , 3 , 0.1 , 0 , 0 );
+}
+
+#UserNameField:focused:hover,
+#RealNameField:focused:hover,
+#PhoneNumberField:focused:hover,
+#MailField:focused:hover,
+#BirthdayField:focused:hover,
+#OriginalPasswordField:focused:hover,
+#NewPasswordField:focused:hover,
+#SecondPasswordField:focused:hover{
+    -fx-alignment: center;
+    -fx-text-fill: #C4E6DF;
+    -fx-font-size: 16px;
+    -fx-background-color: #333333;
+    -fx-effect: dropshadow(  three-pass-box , #F4F460 , 10 , 0.1 , 0 , 0 );
+
+}
+
+/*-----------------------             Field End                  -----------------------*/
+
+
+
+/*-----------------------            Button Begin                -----------------------*/
+#EditButton,
+#SaveButton,
+#RegistButtonForPassword{
+    -fx-background-color: #2B6FD590;
+    -fx-text-fill: #C4E6DF;
+    -fx-font-size: 16px;
+}
+#PasswordChangeButton{
+    -fx-background-color: rgba(0,0,0,0);
+    -fx-text-fill: #2B6FD5;
+    -fx-font-size: 16px;
+}
+#EditButton:hover,
+#SaveButton:hover,
+#RegistButtonForPassword:hover{
+    -fx-effect: innershadow( three-pass-box , #F4F460 , 6 , 0.0 , 0 , 0 );
+    -fx-background-color: #2B6FD5;
+    -fx-text-fill: #F4F460;
+    -fx-font-size: 18px;
+}
+#PasswordChangeButton:hover{
+    -fx-font-size: 18px;
+    -fx-background-color: rgba(0,0,0,0);
+    -fx-text-fill: #F4F460;
+    -fx-effect: innershadow( three-pass-box , #F4F460 , 10 , 0.2 , 0 , 0 );
+ }
+/*-----------------------                Button End                  -----------------------*/
+
+/*-----------------------           ErrorMessage   Begin            -----------------------*/
+#ErrorLabelForInfo,
+#DifferentPassword{
+    -fx-background-image: url("errorImg.png");
+    -fx-background-position: left;
+    -fx-background-repeat: no-repeat;
+    -fx-background-color: rgba(0,0,0,0);
+    -fx-text-fill: #FF3333;
+    -fx-font-size: 14px;
+}
+
+/*-----------------------           ErrorMessage   End              -----------------------*/

@@ -1,0 +1,21 @@
+
+VBox{
+    -fx-pref-width: 180px;
+    -fx-pref-height: 400px;
+    -fx-background-color: #BEBE0E04;
+    -fx-alignment: center;
+}
+.progress-indicator{
+    -fx-background-color: rgba(0,0,0,0);
+    -fx-pref-width: 120px;
+    -fx-pref-height: 120px;
+    -fx-alignment: center;
+}
+.label{
+    -fx-background-position: right;
+    -fx-pref-width: 180px;
+    -fx-alignment: center;
+    -fx-text-alignment: center;
+    -fx-text-fill: blue;
+    -fx-font-size: 14px;
+}

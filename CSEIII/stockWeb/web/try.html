@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+    <title>竖排的选项卡</title>
+    <meta name="keywords" content="网页选项卡,TAB选项卡,竖排网页选项卡,竖排TAB选项卡" />
+    <style type="text/css">
+        body{font-size:12px;font-family:"Lucida Grande",Verdana,Lucida,Arial,Helvetica,宋体,sans-serif;}
+        a:link,a:visited,a:hover,a:active{text-decoration:none;color:#256bae;}
+        .warp{width:586px; height:269px !important; height:271px;border:1px solid #dbdcd7;}
+        .main{width:562px; height:269px !important;height:271px;padding:5px; margin-left:15px;overflow:hidden;float:left;}
+        .news{position:absolute;z-index:4;width:24px; float: left; margin-left:565px !important; margin-left:582px;}
+        .news ul{list-style:none;padding:0;margin:0;}
+        .news ul li{ height:84px !important;height:88px;width:20px;margin-bottom:0px;padding-top:5px;text-align:center;cursor:pointer;;vertical-align:middle; background-color:#e5e5e5; border-left:#dbdcd7 solid 1px;border-bottom:#dbdcd7 solid 1px;}
+        .news ul li.on{background-color:#ffffff; border:#FFFFFF 0px}
+        .news span{display:block; margin-top:9px !important; margin-top:20px;}
+        .dis{display:block;}
+        .undis{display:none;}
+    </style>
+    <script type="text/javascript">
+        function g(o){return document.getElementById(o);}
+        function HoverLi(m,n,counter){for(var i=1;i&lt;=counter;i++){g('tb_'+m+i).className='';g('tbc_'+m+i).className='undis';}g('tbc_'+m+n).className='dis';g('tb_'+m+n).className='on';}
+    </script>
+</head>
+<body>
+<strong>演变！！兼容IE6/IE7/FF/opera</strong><br><br>
+<div class="warp">
+    <div class="news">
+        <ul>
+            <li class="on" id="tb_11" onmouseover="HoverLi(1,1,3);"><span>企业新闻</span></li>
+            <li class="" id="tb_12" onmouseover="HoverLi(1,2,3);"><span>业内咨讯</span></li>
+            <li class="" id="tb_13" onmouseover="HoverLi(1,3,3);"><span>业内咨讯</span></li>
+        </ul>
+    </div>
+    <div class="dis" id="tbc_11">
+        <div class="main">
+            1<br>企业新闻的内容<br>企业新闻的内容<br>企业新闻的内容
+        </div>
+    </div>
+    <div class="undis" id="tbc_12">
+        <div class="main">
+            2<br>业内咨讯的内容<br>业内咨讯的内容<br>业内咨讯的内容<br>
+        </div>
+    </div>
+    <div class="undis" id="tbc_13">
+        <div class="main">
+            3<br>业内咨讯的内容<br>业内咨讯的内容<br>业内咨讯的内容<br>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>

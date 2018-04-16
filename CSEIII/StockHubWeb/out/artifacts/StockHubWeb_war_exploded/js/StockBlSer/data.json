@@ -1,0 +1,54 @@
+[
+  {
+    "date": "17/5/24",
+    "pen": "10",
+    "high": "11",
+    "low": "9.8",
+    "close": "10.2",
+    "code": "60001",
+    "name": "kl",
+    "market": "sa",
+    "increaseOrDecrease": "1%",
+    "preAdjClose": "1.2",
+    "plate": "1"
+  },
+  {
+    "date": "17/5/25",
+    "pen": "10",
+    "high": "11",
+    "low": "9.8",
+    "close": "10.2",
+    "code": "60001",
+    "name": "kl",
+    "market": "sa",
+    "increaseOrDecrease": "1%",
+    "preAdjClose": "1.2",
+    "plate": "1"
+  },
+  {
+    "date": "17/5/26",
+    "pen": "10",
+    "high": "11",
+    "low": "9.8",
+    "close": "10.2",
+    "code": "60001",
+    "name": "kl",
+    "market": "sa",
+    "increaseOrDecrease": "1%",
+    "preAdjClose": "1.2",
+    "plate": "1"
+  },
+  {
+    "date": "17/5/27",
+    "pen": "10",
+    "high": "11",
+    "low": "9.8",
+    "close": "10.2",
+    "code": "60001",
+    "name": "kl",
+    "market": "sa",
+    "increaseOrDecrease": "1%",
+    "preAdjClose": "1.2",
+    "plate": "1"
+  }
+]

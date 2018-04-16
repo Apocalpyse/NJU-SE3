@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>新闻</title>
+    <!-- mobile apps -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="" />
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <!-- //mobile apps -->
+    <!-- Custom Theme files -->
+    <link href="css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
+    <link href="css/style.css" type="text/css" rel="stylesheet" media="all">
+    <!-- //Custom Theme files -->
+    <!-- js -->
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <!-- //js -->
+    <!-- web-fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Buda:300' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,300italic,400italic,700,700italic' rel='stylesheet' type='text/css'>
+    <!-- //web-fonts -->
+    <!-- start-smooth-scrolling -->
+    <script type="text/javascript" src="js/move-top.js"></script>
+    <script type="text/javascript" src="js/easing.js"></script>
+    <script type="text/javascript">
+        jQuery(document).ready(function($) {
+            $(".scroll").click(function(event){
+                event.preventDefault();
+
+                $('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+            });
+        });
+    </script>
+    <!-- //end-smooth-scrolling -->
+</head>
+<body>
+<!-- banner -->
+<div class="banner about-banner">
+    <div class="banner-info">
+        <div class="banner-top">
+            <div class="container">
+                <div class="banner-top-grids banner-top-left">
+                    <ul class="social-icons">
+
+                    </ul>
+                </div>
+                <div class="banner-top-grids banner-logo">
+                    <a href="index.html">
+                        <img src="images/1.png" alt=""/>
+                        <h1>StockHub </h1>
+                        <p>Do the best investment.</p>
+                    </a>
+                </div>
+                <div class="banner-top-grids banner-top-right">
+                    <p><span class="glyphicon glyphicon-globe"></span> StockHubers </p>
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+        </div>
+        <!-- banner-text -->
+        <div class="banner-text about-banner-text">
+            <h2>
+                <ol class="breadcrumb">
+                    <li><a href="index.html">主页</a></li>
+                    <li class="active">新闻</li>
+                </ol>
+            </h2>
+        </div>
+        <!-- //banner-text -->
+        <!-- top-navigation -->
+        <div class="main">
+            <div class="container">
+                <nav id="menu" class="nav top-nav">
+                    <button  class="navtoogle">
+                        <span class="icon-menu glyphicon glyphicon-menu-hamburger"> </span> Menu
+                    </button>
+                    <ul>
+                        <li>
+                            <a href="index.html">
+									<span class="icon">
+										<i aria-hidden="true" class="icon-home glyphicon glyphicon-home"></i>
+									</span>
+                                <span>主页</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="plate.html" onclick="$('#section-2').animatescroll();">
+									<span class="icon">
+										<i aria-hidden="true" class="icon-services glyphicon glyphicon-info-sign"></i>
+									</span>
+                                <span>板块</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="industry.html" onclick="$('#section-3').animatescroll();">
+									<span class="icon">
+										<i aria-hidden="true" class="icon-portfolio glyphicon glyphicon-cog"></i>
+									</span>
+                                <span>行业</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="stock.html" onclick="$('#section-4').animatescroll();">
+									<span class="icon">
+										<i aria-hidden="true" class="icon-blog glyphicon glyphicon-picture"></i>
+									</span>
+                                <span>股票</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="strategy.html" onclick="$('#section-5').animatescroll();">
+									<span class="icon">
+										<i aria-hidden="true" class="icon-team glyphicon glyphicon-check"></i>
+									</span>
+                                <span>策略</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="user.html" onclick="$('#section-6').animatescroll();">
+									<span class="icon">
+										<i aria-hidden="true" class="icon-contact glyphicon glyphicon-envelope"></i>
+									</span>
+                                <span>用户</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- script-for-menu -->
+                <script>
+                    $(".navtoogle").click(function(){
+                        $(".top-nav ul").slideToggle("slow" , function(){
+                        });
+                    });
+                </script>
+                <!-- //script-for-menu -->
+                <script src="js/modernizr.custom.js"></script>
+            </div>
+        </div>
+        <!-- //top-navigation -->
+        <div class="clearfix"> </div>
+    </div>
+</div>
+<!-- //banner -->
+<!--Short codes-->
+<div class="codes">
+    <div class="container">
+        <div class="title">
+            <h3>新闻</h3>
+            <!--<p>Duis euismod massa ut sem fringilla blandit. Proin vel enim nec ipsum finibus. </p>-->
+        </div>
+
+        <div id="NewsContent">
+
+
+
+            <!-- 讨论区 -->
+            <div class="col-md-12">
+                <div class="grid_3 grid_5 ">
+                    <h3 class="hdg">评论区</h3>
+                    <div class="well">
+                        There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration
+                    </div>
+                    <div class="well">
+                        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here
+                    </div>
+                    <div class="well">
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic
+                    </div>
+                </div>
+            </div>
+            <!-- //讨论区 -->
+        </div>
+    </div>
+</div>
+<!--//short-codes-->
+
+<!-- slid -->
+<div class="slid about-w3ls-slid">
+    <div class="container">
+        <h3>对于理性投资者来说，要获得稳定持续的高收益，找到永不过时的行业很重要，但同样重要的是，在这个行业处于市场预期低估或被大众忽略时买入才能最终获得成功。  </h3>
+    </div>
+</div>
+<!-- //slid -->
+
+<!-- footer -->
+<div class="footer">
+    <div class="container">
+        <div class="footer-wthree-nav">
+            <ul>
+                <li><a href="index.html">主页</a></li>
+                <li><a href="plate.html">板块</a></li>
+                <li><a href="industry.html">行业</a></li>
+                <li><a href="stock.html">股票</a></li>
+                <li><a href="strategy.html">策略</a></li>
+                <li><a href="user.html">用户</a></li>
+            </ul>
+        </div>
+        <div class="footer-w3lsrow" style="margin-bottom: 20px;">
+            <div class="col-md-4 footer-grids footer-address">
+                <h3>Contact Us :</h3>
+                <ul>
+                    <li style="margin-bottom: 20px;"><i class="glyphicon glyphicon-envelope"></i> 151250006@smail.nju.edu.cn </li>
+                    <li style="margin-bottom: 20px;"><i class="glyphicon glyphicon-envelope"></i> 151250011@smail.nju.edu.cn </li>
+                    <li style="margin-bottom: 20px;"><i class="glyphicon glyphicon-envelope"></i> 151250013@smail.nju.edu.cn </li>
+                    <li style="margin-bottom: 15px;"><i class="glyphicon glyphicon-envelope"></i> 151099149@smail.nju.edu.cn </li>
+                    <li></li>
+                </ul>
+            </div>
+            <div class="col-md-4 footer-grids subscribe">
+                <h3>Join Us :</h3><br><br>
+                <form action="#" method="post">
+                    <input type="text" name="Email" placeholder="Your Email" required="">
+                    <input type="submit" value="Subscribe">
+                </form>
+                <div class="clearfix"> </div>
+            </div>
+            <div class="col-md-4 footer-grids footer-address footer-icons" style="alignment: right;" >
+                <!--footer-icons-->
+                <h3>Follow Us :</h3>
+                <ul ><br><br>
+                    <!--class="social-icons"-->
+                    <li>曹鸿荣</li>
+                    <li>常德隆</li>
+                    <li>陈进</li>
+                    <li>武秀峰</li>
+                </ul>
+                <div class="clearfix"> </div>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+    </div>
+</div>
+<!-- //footer -->
+<!-- smooth-scrolling-of-move-up -->
+<script type="text/javascript">
+    $(document).ready(function() {
+        /*
+         var defaults = {
+         containerID: 'toTop', // fading element id
+         containerHoverID: 'toTopHover', // fading element hover id
+         scrollSpeed: 1200,
+         easingType: 'linear'
+         };
+         */
+
+        $().UItoTop({ easingType: 'easeOutQuart' });
+
+    });
+</script>
+<!-- //smooth-scrolling-of-move-up -->
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="js/bootstrap.js"></script>
+
+
+<script>
+    /*
+     *函数功能：从href获得参数
+     *sHref: http://www.cscenter.com.cn/arg.htm?arg1=d&arg2=re
+     *sArgName:arg1, arg2
+     *return: the value of arg. d, re
+     */
+    //获取新闻标题
+    srcStr=window.location.href.toString();
+    function GetArgsFromHref(srcStr)
+    {
+        var args = srcStr.split('?');
+        var retval = "";
+        if(args[0] == srcStr) /*参数为空*/
+        {
+            return retval; /*无需做任何处理*/
+        }
+//        var str = args[1];
+//        args = str.split("&");
+//        for(var i = 0; i < args.length; i ++)
+//        {
+//            str = args[i];
+//            var arg = str.split("=");
+//            if(arg.length <= 1) continue;
+//            if(arg[0] == sArgName) retval = arg[1];
+//        }
+        retval=args[1];
+        retval=decodeURI(retval);
+        return retval;
+    }
+    var title=GetArgsFromHref(srcStr);
+    alert(title);
+    //设置网页标题
+//    document.getElementById('htmlTitle').innerHTML=title;
+
+    var newsInfo={"title":title};
+    $.ajax({
+        url: "",
+        type: "GET",
+        dataType: "json",
+        contentType: "application/json; charset=utf-8",
+        //设置响应时间
+        timeout: 1000,
+        async: false,
+        // 默认是true，即为异步方式，$.Ajax执行后，会继续执行ajax后面的脚本，直到服务器端返回数据后，触发$.Ajax里的success方法，这时候执行的是两个线程。
+        // 若要将其设置为false，则所有的请求均为同步请求，在没有返回值之前，同步请求将锁住浏览器，用户其它操作必须等待请求完成才可以执行。
+        data:newsInfo,
+
+//        <div class="page-header">
+//        <h1 >页面标题实例
+//        <small >子标题</small>
+//        <small >子标题</small>
+//        <small >子标题</small>
+//        </h1>
+//        </div>
+        success: function (newsData) {
+            var newsContent = document.createElement("div");
+            newsContent.setAttribute("class", "page-header col-md-12");
+            //标题部分
+            var header = document.createElement("div");
+            header.setAttribute("class", "page-header col-md-12");
+            var title = document.createElement("h1");
+            title.innerHTML = newsData.title;
+            var author = document.createElement("small");
+            author.innerHTML = "作者：" + newsData.author;
+            var time = document.createElement("small");
+            time.innerHTML = "时间：" + newsData.time;
+            var source = document.createElement("small");
+            source.innerHTML = "来源：" + newsData.source;
+            var view = document.createElement("small");
+            view.innerHTML = "浏览：" + newsData.view;
+            title.appendChild(author);
+            title.appendChild(time);
+            title.appendChild(source);
+            title.appendChild(view);
+            header.appendChild(title);
+            //主体部分
+            var words = document.createElement("p");
+            words.setAttribute("class", "col-md-12");
+            words.innerHTML = newsData.content;
+            //点赞，点踩
+            //            <button type="button" class="btn btn-xs btn-success">特别小的成功按钮</button>
+            var upADown = document.createElement("div");
+            upADown.setAttribute("class", "");
+            var ups = document.createElement("button");
+            ups.setAttribute("id", "ups");
+            ups.setAttribute("class", "btn btn-xs btn-success");
+            ups.innerHTML = "赞一个" + "(" + newsData.praise + ")";
+            var downs = document.createElement("button");
+            downs.setAttribute("id", "downs");
+            downs.setAttribute("class", "btn btn-xs btn-fail");
+            downs.innerHTML = "踩一下" + "(" + newsData.criticize + ")";
+            upADown.appendChild(ups);
+            upADown.appendChild(downs);
+            //讨论区
+            var comments = document.createElement("div");
+            comments.setAttribute("class", "col-md-12");
+            for (var i = 0; i < newsData.comment.length; i++) {
+//        alert(i+":"+newsData.commentAccount[i]+" "+newsData.comment[i]);
+                var oneComment = document.createElement("div");
+                oneComment.setAttribute("class", "col-md-12");
+                var user = document.createElement("small");
+                user.setAttribute("class", "col-md-2");
+                user.innerHTML = newsData.commentAccount[i];
+                var commentWords = document.createElement("small");
+                commentWords.setAttribute("class", "col-md-10");
+                commentWords.innerHTML = newsData.comment[i];
+                oneComment.appendChild(user);
+                oneComment.appendChild(commentWords);
+                comments.appendChild(oneComment);
+            }
+
+            newsContent.appendChild(header);
+            newsContent.appendChild(words);
+            newsContent.appendChild(upADown);
+            newsContent.appendChild(comments);
+            document.getElementById('NewsContent').innerHTML=newsContent.innerHTML;
+        },
+        complete : function(XMLHttpRequest,status){ //请求完成后最终执行参数
+            if(status=='timeout'){//超时,status还有success,error等值的情况
+                // ajaxTimeOut.abort(); //取消请求
+                alert("超时");
+            }
+        },
+        done : function(){
+            alert("成功");
+        },
+        fail : function() {
+            alert("失败");
+        },
+        always :function(){
+            alert("都是");
+        }
+    });
+</script>
+
+<script>
+    //功能的基础是登录
+    //        private String newsID;
+    //        private String title;//标题
+    //        private String author;//作者
+    //        private String time;//发表时间
+    //        private String source;//来源
+    //        private int view;//浏览数目
+    //        private int praise;//点赞数目
+    //        private int criticize;//点踩数目
+    //        private String content;//新闻内容
+    //        private ArrayList<String> comment;//评论
+    //        private ArrayList<String> commentAccount;//评论对应account
+window.onload
+    {
+        var newsData =
+            {
+                "title": "新闻标题1",
+                "author": "stockhub",
+                "time": "17/5/25",
+                "source": "stockhub.net",
+                "view": "188",
+                "praise": "100",
+                "criticize": "20",
+                "content": "习近平24日上午视察海军机关，代表党中央和中央军委，他强调，海军是战略性军种，在国家安全和发展全局中具有十分重要的地位。要以党在新形势下的强军目标为引领，贯彻新形势下军事战略方针，坚持政治建军、改革强军、依法治军，瞄准世界一流，锐意开拓进取，加快转型建设，努力建设一支强大的现代化海军，为实现中国梦强军梦提供坚强力量支撑。",
+                "comment": ["good", "ok", "verygood"],
+                "commentAccount": ["per1", "per2", "per3"]
+            };
+
+        var newsContent = document.createElement("div");
+        newsContent.setAttribute("class", "page-header col-md-12");
+        //标题部分
+        var header = document.createElement("div");
+        header.setAttribute("class", "page-header col-md-12");
+        var title = document.createElement("h1");
+        title.innerHTML = newsData.title;
+        var author = document.createElement("small");
+        author.innerHTML = "作者：" + newsData.author;
+        var time = document.createElement("small");
+        time.innerHTML = "时间：" + newsData.time;
+        var source = document.createElement("small");
+        source.innerHTML = "来源：" + newsData.source;
+        var view = document.createElement("small");
+        view.innerHTML = "浏览：" + newsData.view;
+        title.appendChild(author);
+        title.appendChild(time);
+        title.appendChild(source);
+        title.appendChild(view);
+        header.appendChild(title);
+        //主体部分
+        var words = document.createElement("p");
+        words.setAttribute("class", "col-md-12");
+        words.innerHTML = newsData.content;
+        //点赞，点踩
+        //            <button type="button" class="btn btn-xs btn-success">特别小的成功按钮</button>
+        var upADown = document.createElement("div");
+        upADown.setAttribute("class", "");
+        var ups = document.createElement("button");
+        ups.setAttribute("id", "ups");
+        ups.setAttribute("class", "btn btn-xs btn-success");
+        ups.innerHTML = "赞一个" + "(" + newsData.praise + ")";
+        var downs = document.createElement("button");
+        downs.setAttribute("id", "downs");
+        downs.setAttribute("class", "btn btn-xs btn-fail");
+        downs.innerHTML = "踩一下" + "(" + newsData.criticize + ")";
+        upADown.appendChild(ups);
+        upADown.appendChild(downs);
+        //讨论区
+        var comments = document.createElement("div");
+        comments.setAttribute("class", "col-md-12");
+        for (var i = 0; i < newsData.comment.length; i++) {
+//        alert(i+":"+newsData.commentAccount[i]+" "+newsData.comment[i]);
+            var oneComment = document.createElement("div");
+            oneComment.setAttribute("class", "col-md-12");
+            var user = document.createElement("small");
+            user.setAttribute("class", "col-md-2");
+            user.innerHTML = newsData.commentAccount[i];
+            var commentWords = document.createElement("small");
+            commentWords.setAttribute("class", "col-md-10");
+            commentWords.innerHTML = newsData.comment[i];
+            oneComment.appendChild(user);
+            oneComment.appendChild(commentWords);
+            comments.appendChild(oneComment);
+        }
+
+        newsContent.appendChild(header);
+        newsContent.appendChild(words);
+        newsContent.appendChild(upADown);
+        newsContent.appendChild(comments);
+        document.getElementById('NewsContent').innerHTML=newsContent.innerHTML;
+
+    }
+</script>
+
+</body>
+</html>
